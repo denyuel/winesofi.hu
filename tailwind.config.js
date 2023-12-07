@@ -20,7 +20,13 @@ module.exports = {
       green: '#89AC8F',
       green_light: '#BBE3C3',
       red: '#C76D5C',
-      brown_strong: '#C1672D',
+      brown_strong: '#C1672D'
+    },
+    fontFamily: {
+      'sans': ['Montserrat', 'sans-serif'],
+      'serif': ['Montserrat', 'serif'],
+      'cormorant': ['Cormorant', 'serif'],
+      'kaushan': ['Kaushan Script', 'cursive']
     },
   },
   plugins: [],
