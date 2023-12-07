@@ -1,0 +1,21 @@
+# .gitignore
+
+# Parcel build output
+/dist
+.cache
+
+# Node modules
+/node_modules
+
+# Environment variables
+.env
+
+# IDE files
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
