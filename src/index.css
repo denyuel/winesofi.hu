@@ -1,3 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.circle {
+    width: 137px;
+    height: 137px;
+    border-radius: 100%;
+    opacity: 85%;
+
+    color: #1D1D1B;
+    font-size: 12px;
+    font-family: Open Sans;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-wrap: break-word
+}
+
+.big {
+    font-size: 14px;
+}
+
+.small {
+    font-size: 12px;
+}
+  
+.first {
+    background-color: #007589;
+    top: 25%;
+    left: 55%;
+    transform: translate(-120%, -50%);
+}
+  
+.second {
+    background-color: #a39356;
+    top: 47.5%;
+    left: -20%;
+    transform: translate(80%, -50%);
+}
+  
+.third {
+    background-color: #89ac8f;
+    top: 30%;
+    left: 135%;
+    transform: translate(-100%, -50%);
+}
+
+.line {
+    width: 40px;
+    height: 0.1px;
+    background-color: black;
+}
+
+.wine-container {
+    width: 550px;
+    height: 512px
+}

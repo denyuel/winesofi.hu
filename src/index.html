@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <link href="./index.css" rel="stylesheet">
   <title>Wine&Sofi</title>
 </head>
 
@@ -12,7 +13,7 @@
   <!-- navbar -->
   <nav class="flex justify-between items-center w-9/12 mx-auto">
     <div class="relative flex items-center justify-center flex-grow">
-      <img src="assets/Logo.svg" alt="Logo" class="h-14 w-auto">
+      <img src="assets/Logo.svg" alt="Logo" class="h-14 z- w-auto">
     </div>
     <!-- social -->
     <div class="flex items-center justify-end">
@@ -21,19 +22,48 @@
     </div>
   </nav>
   <!-- hero -->
-  <div class="relative flex justify-center items-center ">
+  <div class="relative flex justify-center items-center z-0">
     <img src="assets/wine-cellar.png" alt="Background" class="w-9/12">
     <div class="absolute flex top-0 justify-center ">
-      <img src="assets/Intersect.png" class="z-1">
+      <img src="assets/Intersect.png" class="z-1 h-10">
     </div>
-    <img src="#" alt="Overlay" class="absolute top-0 left-0">
+    <!-- wine container -->
+    <div class="grid grid-cols-3 justify-end absolute bottom-[-22%] end-[18%] wine-container z-10">
+      <div class="relative">
+        <img class="absolute object-cover z-30" src="assets/bor3.png" alt="kéknyelű 2021">
+        <div class="flex flex-col justify-center items-center gap-1 z-20 absolute circle first">
+          <span>Wine&Sofi</span>
+          <div class="line"></div>
+          <span>kéknyelű</span>
+          <span class="big">202<span class="small">1</span></span>
+        </div>
+      </div>
+      <div class="relative">
+        <img class="absolute object-cover z-20" src="assets/bor1.png" alt="olaszrizling 2022">
+        <div class="flex flex-col justify-center items-center gap-1 z-30 absolute circle second">
+          <span>Wine&Sofi</span>
+          <div class="line"></div>
+          <span>olaszrizling</span>
+          <span class="big">202<span class="small">2</span></span>
+        </div>
+      </div>
+      <div class="relative">
+        <img class="absolute object-cover z-30" src="assets/bor2.png" alt="olaszrizling 2022">
+        <div class="flex flex-col justify-center items-center gap-1 z-20 absolute circle third">
+          <span>Wine&Sofi</span>
+          <div class="line"></div>
+          <span>olaszrizling</span>
+          <span class="big">202<span class="small">2</span></span>
+        </div>
+      </div>
+    </div>
   </div>
   <!-- text + button -->
-  <div class="flex flex-col items-center justify-center text-center p-6">
+  <div class="flex flex-col items-center justify-center text-center pt-24">
     <p class="mb-4">Itt hamarosan a Wine&Sofi weboldalát találod.<br>
       Mindaddig látogasd meg pincészetünket a közösségi oldalainkon vagy vedd fel velünk a kapcsolatot emailben!</p>
     <button class="bg-black text-white text-xs font-sans font-semibold uppercase tracking-[2px] rounded-2xl py-3 px-5;
-    ">kapcsolatfelvétel</button>
+  ">kapcsolatfelvétel</button>
   </div>
 </body>
 
