@@ -4,35 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body, html {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-} */
-
-.wine {
-    width: 512px;
-    height: 512px;
-    position: absolute;
-}
-
-#first {
-    left: 0;
-}
-
-#second {
-    left: 15%;
-    transform: translate(-50%, 0);
-}
-
-#third {
-    left: 52.5%;
-    transform: translate(-100%, 0);
-}
-
-img {
-    object-fit: cover;
-}
 
 .circle {
     width: 137px;
@@ -48,25 +19,33 @@ img {
     letter-spacing: 2px;
     word-wrap: break-word
 }
+
+.big {
+    font-size: 14px;
+}
+
+.small {
+    font-size: 12px;
+}
   
 .first {
     background-color: #007589;
     top: 25%;
-    left: 50%;
+    left: 55%;
     transform: translate(-120%, -50%);
 }
   
 .second {
     background-color: #a39356;
     top: 47.5%;
-    left: 50%;
+    left: -20%;
     transform: translate(80%, -50%);
 }
   
 .third {
     background-color: #89ac8f;
     top: 30%;
-    left: 50%;
+    left: 135%;
     transform: translate(-100%, -50%);
 }
 
@@ -74,4 +53,10 @@ img {
     width: 40px;
     height: 0.1px;
     background-color: black;
+}
+
+.wine-container {
+    width: 550px;
+    height: 512px;
+    left: 10%;
 }
