@@ -4,30 +4,32 @@ module.exports = {
     "./src/**/*.{html,js,ts,jsx,tsx}",
   ],
   theme: {
-    colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
-      'black': '#000000',
-      'gray_strong': '#656461',
-      'gray': '#E4E6EE',
-      'gray_light': '#F6F6F8',
-      'white': '#FFFFFF',
-      'orange': '#F49716',
-      'orange_light': '#FF5C2',
-      'blue': '#007589',
-      'blue_light': '#5BD7EC',
-      'brown': '#A39356',
-      'brown_light': '#BBC896',
-      'green': '#89AC8F',
-      'green_light': '#BBE3C3',
-      'red': '#C76D5C',
-      'brown_strong': '#C1672D'
-    },
-    fontFamily: {
-      'sans': ['Montserrat', 'sans-serif'],
-      'serif': ['Montserrat', 'serif'],
-      'cormorant': ['Cormorant', 'serif'],
-      'kaushan': ['Kaushan Script', 'cursive']
+    extend: {
+      colors: {
+        transparent: 'transparent',
+        current: 'currentColor',
+        black: '#000000',
+        gray_strong: '#656461',
+        gray: '#E4E6EE',
+        gray_light: '#F6F6F8',
+        white: '#FFFFFF',
+        orange: '#F49716',
+        orange_light: '#FF5C2',
+        blue: '#007589',
+        blue_light: '#5BD7EC',
+        brown: '#A39356',
+        brown_light: '#BBC896',
+        green: '#89AC8F',
+        green_light: '#BBE3C3',
+        red: '#C76D5C',
+        brown_strong: '#C1672D'
+      },
+      fontFamily: {
+        'sans': ['Montserrat', 'sans-serif'],
+        'serif': ['Montserrat', 'serif'],
+        'cormorant': ['Cormorant', 'serif'],
+        'kaushan': ['Kaushan Script', 'cursive']
+      },
     },
   },
   plugins: [],
