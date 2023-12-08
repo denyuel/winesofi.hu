@@ -8,9 +8,7 @@
 .circle {
     width: 137px;
     height: 137px;
-    border-radius: 100%;
-    opacity: 85%;
-
+    
     color: #1D1D1B;
     font-size: 12px;
     font-family: Open Sans;
@@ -29,21 +27,18 @@
 }
   
 .first {
-    background-color: #007589;
     top: 25%;
     left: 55%;
     transform: translate(-120%, -50%);
 }
   
 .second {
-    background-color: #a39356;
     top: 47.5%;
     left: -20%;
     transform: translate(80%, -50%);
 }
   
 .third {
-    background-color: #89ac8f;
     top: 30%;
     left: 135%;
     transform: translate(-100%, -50%);
@@ -58,5 +53,8 @@
 .wine-container {
     width: 550px;
     height: 512px;
-    left: 10%;
+}
+
+.logo {
+    top: -60%;
 }

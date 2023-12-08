@@ -22,7 +22,8 @@ module.exports = {
         green: '#89AC8F',
         green_light: '#BBE3C3',
         red: '#C76D5C',
-        brown_strong: '#C1672D'
+        brown_strong: '#C1672D',
+        button_black: '#1D1D1B'
       },
       fontFamily: {
         'sans': ['Montserrat', 'sans-serif'],
