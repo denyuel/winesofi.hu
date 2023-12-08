@@ -52,7 +52,9 @@
 
 .wine-container {
     width: 550px;
-    height: 512px;
+    height: 550px;
+    left: 50%;
+    top: 35%;
 }
 
 .logo {
