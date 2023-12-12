@@ -117,23 +117,22 @@ body {
         height: 117px;
     }
 
-    /* majd ezeken kell modositani */
     .first {
         top: 25%;
         left: 5%;
-        transform: translate(-50%, -50%);
+        transform: translate(-75%, -40%);
     }
       
     .second {
         top: 47.5%;
         left: 75%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -20%);
     }
       
     .third {
         top: 30%;
         left: 95%;
-        transform: translate(-50%, -50%);
+        transform: translate(-20%, -45%);
     }
 }
 
