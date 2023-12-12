@@ -48,20 +48,20 @@ body {
 
 .first {
     top: 25%;
-    left: 55%;
-    transform: translate(-120%, -50%);
+    left: 5%;
+    transform: translate(-50%, -50%);
 }
   
 .second {
     top: 47.5%;
-    left: -20%;
-    transform: translate(80%, -50%);
+    left: 75%;
+    transform: translate(-50%, -50%);
 }
   
 .third {
     top: 30%;
-    left: 135%;
-    transform: translate(-100%, -50%);
+    left: 95%;
+    transform: translate(-50%, -50%);
 }
 
 @media only screen and (max-width: 640px) {
@@ -103,26 +103,37 @@ body {
     }
 }
 
-@media only screen and (min-width: 641px) and (max-width: 1279px) and (orientation: portrait) {
-    .wine-container {
-        position: relative;
-        grid-template-columns: repeat(3, 1fr);
-        width: 15rem;
-        height: 15rem;
-    }
-
-    .circle {
-        width: 107px;
-        height: 107px;
-    }
-}
-
-@media only screen and (min-width: 641px) and (max-width: 1279px) and (orientation: landscape) {
+@media only screen and (min-width: 641px) and (max-width: 1279px) {
     .wine-container {
         position: relative;
         grid-template-columns: repeat(3, 1fr);
         width: 20rem;
         height: 20rem;
+        gap: 2rem;
+    }
+
+    .circle {
+        width: 117px;
+        height: 117px;
+    }
+
+    /* majd ezeken kell modositani */
+    .first {
+        top: 25%;
+        left: 5%;
+        transform: translate(-50%, -50%);
+    }
+      
+    .second {
+        top: 47.5%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+    }
+      
+    .third {
+        top: 30%;
+        left: 95%;
+        transform: translate(-50%, -50%);
     }
 }
 
