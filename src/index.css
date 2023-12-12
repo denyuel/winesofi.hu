@@ -13,6 +13,11 @@ body {
     word-wrap: break-word;
 }
 
+.hero {
+    background-image: url("assets/wine-cellar.png");
+    background-size: cover;
+}
+
 .circle {
     width: 137px;
     height: 137px;
@@ -93,18 +98,15 @@ body {
     .wine-container {
         position: relative;
         grid-template-columns: repeat(3, 1fr);
-        width: 33rem;
-        height: 33rem;
+        width: 20rem;
+        height: 20rem;
     }
 }
 
 @media only screen and (min-width: 1280px) {
     .wine-container {
-        position: absolute;
         grid-template-columns: repeat(3, 1fr);
         width: 35rem;
         height: 35rem;
-        left: 50%;
-        top: 32.5%;
     }
 }
