@@ -6,23 +6,27 @@
 
 body {
     color: #656461;
+    font-family: 'Open Sans', sans-serif;
     font-size: 14px;
-    font-family: Open Sans;
     font-weight: 400;
     line-height: 24px;
-    word-wrap: break-word
+    word-wrap: break-word;
+}
+
+.hero {
+    background-image: url("assets/wine-cellar.png");
+    background-size: cover;
 }
 
 .circle {
     width: 137px;
     height: 137px;
-    
     color: #1D1D1B;
-    font-family: Open Sans;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 300;
-    text-transform: uppercase;
     letter-spacing: 2px;
-    word-wrap: break-word
+    text-transform: uppercase;
+    word-wrap: break-word;
 }
 
 .line {
@@ -60,7 +64,6 @@ body {
     transform: translate(-100%, -50%);
 }
 
-/* media queries */
 @media only screen and (max-width: 640px) {
     .wine-container {
         position: relative;
@@ -77,7 +80,7 @@ body {
 
     #right {
         right: 0;
-    };
+    }
 
     .second {
         top: 50%;
@@ -85,7 +88,6 @@ body {
         transform: translate(-50%, -50%);
     }
 
-    /* fontos, hogy ez itt maradjon! */
     .line-container {
         display: flex;
         justify-content: center;
@@ -96,18 +98,15 @@ body {
     .wine-container {
         position: relative;
         grid-template-columns: repeat(3, 1fr);
-        width: 33rem;
-        height: 33rem;
+        width: 20rem;
+        height: 20rem;
     }
 }
 
 @media only screen and (min-width: 1280px) {
     .wine-container {
-        position: absolute;
         grid-template-columns: repeat(3, 1fr);
         width: 35rem;
         height: 35rem;
-        left: 50%;
-        top: 32.5%;
     }
 }
