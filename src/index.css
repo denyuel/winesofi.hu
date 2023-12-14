@@ -17,7 +17,6 @@ body {
     background-image: url("assets/wine-cellar.png");
     background-size: cover;
     background-position: center;
-    aspect-ratio: 1/1;
 }
 
 .circle {
@@ -45,33 +44,24 @@ body {
     grid-template-columns: repeat(3, 1fr);
 }
 
-/* .first {
-    top: 25%;
-    left: 5%;
-    transform: translate(-50%, -50%);
+@media only screen and (min-width: 768px) {
+    .first {
+        top: 15%;
+        left: -30%;
+    }
+
+    .second {
+        top: 40%;
+        left: 40%;
+    }
+
+    .third {
+        top: 18%;
+        left: 53%;
+    }
+
+    .circle {
+        width: 10rem;
+        height: 10rem;
+    }
 }
-  
-.second {
-    top: 47.5%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-}
-  
-.third {
-    top: 30%;
-    left: 95%;
-    transform: translate(-50%, -50%);
-} */
-
-
-/* @media only screen and (max-width: 640px) {
-
-}
-
-@media only screen and (min-width: 641px) and (max-width: 1279px) {
-
-}
-
-@media only screen and (min-width: 1280px) {
-
-} */

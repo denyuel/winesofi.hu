@@ -19,31 +19,30 @@
 </head>
 
 <body>
-  <!-- navbar -->
-  <nav class="flex justify-between items-center mt-4 w-full md:w-9/12 mx-auto h-14 relative">
+  <nav class="relative flex items-center justify-between w-full h-14 mt-4 mx-auto md:w-9/12">
     <!-- logo -->
-    <img src="assets/Logo.svg" alt="Logo" class="block md:hidden absolute h-14 top-2 left-2">
+    <img class="absolute block h-14 top-2 left-2 md:hidden" src="assets/Logo.svg" alt="Logo">
     <!-- social -->
-    <div class="flex items-center justify-end absolute right-0">
-      <a href="https://www.facebook.com"><img src="assets/facebook.png" alt="Facebook" class="h-6 w-6 mx-2"></a>
-      <a href="https://www.instagram.com"><img src="assets/instagram.png" alt="Instagram" class="h-6 w-6 mx-2"></a>
+    <div class="absolute flex items-center justify-end right-0">
+      <a href="https://www.facebook.com"><img class="w-6 h-6 mx-2" src="assets/facebook.png" alt="Facebook"></a>
+      <a href="https://www.instagram.com"><img class="w-6 h-6 mx-2" src="assets/instagram.png" alt="Instagram"></a>
     </div>
   </nav>
   <!-- hero -->
-  <div class="container relative flex flex-col justify-center mx-auto mt-4 w-full hero">
+  <div class="container relative flex flex-col justify-center w-full mx-auto mt-4 hero md:w-9/12">
     <!-- logo overlap -->
-    <div class="absolute top-0 left-0 right-0 mx-auto flex justify-center">
-      <img src="assets/Logo.svg" alt="Logo" class="hidden md:block lg:block absolute h-20 w-auto logo">
-      <img src="assets/Intersect.png" class="hidden md:block lg:block z-1" alt="">
+    <div class="absolute flex justify-center top-0 left-0 right-0 mx-auto">
+      <img class="absolute hidden w-auto h-20 logo md:block lg:block" src="assets/Logo.svg" alt="Logo">
+      <img class="hidden z-1 md:block lg:block" src="assets/Intersect.png" alt="">
     </div>
     <!-- wine container -->
-    <div class="flex justify-end container">
-      <div class="grid grid-cols-3 gap-2 relative wine-container">
+    <div class="flex justify-end container md:mt-28">
+      <div class="relative grid gap-2 md:gap-0 md:mr-20 md:ml-16 md:-mb-12 grid-cols-3 wine-container">
         <!-- wine 3 -->
         <div class="relative wine">
-          <img class="h-auto z-30 -mb-16" src="assets/bor3.png" alt="kéknyelű 2021">
+          <img class="relative h-auto -mb-16 z-30" src="assets/bor3.png" alt="kéknyelű 2021">
           <div
-            class="flex flex-col justify-center items-center gap-1 z-20 bg-blue rounded-full opacity-90 text-xs circle first">
+            class="flex flex-col justify-center items-center gap-1 md:absolute bg-blue rounded-full opacity-90 text-xs z-20 circle first">
             <span>Wine&Sofi</span>
             <div class="line"></div>
             <span>kéknyelű</span>
@@ -52,9 +51,9 @@
         </div>
         <!-- wine 2 -->
         <div class="relative wine">
-          <img class="h-auto z-20 -mb-16" id="right" src="assets/bor1.png" alt="olaszrizling 2022">
+          <img class="relative h-auto -mb-16 z-20" id="right" src="assets/bor1.png" alt="olaszrizling 2022">
           <div
-            class="flex flex-col justify-center items-center gap-1 z-30 bg-brown rounded-full opacity-90 text-xs circle second">
+            class="flex flex-col justify-center items-center gap-1 md:absolute bg-brown rounded-full opacity-90 text-xs z-30 circle second">
             <span>Wine&Sofi</span>
             <div class="line"></div>
             <span>olaszrizling</span>
@@ -63,9 +62,9 @@
         </div>
         <!-- wine 3 -->
         <div class="relative wine">
-          <img class="h-auto z-30 -mb-16" src="assets/bor2.png" alt="olaszrizling 2022">
+          <img class="relative h-auto -mb-16 z-30" src="assets/bor2.png" alt="olaszrizling 2022">
           <div
-            class="flex flex-col justify-center items-center gap-1 z-20 bg-green rounded-full opacity-90 text-xs circle third">
+            class="flex flex-col justify-center items-center gap-1 md:absolute bg-green rounded-full opacity-90 text-xs z-20 circle third">
             <span>Wine&Sofi</span>
             <div class="line"></div>
             <span>olaszrizling</span>
@@ -76,11 +75,13 @@
     </div>
   </div>
   <!-- text + button -->
-  <div class="flex flex-col items-center justify-center text-center p-0 pt-12">
-    <p class="text-lg xl:text-base mb-4">Itt hamarosan a Wine&Sofi weboldalát találod.<br>
-      Mindaddig látogasd meg pincészetünket a közösségi oldalainkon vagy vedd fel velünk a kapcsolatot emailben!</p>
+  <div class="flex flex-col items-center justify-center p-0 pt-32 text-center md:pt-20 text-container">
+    <p class="mb-4 text-lg xl:text-base">
+      Itt hamarosan a Wine&Sofi weboldalát találod.<br>
+      Mindaddig látogasd meg pincészetünket a közösségi oldalainkon vagy vedd fel velünk a kapcsolatot emailben!
+    </p>
     <a href="mailto:example@example.com"
-      class="bg-button_black text-white text-xs font-sans font-semibold uppercase tracking-[2px] rounded-2xl py-3 px-5 my-4">
+      class="my-4 py-3 px-5 text-xs text-white font-sans font-semibold tracking-[2px] uppercase bg-button_black rounded-2xl">
       kapcsolatfelvétel
     </a>
   </div>
