@@ -16,17 +16,18 @@ body {
 .hero {
     background-image: url("assets/wine-cellar.png");
     background-size: cover;
+    background-position: left center;
 }
 
 .circle {
-    width: 137px;
-    height: 137px;
+    aspect-ratio: 1/1;
     color: #1D1D1B;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     letter-spacing: 2px;
     text-transform: uppercase;
     word-wrap: break-word;
+    margin-bottom: -5rem;
 }
 
 .line {
@@ -39,111 +40,28 @@ body {
     top: -60%;
 }
 
-.w-line {
-    width: 75%;
-    height: 1px;
-    background-color: #656461;
-    opacity: 0.25;
+.wine-container {
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.first {
-    top: 25%;
-    left: 5%;
-    transform: translate(-50%, -50%);
-}
-  
-.second {
-    top: 47.5%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-}
-  
-.third {
-    top: 30%;
-    left: 95%;
-    transform: translate(-50%, -50%);
-}
-
-@media only screen and (max-width: 640px) {
-    .container {
-        margin: 0;
-    }
-
-    .wine-container {
-        position: relative;
-        grid-template-rows: repeat(3, 1fr);
-        width: 100%;
-        height: 90rem;
-        margin: 0;
-    }
-
-    .first, .third {
-        top: 50%;
-        left: 70%;
-        transform: translate(-50%, -50%);
-    }
-
-    #right {
-        right: 0;
-    }
-
-    .second {
-        top: 50%;
-        left: 30%;
-        transform: translate(-50%, -50%);
-    }
-
-    .circle {
-        z-index: 50;
-    }
-
-    .line-container {
-        display: flex;
-        justify-content: center;
-    }
-}
-
-@media only screen and (min-width: 641px) and (max-width: 1279px) {
-    .wine-container {
-        position: relative;
-        grid-template-columns: repeat(3, 1fr);
-        width: 20rem;
-        height: 20rem;
-        gap: 2rem;
-    }
-
-    .circle {
-        width: 117px;
-        height: 117px;
-    }
-
+@media only screen and (min-width: 768px) {
     .first {
-        top: 25%;
-        left: 5%;
-        transform: translate(-75%, -40%);
+        top: 15%;
+        left: -30%;
     }
-      
+
     .second {
-        top: 47.5%;
-        left: 75%;
-        transform: translate(-50%, -20%);
+        top: 40%;
+        left: 40%;
     }
-      
+
     .third {
-        top: 30%;
-        left: 95%;
-        transform: translate(-20%, -45%);
+        top: 18%;
+        left: 53%;
     }
 
-    .text-container {
-        padding-top: 8rem;
-    }
-}
-
-@media only screen and (min-width: 1280px) {
-    .wine-container {
-        grid-template-columns: repeat(3, 1fr);
-        width: 35rem;
-        height: 35rem;
+    .circle {
+        width: 10rem;
+        height: 10rem;
     }
 }
