@@ -16,6 +16,7 @@ body {
 .hero {
     background-image: url("assets/wine-cellar.png");
     background-size: cover;
+    background-position: center;
 }
 
 .circle {
