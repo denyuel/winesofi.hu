@@ -40,13 +40,6 @@ body {
     top: -60%;
 }
 
-.w-line {
-    width: 75%;
-    height: 1px;
-    background-color: #656461;
-    opacity: 0.25;
-}
-
 .first {
     top: 25%;
     left: 5%;
@@ -96,11 +89,6 @@ body {
 
     .circle {
         z-index: 50;
-    }
-
-    .line-container {
-        display: flex;
-        justify-content: center;
     }
 }
 
