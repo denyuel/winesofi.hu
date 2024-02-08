@@ -1,13 +1,34 @@
 {
-  "name": "my-project",
-  "source": "src/index.html",
+  "name": "winesofi",
+  "version": "1.0.0",
+  "private": true,
+  "description": "winesofi",
+  "author": "nemvalid <peter@origindevelop.net>",
+  "keywords": [
+    "gatsby"
+  ],
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build"
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "prebuild": "npm install --prefix sanity_studio && npm run build --prefix sanity_studio",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
   },
-  "devDependencies": {
-    "parcel": "latest",
-    "postcss": "^8.4.32",
+  "dependencies": {
+    "gatsby": "^5.13.2",
+    "gatsby-plugin-google-analytics": "^5.13.1",
+    "gatsby-plugin-image": "^3.13.1",
+    "gatsby-plugin-postcss": "^6.13.1",
+    "gatsby-plugin-sharp": "^5.13.1",
+    "gatsby-plugin-sitemap": "^6.13.1",
+    "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-source-sanity": "^7.9.1",
+    "gatsby-transformer-remark": "^6.13.1",
+    "gatsby-transformer-sharp": "^5.13.1",
+    "postcss": "^8.4.33",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "tailwindcss": "^3.3.6"
   }
 }

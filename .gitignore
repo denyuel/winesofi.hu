@@ -1,11 +1,5 @@
-# .gitignore
-.cache
-
-# Parcel cache
-.parcel-cache
-
-# Parcel build output
-dist
-
-# Node modules
-node_modules
+node_modules/
+.cache/
+public
+static/admin
+.env
