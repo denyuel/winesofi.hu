@@ -2,10 +2,7 @@ import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {schemaTypes} from './schemas'
 
-let env = process.env;
-if (!env) {
-  env = import.meta.env;
-}
+const env = import.meta.env || process?.env;
 
 export default defineConfig({
   name: 'default',
