@@ -1,11 +1,11 @@
 import React from 'react';
 import Layout from '../components/layout';
 
-export default function HomePage() {
+export default function Contact() {
   return (
     <Layout>
       <div>
-        <h1>Home</h1>
+        <h1>Kapcsolat</h1>
       </div>
     </Layout>
   )
