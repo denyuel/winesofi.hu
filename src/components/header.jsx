@@ -22,19 +22,21 @@ const Header = () => {
 
   return (
     <header className="py-4">
-      <div className="container mx-auto flex justify-between items-center px-4">
-        <nav className="flex flex-1 justify-center space-x-4 gap-4 uppercase">
+      <nav className="container mx-auto flex justify-between items-center px-4 gap-6 uppercase">
+        <div className="flex flex-1 justify-end space-x-4 gap-4">
           <Link to="/" className="hover:text-gray-300">Wine&Sofi</Link>
           {pages.nodes.map((page) => (
             <Link to={`/${page.slug.current}`} key={page.id} className="hover:text-gray-300">{page.title}</Link>
           ))}
-        </nav>
-        <div>
+        </div>
+        <div className="px-8">
           <Link to="/"><Logo /></Link>
         </div>
-        <nav className="flex flex-1 justify-center space-x-4 gap-4 uppercase">
-          <Link to="/blog" className="hover:text-gray-300">Blog</Link>
-          <Link to="/kapcsolat" className="hover:text-gray-300">Kapcsolat</Link>
+        <div className="flex flex-1 justify-between space-x-4 gap-4">
+          <div className="flex flex-1 justify-start space-x-4 gap-4">
+            <Link to="/blog" className="hover:text-gray-300">Blog</Link>
+            <Link to="/kapcsolat" className="hover:text-gray-300">Kapcsolat</Link>
+          </div>
           <div className="flex justify-between items-center px-4 gap-4 ml-8">
             <a href="#" className="hover:text-gray-300">
               {/* svg facebook icon */}
@@ -45,8 +47,8 @@ const Header = () => {
               i
             </a>
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </header>
   );
 };
