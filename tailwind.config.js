@@ -29,7 +29,8 @@ module.exports = {
         'sans': ['Montserrat', 'sans-serif'],
         'serif': ['Montserrat', 'serif'],
         'cormorant': ['Cormorant', 'serif'],
-        'kaushan': ['Kaushan Script', 'cursive']
+        'kaushan': ['Kaushan Script', 'cursive'],
+        'open': ['"Open Sans"', 'sans-serif'],
       },
     },
   },

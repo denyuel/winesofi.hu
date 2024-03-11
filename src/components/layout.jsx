@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './header';
+import Footer from './footer';
 
 const Layout = ({ children }) => {
   return (
@@ -15,10 +16,9 @@ const Layout = ({ children }) => {
           {children}
         </div>
       </main>
-      <footer className="bg-gray-800 text-white py-4">
+      <footer className="bg-gray_light py-4">
         <div className="container mx-auto px-4">
-          {/* Footer content here */}
-          Footer
+          <Footer />
         </div>
       </footer>
     </div>
