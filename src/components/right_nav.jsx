@@ -6,7 +6,7 @@ const RightNav = () => {
 
     return (
         <nav className="container mx-auto flex justify-between items-center px-4 gap-6 uppercase">
-            <div className="flex flex-1 justify-between items-center space-x-4 gap-4">
+            <div className="flex justify-between items-center space-x-4 gap-2">
                 <div className="flex flex-1 justify-start space-x-4 gap-4 nav-text">
                     <Link to="/esemenyek" className="hover:text-gray-300">Események</Link>
                     <div className="flex items-center justify-center">
@@ -21,7 +21,7 @@ const RightNav = () => {
                         <StaticImage src="../images/ellipse.svg"/>
                     </div>
                 </div>
-                <div className="flex justify-between items-center px-4 gap-2">
+                <div className="flex justify-between items-center gap-2">
                     <a href="https://www.facebook.com/" className="hover:text-gray-300">
                         <StaticImage src="../images/facebook.svg" alt="facebook" className="w-6 h-6 mx-2" />
                     </a>
