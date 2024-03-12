@@ -23,18 +23,21 @@ export default function HomePage({ data }) {
       </section>
 
       <section>
-        <div className="container mx-auto">
+        <div className="container">
           <h2 className="uppercase font-bold text-center md:text-4xl pb-3 mb-auto">Kiemelt posztok</h2>
 
-          <div className="">
+          <div className="border-black border-solid border-2 justify-center items-center gap-24 ">
             {nodes.map((node, index) => (
-              <article className={`pb-8 flex flex-row justify-center items-center mx-6 ${index % 2 ? '' : 'sm:flex-row-reverse'}`} key={node.id}>
-                <div className="sm:w-2/4 pl-10 pt-10 md:pt-0 md:pb-10 pr-6 bg-gray">
+              <article className={`pb-8 flex border-red border-solid border-2 my-20 mx-20 bg-gray_strong ${index % 2 ? '' : 'sm:flex-row-reverse'}`} key={node.id}>
+                
+
+                <div className="sm:w-2/4 pl-10 pt-10 md:pt-0 md:pb-10 bg-gray">
+              
                   <span className="text-white uppercase bg-amber-400 rounded p-1 mr-1">BRAND</span>
                   <span className="text-gray-500">{node._createdAt}</span>
                   <h2 className="text-2xl font-bold">{node.title}</h2>
-                 
-                  <div className="prose max-w-none py-6">
+                  <hr className="w-8 mt-3 h-1 opacity-25"></hr>
+                  <div className="prose py-6">
                     <PortableText
                       value={node._rawSummary}
                       // components={/* optional object of custom components to use */}
@@ -46,9 +49,11 @@ export default function HomePage({ data }) {
                   >
                     Tovább
                   </Link>
-                </div>
+                  </div>
+             
 
-                <div className="hidden sm:block sm:w-1/4 ml-20 z-10">
+                <div className="hidden sm:block sm:w-1/4">
+                  
                   <GatsbyImage
                     image={node.mainImage.asset.gatsbyImageData}
                     alt={node.title}
