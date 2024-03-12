@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .title {
+        @apply leading-9 font-bold uppercase font-cormorant text-button_black;
+    }
+
+    .basic-text {
+        @apply text-sm font-normal leading-6 break-words font-open text-gray_strong;
+    }
+
+    .bold-text {
+        @apply text-sm font-bold leading-7 break-words font-open text-gray_strong;
+    }
+}
+
+input:focus-visible, textarea:focus-visible {
+    border: solid 1px #1D1D1B;
+    box-shadow: 0 0 5px 1px #F49716;
+    outline: none;
+}

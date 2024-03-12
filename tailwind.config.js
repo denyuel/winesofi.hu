@@ -23,14 +23,23 @@ module.exports = {
         green_light: '#BBE3C3',
         red: '#C76D5C',
         brown_strong: '#C1672D',
-        button_black: '#1D1D1B'
+        button_black: '#1D1D1B',
       },
       fontFamily: {
         'sans': ['Montserrat', 'sans-serif'],
         'serif': ['Montserrat', 'serif'],
-        'cormorant': ['Cormorant', 'serif'],
-        'kaushan': ['Kaushan Script', 'cursive']
+        'cormorant': ['"Cormorant SC"', 'serif'],        
+        'kaushan': ['Kaushan Script', 'cursive'],
+        'open': ['"Open Sans"', 'sans-serif']
       },
+      width: {
+        input: '21.75rem',
+        textarea: '33.75rem',
+      },
+      height: {
+        input: '2.5rem',
+        textarea: '11.25rem',
+      }
     },
   },
   plugins: [
