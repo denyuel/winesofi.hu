@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.blogpost_card {
+    @apply justify-center items-center
+}
+
+.blogpost_card__text {
+    @apply flex-1 flex items-center self-stretch pl-32 ;
+    background-color: rgba(246, 246, 248, 1);
+}
+
+.blogpost_card__text__brand{
+    @apply p-1 mr-4 rounded text-white uppercase font-sans font-light;
+    background-color: rgba(244, 151, 22, 1);
+}
+
+.blogpost_card__text--invert{
+    @apply flex-1 flex items-center self-stretch pr-32;
+}
+
+.blogpost_card__image{
+    @apply hidden sm:block max-w-[26rem] h-auto relative -ml-36;
+}
+
+.blogpost_card__image--invert{
+    @apply hidden sm:block max-w-[26rem] h-auto relative -mr-36;
+}
+
+
+
+.black_button{
+    @apply text-white uppercase gap-3 px-5 py-3 rounded-2xl;
+    background-color: rgba(29, 29, 27, 1);
+    cursor: pointer;
+}

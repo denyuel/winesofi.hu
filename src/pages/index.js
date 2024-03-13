@@ -24,42 +24,51 @@ export default function HomePage({ data }) {
 
       <section>
         <div className="container">
-          <h2 className="uppercase font-bold text-center md:text-4xl pb-3 mb-auto">Kiemelt posztok</h2>
+          <h2 className="uppercase text-center md:text-4xl pb-3 mb-auto font-cormorant_sc">Kiemelt posztok</h2>
 
-          <div className="border-black border-solid border-2 justify-center items-center gap-24 ">
+          <div className="blogpost_card">
             {nodes.map((node, index) => (
-              <article className={`pb-8 flex border-red border-solid border-2 my-20 mx-20 bg-gray_strong ${index % 2 ? '' : 'sm:flex-row-reverse'}`} key={node.id}>
-                
+              <article
+                className={`flex flex-1  items-center container mx-auto pb-16 overflow-x-hidden  md:flex-wrap lg:flex-nowrap ${
+                  index % 2 ? '' : 'flex items-center flex-row-reverse container mx-auto pb-16 overflow-x-hidden'
+                }`}
+                key={node.id}
+              >
+            
+                <div className={`blogpost_card__text ${
+                  index % 2 ? '' : 'blogpost_card__text--invert'
+                }`}
+                key={node.id}>
 
-                <div className="sm:w-2/4 pl-10 pt-10 md:pt-0 md:pb-10 bg-gray">
-              
-                  <span className="text-white uppercase bg-amber-400 rounded p-1 mr-1">BRAND</span>
+                  <div className="px-8">
+                  <span className="blogpost_card__text__brand">BRAND</span>
                   <span className="text-gray-500">{node._createdAt}</span>
-                  <h2 className="text-2xl font-bold">{node.title}</h2>
+                  <h2 className="mt-2 text-2xl font-bold font-cormorant_sc">{node.title}</h2>
                   <hr className="w-8 mt-3 h-1 opacity-25"></hr>
-                  <div className="prose py-6">
+                  <div className="prose py-6 font-sans">
                     <PortableText
                       value={node._rawSummary}
                       // components={/* optional object of custom components to use */}
                     />
                   </div>
-                  <Link
-                    className="bg-black text-white uppercase gap-3 px-5 py-3 rounded-2xl"
-                    to={`/post/${node.slug.current}`}
-                  >
+                  <Link className="black_button" to={`/post/${node.slug.current}`}>
                     Tovább
                   </Link>
                   </div>
-             
+               </div>
+         
 
-                <div className="hidden sm:block sm:w-1/4">
-                  
-                  <GatsbyImage
-                    image={node.mainImage.asset.gatsbyImageData}
-                    alt={node.title}
-                    className="rounded-full aspect-square"
-                  />
+                <div className={`blogpost_card__image order-1 ${
+                  index % 2 ? '' : 'blogpost_card__image--invert'
+                }`}
+                key={node.id}>
+                <GatsbyImage
+                  image={node.mainImage.asset.gatsbyImageData}
+                  alt={node.title}
+                  className="rounded-full aspect-square"
+                />
                 </div>
+
               </article>
             ))}
           </div>

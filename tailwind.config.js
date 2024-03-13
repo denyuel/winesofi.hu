@@ -28,7 +28,7 @@ module.exports = {
       fontFamily: {
         'sans': ['Montserrat', 'sans-serif'],
         'serif': ['Montserrat', 'serif'],
-        'cormorant': ['Cormorant', 'serif'],
+        'cormorant_sc': ['Cormorant SC', 'serif'],
         'kaushan': ['Kaushan Script', 'cursive']
       },
     },
