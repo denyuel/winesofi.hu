@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import { PortableText } from '@portabletext/react';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
 
 import Layout from '../components/layout';
 
@@ -22,9 +22,18 @@ export default function HomePage({ data }) {
         </div>
       </section>
 
-      <section>
-        <div className='container mx-auto'>
-          Bio section
+      <section className='w-full'>
+        <div className="flex flex-wrap items-center justify-evenly bg-[url('../images/index-bio-bg.png')] bg-contain bg-no-repeat bg-right-bottom">
+          <div className='max-w-[50%]'>
+            <h1 className='font-kaushan text-4xl leading-[52px] tracking-normal text-orange'>Laposa Zsófia</h1>
+            <h3 className='font-cormorant_sc text-3xl font-bold leading-7 tracking-normal uppercase text-button_black'>borász</h3>
+            <div className='h-[1px] w-[40px] opacity-20 bg-button_black mr-auto my-4'></div>
+            <p className='font-sans text-sm leading-7 text-wrap text-button_black opacity-60 pb-4'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus  mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus  mus.</p>
+            <button className='bg-button_black text-white text-sm font-sans font-[600] tracking-[2px] uppercase gap-3 px-5 py-3 rounded-3xl cursor-pointer -mr-24 mt-4'>kapcsolat</button>
+          </div>
+          <div className=''>
+            <StaticImage class='rounded-full h-[19rem] w-[19rem] my-20' src="../images/index-bio-photo.jpg" alt="index-post-right" placeholder="blurred" />
+          </div>
         </div>
       </section>
 
