@@ -39,7 +39,7 @@ export default function Contact() {
                     type="tel" id="tel" name="tel" required placeholder='+36'/>
                 </div>
                 <div className="flex flex-col gap-[0.4rem]">
-                  <label className="pl-4 text-gray-strong text-xs font-light tracking-[2px] uppercase" for="message">üzenet</label>
+                  <label className="pl-4 text-gray_strong text-xs font-light tracking-[2px] uppercase" for="message">üzenet</label>
                   <textarea
                     className="w-full md:w-textarea h-textarea basic-text border-solid border-gray border rounded-3xl resize-none p-4"
                     name="message" id="message" cols="30" rows="10" required placeholder='üzenet'></textarea>
