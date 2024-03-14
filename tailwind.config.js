@@ -28,8 +28,12 @@ module.exports = {
       fontFamily: {
         'sans': ['Montserrat', 'sans-serif'],
         'serif': ['Montserrat', 'serif'],
-        'cormorant': ['Cormorant', 'serif'],
-        'kaushan': ['Kaushan Script', 'cursive']
+        'cormorant': ['Cormorant SC', 'serif'],
+        'kaushan': ['Kaushan Script', 'cursive'],
+        'open': ['"Open Sans"', 'sans-serif']
+      },
+      fontSize: {
+        xxs: '10px',
       },
     },
   },
