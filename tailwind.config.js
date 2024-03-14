@@ -4,6 +4,9 @@ module.exports = {
     "./src/**/*.{html,js,ts,jsx,tsx}",
   ],
   theme: {
+    backgroundPosition: {
+      'bottom-1': 'center bottom -7.5rem'
+    },
     extend: {
       colors: {
         transparent: 'transparent',

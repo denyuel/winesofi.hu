@@ -17,7 +17,7 @@ export default function HomePage({ data }) {
       </section>
 
       <section className='w-full bg-gradient-to-r from-orange to-[#D07C1F]'>
-        <div className="container bg-[url('../images/index-bg-object.png')] bg-no-repeat bg-bottom">
+        <div className="container bg-[url('../images/index-bg-object.png')] bg-no-repeat bg-bottom-1">
           <div className='flex flex-wrap justify-center gap-8'>
             <div className='flex items-center gap-8'>
               <div className='relative z-20 text-right w-[16rem]'>
