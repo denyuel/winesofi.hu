@@ -5,7 +5,7 @@ module.exports = {
   ],
   theme: {
     backgroundPosition: {
-      'bottom-1': 'center bottom -7.5rem'
+      'teaser': 'center bottom -7.5rem'
     },
     extend: {
       colors: {
