@@ -29,19 +29,15 @@ export default function HomePage({ data }) {
           <div className="blogpost_card">
             {nodes.map((node, index) => (
               <article
-                className={`flex flex-1  items-center container mx-auto pb-16 overflow-x-hidden  md:flex-wrap lg:flex-nowrap ${
-                  index % 2 ? '' : 'flex items-center flex-row-reverse container mx-auto pb-16 overflow-x-hidden'
+                className={`flex flex-1  items-center container mx-auto overflow-x-hidden mb-16 gradient ${
+                  index % 2 ? '' : 'sm:flex-row-reverse'
                 }`}
                 key={node.id}
               >
             
-                <div className={`blogpost_card__text ${
-                  index % 2 ? '' : 'blogpost_card__text--invert'
-                }`}
-                key={node.id}>
-
+                <div className="flex flex-1 items-center  self-stretch pl-32 -ml-32">
                   <div className="px-8">
-                  <span className="blogpost_card__text__brand">BRAND</span>
+                  <span className="brand">BRAND</span>
                   <span className="text-gray-500">{node._createdAt}</span>
                   <h2 className="mt-2 text-2xl font-bold font-cormorant_sc">{node.title}</h2>
                   <hr className="w-8 mt-3 h-1 opacity-25"></hr>
@@ -58,10 +54,7 @@ export default function HomePage({ data }) {
                </div>
          
 
-                <div className={`blogpost_card__image order-1 ${
-                  index % 2 ? '' : 'blogpost_card__image--invert'
-                }`}
-                key={node.id}>
+                <div className="flex items-center container max-w-[26rem] h-auto">
                 <GatsbyImage
                   image={node.mainImage.asset.gatsbyImageData}
                   alt={node.title}
