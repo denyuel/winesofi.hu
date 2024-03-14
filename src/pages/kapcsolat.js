@@ -18,7 +18,7 @@ export default function Contact() {
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies.
               </p>
             </div>
-            <div className='flex justify-end w-11/12 md:w-4/12 -mb-20'>
+            <div className='flex justify-center md:justify-end w-11/12 md:w-4/12 -mb-20'>
               <div className='w-64 h-64 overflow-hidden z-10 rounded-full aspect-square'>
                 <StaticImage className='rounded-full' src='../images/contact.jpg'/>
               </div>
