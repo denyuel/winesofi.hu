@@ -28,6 +28,51 @@ export default function HomePage({ data }) {
         </div>
       </section>
 
+      <section className='w-full'>
+        <div className='container py-16 bg-gray_light flex flex-col items-center justify-between gap-6'>
+          <h1 className='font-cormorant_sc uppercase text-3xl font-bold leading-7 text-button_black'>közelgő események</h1>
+          <div className='flex flex-wrap justify-center gap-10 mt-8'>
+            <div id='card' className='flex items-center justify-end gap-8 px-6 bg-white border-[1px] border-gray'>
+              <div className='flex flex-col items-start justify-around pt-6 pb-4 w-52'>
+                <h3 className='font-sans text-sm leading-4 tracking-widest uppercase px-[10px] py-[4px] rounded-[4px] text-white bg-brown_strong'>képzés</h3>
+                <h2 className='font-cormorant_sc text-3xl font-bold uppercase mt-2 text-button_black'>wine&roof</h2>
+                <p className='font-sans text-sm leading-7 capitalize text-gray_strong'>Badacsonytomaj</p>
+                <p className='font-sans text-sm leading-7 capitalize text-gray_strong'>Helyszín</p>
+              </div>
+              <div className='bg-gray flex flex-col items-center w-20 h-20 rounded-full -mt-40'>
+                <h1 className='font-kaushan text-4xl leading-[52px] text-button_black -mb-4 mt-2'>18</h1>
+                <p className='font-sans text-sm leading-7 text-button_black'>aug</p>
+              </div>
+            </div>
+            <div id='card' className='flex items-center justify-end gap-8 px-6 bg-white border-[1px] border-gray'>
+              <div className='flex flex-col items-start justify-around pt-6 pb-4 w-52'>
+                <h3 className='font-sans text-sm leading-4 tracking-widest uppercase px-[10px] py-[4px] rounded-[4px] text-white bg-blue'>tanácsadás</h3>
+                <h2 className='font-cormorant_sc text-3xl font-bold uppercase mt-2 text-button_black'>esemény neve</h2>
+                <p className='font-sans text-sm leading-7 capitalize text-gray_strong'>város</p>
+                <p className='font-sans text-sm leading-7 capitalize text-gray_strong'>helyszín</p>
+              </div>
+              <div className='bg-gray flex flex-col items-center w-20 h-20 rounded-full -mt-40'>
+                <h1 className='font-kaushan text-4xl leading-[52px] text-button_black -mb-4 mt-2'>20</h1>
+                <p className='font-sans text-sm leading-7 text-button_black'>szept</p>
+              </div>
+            </div>
+            <div id='card' className='flex items-center justify-end gap-8 px-6 bg-white border-[1px] border-gray'>
+              <div className='flex flex-col items-start justify-around pt-6 pb-4 w-52'>
+                <h3 className='font-sans text-sm leading-4 tracking-widest uppercase px-[10px] py-[4px] rounded-[4px] text-white bg-green'>szőlészet</h3>
+                <h2 className='font-cormorant_sc text-3xl font-bold uppercase mt-2 text-button_black'>esemény neve</h2>
+                <p className='font-sans text-sm leading-7 capitalize text-gray_strong'>Badacsonytomaj</p>
+                <p className='font-sans text-sm leading-7 capitalize text-gray_strong'>Helyszín</p>
+              </div>
+              <div className='bg-gray flex flex-col items-center w-20 h-20 rounded-full -mt-40'>
+                <h1 className='font-kaushan text-4xl leading-[52px] text-button_black -mb-4 mt-2'>20</h1>
+                <p className='font-sans text-sm leading-7 text-button_black'>szept</p>
+              </div>
+            </div>
+          </div>
+          <button className='bg-button_black text-white text-sm font-sans font-[600] tracking-[2px] uppercase gap-3 px-5 py-3 rounded-3xl cursor-pointer mt-4'>további események</button>
+        </div>
+      </section>
+
       <section>
         <div className='container mx-auto'>
           Blogposts
