@@ -5,10 +5,10 @@
   "main": "package.json",
   "license": "UNLICENSED",
   "scripts": {
-    "dev": "npx sanity@latest dev",
-    "start": "npx sanity@latest start",
-    "build": "npx sanity@latest build ../static/admin -y",
-    "deploy-graphql": "npx sanity@latest graphql deploy"
+    "dev": "npx sanity dev",
+    "start": "npx sanity start",
+    "build": "npx sanity build ../static/admin -y",
+    "deploy-graphql": "npx sanity graphql deploy"
   },
   "keywords": [
     "sanity"
