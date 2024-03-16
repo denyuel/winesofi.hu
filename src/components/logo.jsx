@@ -4,7 +4,7 @@ import logoSvg from '../images/logo.svg';
 
 const Logo = () => {
     return (
-      <div className='flex flex-col items-center gap-4 relative w-80'>
+      <div className='flex flex-col items-center gap-4 relative w-80 z-10'>
         <div className='absolute top-0 z-10 w-28'>
           <img src={logoSvg} alt="logo" className='w-full h-auto' />
         </div>
