@@ -2,13 +2,14 @@ import React from 'react';
 import LeftNav from './left_nav';
 import RightNav from './right_nav';
 import { StaticImage } from "gatsby-plugin-image";
+import logoSvg from '../images/logo.svg';
 
 const Footer = () => {
   return (
     <div className='flex gap-8'>
         <div className='flex w-2/12 gap-4'>
             <div className='flex max-w-[4.25rem] max-h-[3.5rem]'>
-                <StaticImage src="../images/logo.svg" alt="logo"/>
+                <img src={logoSvg} alt="logo"/>
             </div>
             <div className='flex items-center w-40'>
                 <span className='nav-text'>Copyright © 2023</span>
