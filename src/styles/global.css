@@ -1,3 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .title {
+        @apply leading-9 font-bold uppercase font-cormorant text-button_black;
+    }
+
+    .basic-text {
+        @apply text-sm font-normal leading-6 break-words font-open text-gray_strong;
+    }
+
+    .bold-text {
+        @apply text-sm font-bold leading-7 break-words font-open text-gray_strong;
+    }
+
+    .circle {
+        @apply font-open font-light uppercase break-words tracking-[2px] text-button_black;
+    }
+}
+
+.hero {
+    background-image: url('../images/hero-bg.png');
+    background-size: cover;
+}
