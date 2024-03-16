@@ -16,10 +16,19 @@
     .bold-text {
         @apply text-sm font-bold leading-7 break-words font-open text-gray_strong;
     }
+  
+    .circle {
+        @apply font-open font-light uppercase break-words tracking-[2px] text-button_black;
+    }
 }
 
 input:focus-visible, textarea:focus-visible {
     border: solid 1px #1D1D1B;
     box-shadow: 0 0 5px 1px #F49716;
     outline: none;
+}
+
+.hero {
+    background-image: url('../images/hero-bg.png');
+    background-size: cover;
 }
