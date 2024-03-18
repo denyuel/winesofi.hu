@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .teaser-img{
+        @apply rounded-full right-16 max-h-64 max-w-64 w-[50vw] h-[50vw] sm:mb-20 xl:mt-20;
+    }
+}
