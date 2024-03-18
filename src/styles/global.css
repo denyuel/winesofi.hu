@@ -16,7 +16,17 @@
     cursor: pointer;
 }
 
-.gradient {
-    background: linear-gradient(to right, rgba(246, 246, 248, 0), rgba(246, 246, 248, 0.3) 30%, rgba(246, 246, 248, 1) 100%);
-    background-color: #F6F6F8;
+.blog_post_card{
+    @apply flex md:flex-row flex-1  items-center container mx-auto overflow-x-hidden mb-16;
+
+}
+
+article.blog-first > div.blog-article-child{
+    @apply -ml-[200px] pl-[200px];
+    background: #F6F6F8;
+  }
+
+  article.blog-second > div.blog-article-child{
+    @apply -mr-[200px] pl-[200px];
+    background: #F6F6F8;
   }

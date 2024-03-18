@@ -26,16 +26,16 @@ export default function HomePage({ data }) {
         <div className="container">
           <h2 className="uppercase text-center md:text-4xl pb-3 mb-auto font-cormorant_sc">Kiemelt posztok</h2>
 
-          <div className="blogpost_card">
+          <div className="">
             {nodes.map((node, index) => (
               <article
-                className={`flex flex-1  items-center container mx-auto overflow-x-hidden mb-16 gradient ${
-                  index % 2 ? '' : 'sm:flex-row-reverse'
+                className={`blog_post_card flex-col-reverse ${
+                  index % 2 ? 'blog-second' : 'blog-first md:flex-row-reverse'
                 }`}
                 key={node.id}
               >
             
-                <div className="flex flex-1 items-center  self-stretch pl-32 -ml-32">
+                <div className="blog-article-child flex flex-1 items-center self-stretch md:pl-32 -ml-28 mt-4 md:mt-0 ">
                   <div className="px-8">
                   <span className="brand">BRAND</span>
                   <span className="text-gray-500">{node._createdAt}</span>
@@ -54,7 +54,7 @@ export default function HomePage({ data }) {
                </div>
          
 
-                <div className="flex items-center container max-w-[26rem] h-auto">
+                <div className="flex items-center container max-w-[26rem] max-h-[26rem]">
                 <GatsbyImage
                   image={node.mainImage.asset.gatsbyImageData}
                   alt={node.title}
