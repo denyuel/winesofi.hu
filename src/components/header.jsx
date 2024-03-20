@@ -20,11 +20,11 @@ const Header = () => {
       <div className="menu-icon" onClick={handleShowNavbar}>
         <StaticImage src="../images/hamburger 1.png" alt="hamburger ikon"/>
       </div>
-      <div className={`nav-elements  ${showNavbar && 'active'}`}>
-        <ul>
-          <li><LeftNav /></li>
-          <li className='logo'><Logo /></li>
-          <li><RightNav /></li>
+      <div className={`nav-elements w-full  ${showNavbar && 'active'}`}>
+        <ul className='w-full'>
+          <li className='w-5/12'><LeftNav /></li>
+          <li className='w-2/12 flex justify-center logo'><Logo /></li>
+          <li className='w-5/12'><RightNav /></li>
         </ul>
       </div>
       <div className="flex items-center gap-2 md:hidden">
