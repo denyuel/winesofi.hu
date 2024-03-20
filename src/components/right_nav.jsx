@@ -6,8 +6,8 @@ import insta from "../images/instagram.svg";
 
 const RightNav = () => {
   return (
-    <nav className="container mx-auto flex justify-between items-center px-4 gap-6 h-full uppercase">
-      <div className="flex flex-col md:flex-row flex-1 justify-between items-end md:items-center space-x-4 gap-2">
+    <nav className="container ml-[3.7rem] sm:mx-auto flex justify-between items-center px-4 gap-6 h-full uppercase">
+      <div className="flex flex-col sm:flex-row sm:flex-1 justify-between items-end md:items-center sm:space-x-4 gap-4 nav-text">
         <div className="flex flex-col md:flex-row flex-1 items-end md:items-center justify-start space-x-4 gap-4 nav-text">
           {/*
             <Link to="/esemenyek" className="hover:text-gray-300">Események</Link>
