@@ -24,10 +24,10 @@ const Header = () => {
         <ul className='w-full flex flex-col sm:flex-row gap-0 sm:gap-6 pt-4 sm:pt-0 pb-4 sm:pb-0'>
           <li className='w-5/12 mr-0 mt-3 sm:mt-0'><LeftNav /></li>
           <li className='w-2/12 justify-center hidden sm:flex '><Logo /></li>
-          <li className='w-5/12 mr-0 mt-[0.9rem] ms:mt-0'><RightNav /></li>
+          <li className='w-5/12 mr-0 mt-[0.9rem] sm:mt-0'><RightNav /></li>
         </ul>
       </div>
-      <div className="flex items-center gap-2 md:hidden">
+      <div className="flex items-center gap-2 sm:hidden">
           <a href="https://www.facebook.com/" className="hover:text-gray-300">
             <img src={fb} alt="facebook" className="w-6 h-6 mx-2" />
           </a>
