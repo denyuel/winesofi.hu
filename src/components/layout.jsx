@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
         </div>
       </header>
       <main className="flex-grow">
-        <div className="container mx-auto xl:px-4">
+        <div className="mx-auto xl:px-4">
           {/* Main content here */}
           {children}
         </div>

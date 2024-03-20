@@ -9,7 +9,7 @@ import insta from "../images/instagram.svg";
 const Footer = () => {
   return (
     <div className='flex gap-8'>
-        <div className='flex w-2/3 md:w-1/5 justify-start gap-4'>
+        <div className='flex w-2/3 md:w-1/6 justify-start gap-2 lg:gap-4'>
             <div className='flex max-w-[4.25rem] max-h-[3.5rem]'>
                 <img src={logoSvg} alt="logo"/>
             </div>
@@ -18,11 +18,15 @@ const Footer = () => {
             </div>
             </div>
         <div className='hidden md:flex w-10/12'>
-            <LeftNav />
+            <div className="w-7/12">
+                <LeftNav />
+            </div>
             <div className="flex items-center w-4 m-4 md:m-3 lg:m-4">
                 <StaticImage src="../images/ellipse.svg"/>
             </div>
-            <RightNav />
+            <div className="w-5/12">
+                <RightNav />
+            </div>
         </div>
         <div className="flex items-center justify-end gap-2 md:hidden w-1/3">
           <a href="https://www.facebook.com/" className="hover:text-gray-300">

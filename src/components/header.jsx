@@ -21,7 +21,7 @@ const Header = () => {
         <StaticImage src="../images/hamburger 1.png" alt="hamburger ikon"/>
       </div>
       <div className={`nav-elements w-full  ${showNavbar && 'active'}`}>
-        <ul className='w-full'>
+        <ul className='w-full flex gap-4 lg:gap-12'>
           <li className='w-5/12'><LeftNav /></li>
           <li className='w-2/12 flex justify-center logo'><Logo /></li>
           <li className='w-5/12'><RightNav /></li>
