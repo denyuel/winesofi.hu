@@ -23,7 +23,7 @@ const Header = () => {
       <div className={`nav-elements z-30 sm:z-0 absolute sm:static -left-6 sm:left-0 top-16 sm:top-0 bg-gray_light sm:bg-white w-0 sm:w-full h-fit sm:h-auto  overflow-hidden sm:overflow-visible transition-all ease-in-out duration-300 sm:transition-none ${showNavbar && 'w-48 z-30 rounded-md'}`}>
         <ul className='w-full flex flex-col sm:flex-row gap-0 sm:gap-6 pt-4 sm:pt-0 pb-4 sm:pb-0'>
           <li className='w-5/12 mr-0 mt-3 sm:mt-0'><LeftNav /></li>
-          <li className='w-2/12 flex justify-center hidden sm:flex'><Logo /></li>
+          <li className='w-2/12 justify-center hidden sm:flex'><Logo /></li>
           <li className='w-5/12 mr-0 mt-[0.9rem] sm:mt-0'><RightNav /></li>
         </ul>
       </div>
