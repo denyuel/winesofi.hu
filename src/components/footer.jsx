@@ -7,7 +7,7 @@ import logoSvg from '../images/logo.svg';
 const Footer = () => {
   return (
     <div className='flex gap-8'>
-        <div className='flex w-2/12 gap-4'>
+        <div className='flex justify-center w-full md:w-2/12 md:justify-start gap-4'>
             <div className='flex max-w-[4.25rem] max-h-[3.5rem]'>
                 <img src={logoSvg} alt="logo"/>
             </div>
@@ -15,7 +15,7 @@ const Footer = () => {
                 <span className='nav-text'>Copyright © 2023</span>
             </div>
             </div>
-        <div className='flex w-10/12'>
+        <div className='hidden md:flex w-10/12'>
             <LeftNav />
             <div className="flex items-center w-4 m-2">
                 <StaticImage src="../images/ellipse.svg"/>
