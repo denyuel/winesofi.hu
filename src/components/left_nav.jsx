@@ -18,13 +18,13 @@ const LeftNav = () => {
   `);
 
   return (
-    <nav className="container mx-auto flex justify-between items-center xl:px-4 gap-6 h-full uppercase">
-      <div className="flex flex-col md:flex-row flex-1 items-end md:items-center justify-end xl:space-x-4 md:gap-3 xl:gap-4 nav-text">
+    <nav className="container ml-6 sm:mx-auto flex justify-between items-center xl:px-4 gap-6 h-full uppercase">
+      <div className="flex flex-col sm:flex-row sm:flex-1 items-end sm:items-center justify-end xl:space-x-4 md:gap-3 xl:gap-4 nav-text">
         <Link to="/" className="hover:text-gray-300">Wine&Sofi</Link>
         {pages.nodes.map((page) => (
           <Link to={`/${page.slug.current}`} key={page.id} className="hover:text-gray-300">
             <div className="flex items-center gap-4 xl:gap-7">
-              <StaticImage className="hidden md:block" src="../images/ellipse.svg" />
+              <StaticImage className="hidden sm:block" src="../images/ellipse.svg" />
               {page.title}
             </div>
           </Link>
