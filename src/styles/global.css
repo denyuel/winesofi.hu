@@ -39,10 +39,6 @@ textarea:focus-visible {
 
 
 /* mobile navbar */
-.menu-icon {
-  display: none;
-}
-
 .nav-elements ul {
   display: flex;
   gap: 3rem;
@@ -60,12 +56,6 @@ textarea:focus-visible {
 }
 
 @media (max-width: 600px) {
-  .menu-icon {
-    display: block;
-    cursor: pointer;
-    height: 2rem;
-    width: 2rem;
-  }
 
   .nav-elements {
     z-index: 30;

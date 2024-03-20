@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <div className='flex justify-between'>
-      <div className="menu-icon" onClick={handleShowNavbar}>
+      <div className="menu-icon flex justify-start items-center md:hidden w-3/12 h-8 cursor-pointer" onClick={handleShowNavbar}>
         <StaticImage src="../images/hamburger 1.png" alt="hamburger ikon"/>
       </div>
       <div className={`nav-elements w-full  ${showNavbar && 'active'}`}>
@@ -27,7 +27,10 @@ const Header = () => {
           <li className='w-5/12'><RightNav /></li>
         </ul>
       </div>
-      <div className="flex items-center gap-2 md:hidden">
+      <div className='flex justify-center w-6/12 md:hidden'>
+        <Logo />
+      </div>
+      <div className="flex items-center justify-end md:hidden w-3/12">
           <a href="https://www.facebook.com/" className="hover:text-gray-300">
             <img src={fb} alt="facebook" className="w-6 h-6 mx-2" />
           </a>

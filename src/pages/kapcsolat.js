@@ -7,7 +7,7 @@ export default function Contact() {
     <Layout>
       <div>
         <div className='w-full'>
-          <StaticImage className='w-full' src='../images/narrow-hero-bg.png'/>
+          <StaticImage className='w-full min-h-16' src='../images/narrow-hero-bg.png'/>
         </div>
         <div className='flex flex-col'>
           <div className='flex flex-col md:flex-row justify-center items-center gap-2 px-4 md:px-20 xl:px-72 py-12'>
