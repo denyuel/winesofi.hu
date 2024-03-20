@@ -21,7 +21,7 @@
     @apply font-open font-light uppercase break-words tracking-[2px] text-button_black;
   }
   .nav-text {
-    @apply text-xs font-light tracking-[2px] break-words uppercase font-open text-button_black;
+    @apply font-light break-words uppercase font-open text-button_black text-xxs tracking-[0px] xl:text-xs xl:tracking-[2px];
   }
 }
 

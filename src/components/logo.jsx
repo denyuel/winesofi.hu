@@ -8,7 +8,7 @@ const Logo = () => {
         <div className='absolute top-0 z-10 w-20 md:w-28'>
           <img src={logoSvg} alt="logo" className='w-full h-auto' />
         </div>
-        <div className='absolute top-12 md:top-11 z-5 w-48 md:w-72'>
+        <div className='absolute top-12 md:top-[2.7rem] z-5 w-48 md:w-72'>
           <StaticImage src="../images/intersect.png" alt="intersect"/>
         </div>
       </div>

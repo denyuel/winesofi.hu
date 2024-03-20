@@ -9,7 +9,7 @@ import insta from "../images/instagram.svg";
 const Footer = () => {
   return (
     <div className='flex gap-8'>
-        <div className='flex w-2/3 md:w-1/4 justify-start gap-4'>
+        <div className='flex w-2/3 md:w-1/5 justify-start gap-4'>
             <div className='flex max-w-[4.25rem] max-h-[3.5rem]'>
                 <img src={logoSvg} alt="logo"/>
             </div>
@@ -19,7 +19,7 @@ const Footer = () => {
             </div>
         <div className='hidden md:flex w-10/12'>
             <LeftNav />
-            <div className="flex items-center w-4 m-2">
+            <div className="flex items-center w-4 m-4 md:m-3 lg:m-4">
                 <StaticImage src="../images/ellipse.svg"/>
             </div>
             <RightNav />
