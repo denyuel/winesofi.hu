@@ -21,7 +21,7 @@ const Header = () => {
         <StaticImage src="../images/hamburger 1.png" alt="hamburger ikon"/>
       </div>
       <div className={`nav-elements z-30 md:z-0 absolute md:static -left-6 md:left-0 top-16 md:top-0 bg-gray_light md:bg-white w-0 md:w-full h-fit md:h-auto overflow-hidden md:overflow-visible transition-all ease-in-out duration-300 md:transition-none ${showNavbar && 'w-48 z-30 rounded-md'}`}>
-        <ul className='w-full flex flex-col md:flex-row gap-0 md:gap-4 pt-4 md:pt-0 pb-4 md:pb-0'>
+        <ul className='w-full flex flex-col md:flex-row gap-0 md:gap-8 pt-4 md:pt-0 pb-4 md:pb-0'>
           <li className='w-5/12 mr-0 mt-3 md:mt-0'><LeftNav /></li>
           <li className='w-2/12 justify-center hidden md:flex'><Logo /></li>
           <li className='w-5/12 mr-0 mt-2 md:mt-0'><RightNav /></li>
