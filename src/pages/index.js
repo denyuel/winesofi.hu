@@ -80,12 +80,12 @@ export default function HomePage({ data }) {
       </section>
 
       <section>
-        <div className="container">
+        <div className="container mt-8">
           <h2 className="uppercase text-center md:text-4xl pb-3 mb-auto font-cormorant_sc">Kiemelt posztok</h2>
           <div className="">
             {nodes.map((node, index) => (
               <article
-                className={`blog_post_card flex-col-reverse max-w-md md:w-full ${
+                className={`blog_post_card flex-col-reverse max-w-[80%] md:w-full ${
                   index % 2 ? 'blog-second' : 'blog-first md:flex-row-reverse'
                 }`}
                 key={node.id}
@@ -108,7 +108,7 @@ export default function HomePage({ data }) {
                   </div>
                </div>
 
-                <div className="flex items-center container  md:max-w-[26rem] md:max-h-[26rem]">
+                <div className="flex items-center container h-auto md:max-w-[26rem] md:max-h-[26rem]">
                 <GatsbyImage
                   image={node.mainImage.asset.gatsbyImageData}
                   alt={node.title}
