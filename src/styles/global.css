@@ -1,19 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .title {
+        @apply leading-9 font-bold uppercase font-cormorant_sc text-button_black;
+    }
 
+    .basic-text {
+        @apply text-sm font-normal leading-6 break-words font-open text-gray_strong;
+    }
+
+    .bold-text {
+        @apply text-sm font-bold leading-7 break-words font-open text-gray_strong;
+    }
+  
+    .circle {
+        @apply font-open font-light uppercase break-words tracking-[2px] text-button_black;
+    }
+}
+
+input:focus-visible, textarea:focus-visible {
+    border: solid 1px #1D1D1B;
+    box-shadow: 0 0 5px 1px #F49716;
+    outline: none;
+}
+
+.hero {
+    background-image: url('../images/hero-bg.png');
+    background-size: cover;
+}
 
 
 .brand{
-    @apply p-1 mr-4 rounded text-white uppercase font-sans font-light;
-    background-color: rgba(244, 151, 22, 1);
+    @apply p-1 mr-4 rounded text-white uppercase font-sans font-light bg-orange;
 }
 
 .black_button{
-    @apply text-white uppercase gap-3 px-5 py-3 rounded-2xl;
-    background-color: rgba(29, 29, 27, 1);
-    cursor: pointer;
+    @apply text-white uppercase gap-3 px-5 py-3 rounded-2xl bg-button_black cursor-pointer;
 }
 
 .blog_post_card{
@@ -22,11 +48,9 @@
 }
 
 article.blog-first > div.blog-article-child{
-    @apply -ml-[200px] pl-[200px];
-    background: #F6F6F8;
+    @apply -ml-[200px] pl-[200px] bg-gray_light;
   }
 
   article.blog-second > div.blog-article-child{
-    @apply -mr-[200px] pl-[200px];
-    background: #F6F6F8;
+    @apply -mr-[200px] pl-[200px] bg-gray_light;
   }
