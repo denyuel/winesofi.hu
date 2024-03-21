@@ -21,7 +21,7 @@ const Footer = () => {
             <div className="w-7/12">
                 <LeftNav />
             </div>
-            <div className="flex items-center justify-center w-4 m-4 md:m-2 xl:m-4">
+            <div className="flex items-center justify-center w-4 m-2 xl:m-4">
                 <StaticImage src="../images/ellipse.svg"/>
             </div>
             <div className="w-5/12">

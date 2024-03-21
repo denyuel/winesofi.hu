@@ -19,7 +19,7 @@ const LeftNav = () => {
 
   return (
     <nav className="container ml-9 md:mx-auto flex justify-between items-center h-full uppercase">
-      <div className="flex flex-col md:flex-row md:flex-1 justify-end items-end md:items-center lg:space-x-4 gap-3 xl:gap-4 nav-text">
+      <div className="flex flex-col md:flex-row md:flex-1 justify-end items-end md:items-center xl:space-x-4 gap-3 xl:gap-4 nav-text">
         <Link to="/" className="hover:text-gray-300">Wine&Sofi</Link>
         {pages.nodes.map((page) => (
           <Link to={`/${page.slug.current}`} key={page.id} className="hover:text-gray-300">
