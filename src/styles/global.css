@@ -39,5 +39,5 @@ textarea:focus-visible {
 
 .narrow-hero {
   background-image: url("../images/narrow-hero-bg.png");
-  background-size: cover;
+  @apply w-full min-h-28 bg-cover;
 }
