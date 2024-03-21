@@ -6,9 +6,9 @@ import insta from "../images/instagram.svg";
 
 const RightNav = () => {
   return (
-    <nav className="container ml-[4.7rem] sm:mx-auto flex justify-between items-center h-full uppercase">
-      <div className="flex flex-col sm:flex-row sm:flex-1 justify-between items-end md:items-center">
-        <div className="flex flex-col sm:flex-row flex-1 items-end sm:items-center justify-start sm:space-x-4 md:space-x-0 xl:space-x-4 gap-3 xl:gap-4 nav-text">
+    <nav className="container ml-[4.7rem] md:mx-auto flex justify-between items-center h-full uppercase">
+      <div className="flex flex-col md:flex-row md:flex-1 justify-between items-end md:items-center">
+        <div className="flex flex-col md:flex-row flex-1 items-end md:items-center justify-start lg:space-x-4 gap-3 xl:gap-4 nav-text">
           {/*
             <Link to="/esemenyek" className="hover:text-gray-300">Események</Link>
             <div className="flex items-center justify-center">
@@ -18,14 +18,14 @@ const RightNav = () => {
           <Link to="/blog" className="hover:text-gray-300">
             Blog
           </Link>
-          <div className="hidden sm:flex items-center justify-center">
+          <div className="hidden md:flex items-center justify-center">
             <StaticImage src="../images/ellipse.svg" />
           </div>
           <Link to="/kapcsolat" className="hover:text-gray-300">
             Kapcsolat
           </Link>
         </div>
-        <div className="hidden sm:flex justify-between items-center gap-2">
+        <div className="hidden md:flex justify-between items-center gap-2">
           <a href="https://www.facebook.com/" className="hover:text-gray-300">
             <img src={fb} alt="facebook" className="w-6 h-6 lg:mx-2" />
           </a>
