@@ -35,22 +35,22 @@ input:focus-visible, textarea:focus-visible {
 
 
 .brand{
-    @apply p-1 mr-4 rounded text-white uppercase font-sans font-light bg-orange;
+  @apply p-1 mr-4 rounded text-white uppercase font-sans font-light bg-orange;
 }
 
 .black_button{
-    @apply text-white uppercase gap-3 px-5 py-3 rounded-2xl bg-button_black cursor-pointer;
+  @apply text-white uppercase gap-3 px-5 py-3 rounded-2xl bg-button_black cursor-pointer;
 }
 
 .blog_post_card{
-    @apply flex md:flex-row flex-1  items-center container mx-auto overflow-x-hidden mb-16;
+  @apply flex md:flex-row flex-1  items-center container mx-auto overflow-x-hidden mb-16;
 
 }
 
 article.blog-first > div.blog-article-child{
-    @apply -ml-[200px] pl-[200px] bg-gray_light;
-  }
+  @apply md:-ml-[200px] md:pl-[200px] bg-gray_light;
+}
 
-  article.blog-second > div.blog-article-child{
-    @apply -mr-[200px] pl-[200px] bg-gray_light;
-  }
+article.blog-second > div.blog-article-child{
+  @apply  md:-mr-[200px] md:pl-[200px] bg-gray_light;
+}
