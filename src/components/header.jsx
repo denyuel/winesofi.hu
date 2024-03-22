@@ -1,55 +1,44 @@
 import React from 'react';
-import { Link, useStaticQuery, graphql } from 'gatsby';
-
-const Logo = () => {
-  return <h1 className="text-2xl font-bold">Wine&Sofi</h1>;
-};
+import LeftNav from './left_nav';
+import RightNav from './right_nav';
+import Logo from './logo';
+import { useState } from 'react';
+import { StaticImage } from "gatsby-plugin-image";
+import fb from "../images/facebook.svg";
+import insta from "../images/instagram.svg";
 
 const Header = () => {
-  const { pages } = useStaticQuery(graphql`
-    query {
-      pages: allSanityPage {
-        nodes {
-          id
-          slug {
-            current
-          }
-          title
-        }
-      }
-    }
-  `);
+
+  const [showNavbar, setShowNavbar] = useState(false)
+
+  const handleShowNavbar = () => {
+    setShowNavbar(!showNavbar)
+  }
 
   return (
-    <header className="py-4">
-      <nav className="container mx-auto flex justify-between items-center px-4 gap-6 uppercase">
-        <div className="flex flex-1 justify-end space-x-4 gap-4">
-          <Link to="/" className="hover:text-gray-300">Wine&Sofi</Link>
-          {pages.nodes.map((page) => (
-            <Link to={`/${page.slug.current}`} key={page.id} className="hover:text-gray-300">{page.title}</Link>
-          ))}
-        </div>
-        <div className="px-8">
-          <Link to="/"><Logo /></Link>
-        </div>
-        <div className="flex flex-1 justify-between space-x-4 gap-4">
-          <div className="flex flex-1 justify-start space-x-4 gap-4">
-            <Link to="/blog" className="hover:text-gray-300">Blog</Link>
-            <Link to="/kapcsolat" className="hover:text-gray-300">Kapcsolat</Link>
-          </div>
-          <div className="flex justify-between items-center px-4 gap-4 ml-8">
-            <a href="#" className="hover:text-gray-300">
-              {/* svg facebook icon */}
-              fb
-            </a>
-            <a href="#" className="hover:text-gray-300">
-              {/* svg instagram icon */}
-              i
-            </a>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <div className='flex justify-between'>
+      <div className="flex justify-start items-center md:hidden w-3/12 h-8 cursor-pointer" onClick={handleShowNavbar}>
+        <StaticImage src="../images/hamburger 1.png" alt="hamburger ikon"/>
+      </div>
+      <div className={`nav-elements z-30 md:z-0 absolute md:static -left-6 md:left-0 top-16 md:top-0 bg-gray_light md:bg-white w-0 md:w-full h-fit md:h-auto overflow-hidden md:overflow-visible transition-all ease-in-out duration-300 md:transition-none ${showNavbar && 'w-48 z-30 rounded-md'}`}>
+        <ul className='w-full flex flex-col md:flex-row gap-0 md:gap-8 pt-4 md:pt-0 pb-4 md:pb-0'>
+          <li className='w-5/12 mr-0 mt-3 md:mt-0'><LeftNav /></li>
+          <li className='w-2/12 justify-center hidden md:flex'><Logo /></li>
+          <li className='w-5/12 mr-0 mt-2 md:mt-0'><RightNav /></li>
+        </ul>
+      </div>
+      <div className='flex justify-center w-6/12 md:hidden'>
+        <Logo />
+      </div>
+      <div className="flex items-center justify-end md:hidden w-3/12">
+          <a href="https://www.facebook.com/" className="hover:text-gray-300">
+            <img src={fb} alt="facebook" className="w-6 h-6 mx-2" />
+          </a>
+          <a href="https://www.instagram.com/" className="hover:text-gray-300">
+            <img src={insta} alt="instagram" className="w-7 h-7 mx-2" />
+          </a>
+      </div>
+    </div>
   );
 };
 

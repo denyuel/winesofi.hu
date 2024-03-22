@@ -12,7 +12,7 @@ export default function HomePage({ data }) {
     <Layout>
       <section>
         <div className="flex flex-col justify-center w-full h-auto md:min-h-[30rem] hero">
-          <div className="flex justify-center gap-2 md:gap-8 -mb-16 md:-mb-32 md:mt-16 w-full wine-container">
+          <div className="flex justify-center gap-2 mt-12 md:gap-8 -mb-16 md:-mb-32 md:mt-16 w-full wine-container">
             <div className="flex flex-col items-center max-w-full">
               <StaticImage className="h-auto -mb-16 md:-mb-36 z-10" src='../images/bor3.png' alt="kéknyelű 2021" />
               <div
