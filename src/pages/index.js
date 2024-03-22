@@ -85,7 +85,7 @@ export default function HomePage({ data }) {
           <div className="">
             {nodes.map((node, index) => (
               <article
-                className={`blog_post_card flex-col-reverse max-w-[80%] md:w-full ${
+                className={`blog_post_card flex-col-reverse max-w-[80%] sm:max-w-[90%] md:w-full ${
                   index % 2 ? 'blog-second' : 'blog-first md:flex-row-reverse'
                 }`}
                 key={node.id}
