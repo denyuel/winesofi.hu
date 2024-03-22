@@ -80,7 +80,7 @@ export default function HomePage({ data }) {
       </section>
 
       <section>
-        <div className="container mt-8">
+        <div className="mx-12 mt-8">
           <h2 className="uppercase text-center md:text-4xl pb-3 mb-auto font-cormorant_sc">Kiemelt posztok</h2>
           <div className="">
             {nodes.map((node, index) => (
