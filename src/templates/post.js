@@ -31,7 +31,7 @@ export default function BlogPost({ data }) {
       </div>
       <div className='w-full h-0 border-b-[1px] border-button_black border-opacity-20'></div>
       <div className='container mx-auto py-10'>
-        <div className="prose prose-h2:font-cormorant prose-h2:text-[28px] prose-h2:leading-7 prose-h2:font-bold prose-p:text-sm prose-p:leading-6 prose-p:font-normal prose-p:font-open max-w-none">
+        <div className="prose prose-h2:font-cormorant prose-h2:text-[28px] prose-h2:leading-7 prose-h2:font-bold text-sm leading-6 font-normal font-open max-w-none">
           <PortableText
             value={post._rawBody}
             // components={/* optional object of custom components to use */}
