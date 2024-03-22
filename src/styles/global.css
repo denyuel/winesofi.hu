@@ -1,34 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
-    .title {
-        @apply leading-9 font-bold uppercase font-cormorant text-button_black;
-    }
+  .title {
+    @apply leading-9 font-bold uppercase font-cormorant text-button_black;
+  }
 
-    .basic-text {
-        @apply text-sm font-normal leading-6 break-words font-open text-gray_strong;
-    }
+  .basic-text {
+    @apply text-sm font-normal leading-6 break-words font-open text-gray_strong;
+  }
 
-    .bold-text {
-        @apply text-sm font-bold leading-7 break-words font-open text-gray_strong;
-    }
-  
-    .circle {
-        @apply font-open font-light uppercase break-words tracking-[2px] text-button_black;
-    }
+  .bold-text {
+    @apply text-sm font-bold leading-7 break-words font-open text-gray_strong;
+  }
+
+  .circle {
+    @apply font-open font-light uppercase break-words tracking-[2px] text-button_black;
+  }
+  .nav-text {
+    @apply font-light break-words uppercase font-open text-button_black text-xxs tracking-[1px] xl:text-xs xl:tracking-[2px];
+  }
 }
 
-input:focus-visible, textarea:focus-visible {
-    border: solid 1px #1D1D1B;
-    box-shadow: 0 0 5px 1px #F49716;
-    outline: none;
+input:focus-visible,
+textarea:focus-visible {
+  border: solid 1px #1d1d1b;
+  box-shadow: 0 0 5px 1px #f49716;
+  outline: none;
 }
 
 .hero {
-    background-image: url('../images/hero-bg.png');
-    background-size: cover;
+  background-image: url("../images/hero-bg.png");
+  background-size: cover;
+}
+
+.narrow-hero {
+  background-image: url("../images/narrow-hero-bg.png");
+  @apply w-full min-h-28 bg-cover;
 }
