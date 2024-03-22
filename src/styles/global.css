@@ -49,14 +49,14 @@ textarea:focus-visible {
 }
 
 .blog_post_card{
-  @apply flex md:flex-row flex-1 items-center md:container mx-auto overflow-x-hidden mb-16;
+  @apply flex lg:flex-row flex-1 items-center lg:container lg:mx-auto overflow-x-hidden mb-16;
 
 }
 
 article.blog-first > div.blog-article-child{
-  @apply md:-ml-[200px] md:pl-[200px] bg-gray_light;
+  @apply lg:-ml-[200px] lg:pl-[200px] bg-gray_light;
 }
 
 article.blog-second > div.blog-article-child{
-  @apply  md:-mr-[200px] md:pl-[200px] bg-gray_light;
+  @apply  lg:-mr-[200px] lg:pl-[200px] bg-gray_light;
 }

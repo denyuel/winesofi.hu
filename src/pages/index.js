@@ -80,17 +80,17 @@ export default function HomePage({ data }) {
       </section>
 
       <section>
-        <div className="mx-12 mt-8">
-          <h2 className="uppercase text-center md:text-4xl pb-3 mb-auto font-cormorant_sc">Kiemelt posztok</h2>
-          <div className="">
+        <div className="md:mx-12 mt-8">
+          <h2 className="uppercase text-center text-2xl sm:text-3xl md:text-4xl pb-3 mb-auto font-cormorant_sc">Kiemelt posztok</h2>
+          <div className="flex flex-col items-center">
             {nodes.map((node, index) => (
               <article
-                className={`blog_post_card flex-col-reverse max-w-[80%] sm:max-w-[90%] md:w-full ${
-                  index % 2 ? 'blog-second' : 'blog-first md:flex-row-reverse'
+                className={`blog_post_card flex-col-reverse w-[80%] sm:w-[90%] lg:w-full ${
+                  index % 2 ? 'blog-second' : 'blog-first lg:flex-row-reverse'
                 }`}
                 key={node.id}
               >
-                <div className="blog-article-child flex flex-1 items-center self-stretch py-4 md:py-0 md:pl-32 md:-ml-28 mt-4 md:mt-0 rounded-2xl md:rounded-none">
+                <div className="blog-article-child flex flex-1 items-center self-stretch py-4 lg:py-0 lg:pl-32 lg:-ml-28 mt-4 lg:mt-0 rounded-2xl lg:rounded-none">
                   <div className="px-8">
                   <span className="brand">BRAND</span>
                   <span className="text-gray-500">{node._createdAt}</span>
@@ -108,11 +108,11 @@ export default function HomePage({ data }) {
                   </div>
                </div>
 
-                <div className="flex items-center container h-auto md:max-w-[26rem] md:max-h-[26rem]">
+                <div className="flex items-center lg:container h-auto w-full lg:max-w-[26rem] lg:max-h-[26rem]">
                 <GatsbyImage
                   image={node.mainImage.asset.gatsbyImageData}
                   alt={node.title}
-                  className=" rounded-2xl md:rounded-full aspect-square"
+                  className="rounded-2xl lg:rounded-full aspect-square md:w-full md:aspect-auto lg:aspect-square object-fill"
                 />
                 </div>
               </article>
