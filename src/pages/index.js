@@ -60,11 +60,11 @@ export default function HomePage({ data }) {
         </div>
       </section>
 
-      <section className='w-full bg-gradient-to-r from-orange to-[#D07C1F]'>
-        <div className="container bg-[url('../images/index-bg-object.png')] bg-no-repeat bg-teaser">
-          <div className='flex flex-wrap justify-center xl:gap-8 flex-col sm:flex-row '>
+      <section className='w-full mt-20 bg-gradient-to-r from-orange to-[#D07C1F]'>
+        <div className="container mx-auto bg-[url('../images/index-bg-object.png')] bg-no-repeat bg-teaser">
+          <div className='flex flex-wrap justify-center xl:gap-8 flex-col sm:flex-row'>
             <div className='flex items-center sm:gap-8 flex-col-reverse sm:flex-row sm:py-16'>
-              <div className='relative left-6 bottom-10 sm:left-0 sm:bottom-0 z-20 text-right w-64 '>
+              <div className='relative left-6 bottom-10 sm:left-0 sm:bottom-0 z-20 text-right w-64'>
                 <h2 className='font-cormorant_sc text-3xl font-bold leading-7 tracking-normal text-button_black'>Borászati</h2>
                 <h3 className='font-kaushan text-4xl leading-[52px] tracking-normal text-white'>Képzések</h3>
                 <div className='h-[1px] w-10 opacity-20 bg-button_black ml-auto'></div>
@@ -78,7 +78,7 @@ export default function HomePage({ data }) {
               <div className='relative z-20 w-64 text-right sm:text-left left-6 bottom-10 sm:left-0 sm:bottom-0'>
                 <h2 className='font-cormorant_sc text-3xl font-bold leading-7 tracking-normal text-button_black'>Szőlészeti</h2>
                 <h3 className='font-kaushan text-4xl leading-[52px] tracking-normal text-white'>Szaktanácsadás</h3>
-                <div className='h-[1px] w-10 opacity-20 bg-button_black mr-auto'></div>
+                <div className='h-[1px] w-10 opacity-20 bg-button_black ml-auto sm:mr-auto sm:ml-0'></div>
                 <p className='font-sans text-sm leading-7 text-wrap text-button_black opacity-60 pb-4'>Lorem ipsum  amet, consectetuer adipiscing elit.</p>
                 <button className='bg-button_black text-white text-sm font-sans font-[600] tracking-[2px] uppercase gap-3 px-5 py-3 rounded-3xl cursor-pointer -ml-24 mt-4'>részletek</button>
               </div>

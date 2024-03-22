@@ -33,7 +33,7 @@ module.exports = {
         'serif': ['Montserrat', 'serif'],
         'cormorant': ['Cormorant', 'serif'],
         'cormorant_sc': ['Cormorant SC', 'serif'],
-        'kaushan': ['Kaushan Script', 'cursive']
+        'kaushan': ['Kaushan Script', 'cursive'],
         'open': ['"Open Sans"', 'sans-serif']
       },
       fontSize: {
