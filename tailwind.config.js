@@ -4,6 +4,9 @@ module.exports = {
     "./src/**/*.{html,js,ts,jsx,tsx}",
   ],
   theme: {
+    backgroundPosition: {
+      'teaser': 'center bottom -7.5rem'
+    },
     extend: {
       colors: {
         transparent: 'transparent',
@@ -28,6 +31,7 @@ module.exports = {
       fontFamily: {
         'sans': ['Montserrat', 'sans-serif'],
         'serif': ['Montserrat', 'serif'],
+        'cormorant': ['Cormorant', 'serif'],
         'cormorant_sc': ['Cormorant SC', 'serif'],
         'kaushan': ['Kaushan Script', 'cursive'],
         'open': ['Open Sans', 'sans-serif']

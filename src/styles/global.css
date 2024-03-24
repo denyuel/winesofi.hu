@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,15 +20,16 @@
   .circle {
     @apply font-open font-light uppercase break-words tracking-[2px] text-button_black;
   }
-  .nav-text {
-    @apply font-light break-words uppercase font-open text-button_black text-xxs tracking-[1px] xl:text-xs xl:tracking-[2px];
+
+  .teaser-img {
+    @apply rounded-full right-16 max-h-64 max-w-64 w-[50vw] h-[50vw] sm:mb-20 xl:mt-20;
   }
 }
 
 input:focus-visible,
 textarea:focus-visible {
-  border: solid 1px #1d1d1b;
-  box-shadow: 0 0 5px 1px #f49716;
+  border: solid 1px #1D1D1B;
+  box-shadow: 0 0 5px 1px #F49716;
   outline: none;
 }
 
