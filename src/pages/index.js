@@ -103,47 +103,53 @@ export default function HomePage({ data }) {
       </section>
 
       <section>
-        <div className='container mx-auto'>
-          Blogposts
+        <div className="md:mx-12 mt-8">
+          <h2 className="uppercase text-center text-2xl sm:text-3xl md:text-4xl pb-3 mb-auto font-cormorant_sc">Kiemelt posztok</h2>
+          <div className="flex flex-col items-center">
+            {nodes.map((node, index) => (
+              <article
+                className={`blog_post_card flex-col-reverse w-[80%] sm:w-[90%] lg:w-full ${
+                  index % 2 ? 'blog-second' : 'blog-first lg:flex-row-reverse'
+                }`}
+                key={node.id}
+              >
+                <div className="blog-article-child flex flex-1 items-center self-stretch py-4 lg:py-0 lg:pl-32 lg:-ml-28 mt-4 lg:mt-0 rounded-2xl lg:rounded-none">
+                  <div className="px-8">
+                  <span className="brand">BRAND</span>
+                  <span className="text-gray-500">{node._createdAt}</span>
+                  <h2 className="mt-2 text-2xl font-bold font-cormorant_sc">{node.title}</h2>
+                  <hr className="w-8 mt-3 h-1 opacity-25"></hr>
+                  <div className="prose py-6 font-sans">
+                    <PortableText
+                      value={node._rawSummary}
+                      // components={/* optional object of custom components to use */}
+                    />
+                  </div>
+                  <Link className="black_button" to={`/post/${node.slug.current}`}>
+                    Tovább
+                  </Link>
+                  </div>
+               </div>
 
-
-          {nodes.map((node, index) => (
-            <article className={`pb-8 flex flex-row gap-24 ${index % 2 ? '' : 'sm:flex-row-reverse'}`} key={node.id}>
-              <div className="sm:w-3/4">
-                <h2 className="text-xl font-bold">{node.title}</h2>
-                <span className="text-gray-500">{node._createdAt}</span>
-                <div className="prose max-w-none py-6">
-                  <PortableText
-                    value={node._rawSummary}
-                  // components={/* optional object of custom components to use */}
-                  />
-                </div>
-
-                <Link to={`/post/${node.slug.current}`}>Tovább</Link>
-              </div>
-
-              <div className="hidden sm:block sm:w-1/4">
+                <div className="flex items-center lg:container h-auto w-full lg:max-w-[26rem] lg:max-h-[26rem]">
                 <GatsbyImage
                   image={node.mainImage.asset.gatsbyImageData}
                   alt={node.title}
-                  className="rounded-full aspect-square "
+                  className="rounded-2xl lg:rounded-full aspect-square md:w-full md:aspect-auto lg:aspect-square object-fill"
                 />
-              </div>
-
-            </article>
-          ))}
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
     </Layout>
-  )
-};
+  );
+}
 
 export const query = graphql`
   query Blogposts {
-    allSanityPost(
-      sort: { _createdAt: DESC }
-      limit: 2
-    ) {
+    allSanityPost(sort: { _createdAt: DESC }, limit: 2) {
       nodes {
         id
         title
@@ -156,10 +162,10 @@ export const query = graphql`
         slug {
           current
         }
-        _rawSummary(resolveReferences: {maxDepth: 2})
+        _rawSummary(resolveReferences: { maxDepth: 2 })
       }
     }
   }
 `;
 
-export const Head = () => <title>Wine&Sofi &mdash; terroir by Laposa Zsófia</title>
+export const Head = () => <title>Wine&Sofi &mdash; terroir by Laposa Zsófia</title>;
