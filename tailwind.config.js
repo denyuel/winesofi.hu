@@ -46,6 +46,9 @@ module.exports = {
       height: {
         input: '2.5rem',
         textarea: '11.25rem',
+      },
+      padding: {
+        '2.75': '11px',
       }
     },
   },
