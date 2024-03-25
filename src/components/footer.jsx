@@ -22,7 +22,7 @@ const Footer = () => {
                 <LeftNav />
             </div>
             <div className="flex items-center justify-center w-4 m-2 xl:m-4">
-                <StaticImage src="../images/ellipse.svg"/>
+                <StaticImage src="../images/ellipse.svg" role="presentation" alt="" />
             </div>
             <div className="w-5/12">
                 <RightNav />
