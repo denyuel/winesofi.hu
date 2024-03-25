@@ -53,7 +53,7 @@ export default function HomePage({ data }) {
           </p>
           <div className="flex gap-3 justify-center pt-7">
             <button
-              className="px-5 py-2 bg-button_black rounded-[20px] text-white uppercase text-xs tracking-[2px] font-semibold">
+              className="button">
               a pincészet borai
             </button>
           </div>
@@ -69,7 +69,7 @@ export default function HomePage({ data }) {
                 <h3 className='font-kaushan text-4xl leading-[52px] tracking-normal text-white'>Képzések</h3>
                 <div className='h-[1px] w-10 opacity-20 bg-button_black ml-auto'></div>
                 <p className='font-sans text-sm leading-7 text-wrap text-button_black opacity-60 pb-4'>Egyedi borászati kurzusok 4-8 fős csoportok részére.</p>
-                <button className='bg-button_black text-white text-sm font-sans font-[600] tracking-[2px] uppercase gap-3 px-5 py-3 rounded-3xl cursor-pointer mr-0 sm:-mr-24 mt-0 sm:mt-4'>részletek</button>
+                <button className='button mr-0 sm:-mr-24 mt-0 sm:mt-4'>részletek</button>
               </div>
               <StaticImage className='teaser-img relative sm:right-0 z-10 mt-8 sm:mt-0 mb-0' src="../images/index-post-left.jpg" alt="Borászati képzések" placeholder="blurred" />
             </div>
@@ -80,7 +80,7 @@ export default function HomePage({ data }) {
                 <h3 className='font-kaushan text-4xl leading-[52px] tracking-normal text-white'>Szaktanácsadás</h3>
                 <div className='h-[1px] w-10 opacity-20 bg-button_black ml-auto sm:mr-auto sm:ml-0'></div>
                 <p className='font-sans text-sm leading-7 text-wrap text-button_black opacity-60 pb-4'>Lorem ipsum  amet, consectetuer adipiscing elit.</p>
-                <button className='bg-button_black text-white text-sm font-sans font-[600] tracking-[2px] uppercase gap-3 px-5 py-3 rounded-3xl cursor-pointer -ml-24 mt-4'>részletek</button>
+                <button className='button -ml-24 mt-4'>részletek</button>
               </div>
             </div>
           </div>
@@ -97,7 +97,9 @@ export default function HomePage({ data }) {
             <h3 className='font-cormorant_sc text-3xl font-bold leading-7 tracking-normal uppercase text-button_black'>borász</h3>
             <div className='h-[1px] w-[40px] opacity-20 bg-button_black mr-auto my-4'></div>
             <p className='font-sans text-sm leading-7 text-wrap text-button_black opacity-60 pb-4'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus  mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus  mus.</p>
-            <Link to="/kapcsolat" className='bg-button_black text-white text-sm font-sans font-[600] tracking-[2px] uppercase gap-3 px-5 py-3 rounded-3xl cursor-pointer -mr-24 mt-4'>kapcsolat</Link>
+            <button className='button -mr-24 mt-4'>
+              <Link to="/kapcsolat">kapcsolat</Link>
+            </button>
           </div>
         </div>
       </section>

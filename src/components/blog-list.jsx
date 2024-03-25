@@ -26,9 +26,11 @@ const BlogList = ({ nodes = []}) => (
                 // components={/* optional object of custom components to use */}
               />
             </div>
-            <Link className="black_button" to={`/post/${node.slug.current}`}>
-              Tovább
-            </Link>
+            <button className="button">
+              <Link to={`/post/${node.slug.current}`}>
+                Tovább
+              </Link>
+            </button>
           </div>
         </div>
 

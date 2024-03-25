@@ -24,6 +24,10 @@
   .teaser-img {
     @apply rounded-full right-16 max-h-64 max-w-64 w-[50vw] h-[50vw] sm:mb-20 xl:mt-20;
   }
+
+  .button {
+    @apply px-5 py-2 bg-button_black rounded-[20px] text-white uppercase text-xs tracking-[2px] font-semibold font-open h-9;
+  }
 }
 
 input:focus-visible,

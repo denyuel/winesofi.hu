@@ -45,7 +45,7 @@ export default function Contact() {
               </div>
               <div className="flex justify-center items-center w-full h-[5.5rem] bg-orange">
                 <button
-                  className="text-white bg-button_black rounded-3xl uppercase tracking-[2px] text-xs font-semibold px-6 py-3 h-9 submit"
+                  className="button submit"
                   type="submit">üzenet küldése</button>
               </div>
             </form>
