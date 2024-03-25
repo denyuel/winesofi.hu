@@ -18,6 +18,7 @@ module.exports = {
         white: '#FFFFFF',
         orange: '#F49716',
         orange_light: '#FF5C2',
+        orange_strong: '#D07C1F',
         blue: '#007589',
         blue_light: '#5BD7EC',
         brown: '#A39356',
@@ -40,15 +41,32 @@ module.exports = {
         xxs: '10px',
       },
       width: {
+        '17': '4.25rem',
+        '76': '19rem',
+        '104': '26rem',
         input: '21.75rem',
         textarea: '33.75rem',
       },
       height: {
+        '22': '5.5rem',
+        '76': '19rem',
         input: '2.5rem',
         textarea: '11.25rem',
       },
+      size: {
+        circle: '12.5rem',
+      },
       padding: {
         '2.75': '11px',
+      },
+      lineHeight: {
+        '11': '52px',
+      },
+      letterSpacing: {
+        extra: '2px',
+      },
+      gap: {
+        form: '0.4rem',
       }
     },
   },

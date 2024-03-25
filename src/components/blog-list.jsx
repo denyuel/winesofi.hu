@@ -32,7 +32,7 @@ const BlogList = ({ nodes = []}) => (
           </div>
         </div>
 
-        <div className="flex items-center lg:container h-auto w-full lg:max-w-[26rem] lg:max-h-[26rem]">
+        <div className="flex items-center lg:container h-auto w-full lg:max-w-104 lg:max-h-104">
           <GatsbyImage
             image={node.mainImage.asset.gatsbyImageData}
             alt={node.title}
