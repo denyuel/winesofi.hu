@@ -43,7 +43,6 @@ module.exports = {
       width: {
         '17': '4.25rem',
         '76': '19rem',
-        '104': '26rem',
         input: '21.75rem',
         textarea: '33.75rem',
       },
@@ -52,6 +51,12 @@ module.exports = {
         '76': '19rem',
         input: '2.5rem',
         textarea: '11.25rem',
+      },
+      maxWidth: {
+        '104': '26rem',
+      },
+      maxHeight: {
+        '104': '26rem',
       },
       size: {
         circle: '12.5rem',
