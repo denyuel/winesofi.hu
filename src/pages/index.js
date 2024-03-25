@@ -71,10 +71,10 @@ export default function HomePage({ data }) {
                 <p className='font-sans text-sm leading-7 text-wrap text-button_black opacity-60 pb-4'>Egyedi borászati kurzusok 4-8 fős csoportok részére.</p>
                 <button className='bg-button_black text-white text-sm font-sans font-[600] tracking-[2px] uppercase gap-3 px-5 py-3 rounded-3xl cursor-pointer mr-0 sm:-mr-24 mt-0 sm:mt-4'>részletek</button>
               </div>
-              <StaticImage class='teaser-img relative sm:right-0 z-10 mt-8 sm:mt-0 mb-0' src="../images/index-post-left.jpg" alt="Borászati képzések" placeholder="blurred" />
+              <StaticImage className='teaser-img relative sm:right-0 z-10 mt-8 sm:mt-0 mb-0' src="../images/index-post-left.jpg" alt="Borászati képzések" placeholder="blurred" />
             </div>
             <div className='flex items-center sm:gap-8 flex-col sm:flex-row sm:py-16'>
-              <StaticImage class='teaser-img sm:left-0 my-0' src="../images/index-post-right.jpg" alt="Szőlészeti tanácsadás" placeholder="blurred" />
+              <StaticImage className='teaser-img sm:left-0 my-0' src="../images/index-post-right.jpg" alt="Szőlészeti tanácsadás" placeholder="blurred" />
               <div className='relative z-20 w-64 text-right sm:text-left left-6 bottom-10 sm:left-0 sm:bottom-0'>
                 <h2 className='font-cormorant_sc text-3xl font-bold leading-7 tracking-normal text-button_black'>Szőlészeti</h2>
                 <h3 className='font-kaushan text-4xl leading-[52px] tracking-normal text-white'>Szaktanácsadás</h3>
@@ -90,7 +90,7 @@ export default function HomePage({ data }) {
       <section className='py-16 bg-no-repeat bg-contain bg-[url(../images/index-bio-bg.png)] bg-[position:right]'>
         <div className="container mx-auto flex flex-wrap items-center justify-evenly bg-contain px-4 max-w-7xl gap-8 md:gap-12 sm:flex-row-reverse">
           <div className=''>
-            <StaticImage class='rounded-full h-[19rem] w-[19rem]' src="../images/index-bio-photo.jpg" alt="Laposa Zsófia" placeholder="blurred" />
+            <StaticImage className='rounded-full h-[19rem] w-[19rem]' src="../images/index-bio-photo.jpg" alt="Laposa Zsófia" placeholder="blurred" />
           </div>
           <div className='sm:flex-1 w-full'>
             <h1 className='font-kaushan text-4xl leading-[52px] tracking-normal text-orange'>Laposa Zsófia</h1>

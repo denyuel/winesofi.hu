@@ -12,7 +12,7 @@ const Logo = () => {
         </Link>
       </div>
       <div className="absolute top-[2.9rem] md:top-[2.7rem] z-5 w-48 lg:w-72">
-        <img src={intersect} alt="" aria-hidden="true" role="presentation" alt="" />
+        <img src={intersect} alt="intersect" aria-hidden="true" role="presentation" />
       </div>
     </div>
   );
