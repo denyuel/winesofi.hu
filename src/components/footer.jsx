@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <div className='flex gap-8'>
         <div className='flex w-2/3 md:w-1/6 justify-start gap-3 xl:gap-4'>
-            <div className='flex max-w-[4.25rem] max-h-[3.5rem]'>
+            <div className='flex max-w-17 max-h-14'>
                 <img src={logoSvg} alt="logo"/>
             </div>
             <div className='flex items-center w-40'>
@@ -22,7 +22,7 @@ const Footer = () => {
                 <LeftNav />
             </div>
             <div className="flex items-center justify-center w-4 m-2 xl:m-4">
-                <StaticImage src="../images/ellipse.svg"/>
+                <StaticImage src="../images/ellipse.svg" role="presentation" alt="" />
             </div>
             <div className="w-5/12">
                 <RightNav />

@@ -9,9 +9,9 @@ export default function Page({ data }) {
     <Layout>
       <div>
         <div className='narrow-hero w-full'></div>
-        <div className='container mx-auto py-4'>
+        <div className='container mx-auto px-4'>
           <h1 className='title text-4xl my-8'>{post.title}</h1>
-          <div className='h-[1px] w-[40px] opacity-20 bg-button_black mr-auto my-4'></div>
+          <div className='h-px w-10 opacity-20 bg-button_black mr-auto my-4'></div>
           <div className="prose max-w-none bold-text my-8">
             <PortableText
               value={post._rawSummary}

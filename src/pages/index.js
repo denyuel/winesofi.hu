@@ -1,22 +1,22 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import { PortableText } from '@portabletext/react';
-import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
+import { StaticImage } from 'gatsby-plugin-image';
 
 import Layout from '../components/layout';
+import BlogList from '../components/blog-list';
 
 export default function HomePage({ data }) {
-  const nodes = data.allSanityPost.nodes;
+  const { nodes } = data.allSanityPost;
 
   return (
     <Layout>
       <section>
-        <div className="flex flex-col justify-center w-full h-auto md:min-h-[30rem] hero">
+        <div className="flex flex-col justify-center w-full h-auto hero">
           <div className="flex justify-center gap-2 mt-12 md:gap-8 -mb-16 md:-mb-32 md:mt-16 w-full wine-container">
             <div className="flex flex-col items-center max-w-full">
-              <StaticImage className="h-auto -mb-16 md:-mb-36 z-10" src='../images/bor3.png' alt="kéknyelű 2021" />
+              <StaticImage className="h-auto -mb-16 md:-mb-36 z-10" src='../images/bor3.png' alt="kéknyelű 2021" placeholder='blurred' />
               <div
-                className="flex flex-col justify-end items-center gap-1 w-[90%] md:size-[12.5rem] bg-blue rounded-full opacity-90 text-xxs md:text-xs z-5 p-2 md:p-6 aspect-square circle">
+                className="flex flex-col justify-end items-center gap-1 w-11/12 md:size-circle bg-blue rounded-full opacity-90 text-xxs md:text-xs z-5 p-2 md:p-6 aspect-square circle">
                 <span>Wine&Sofi</span>
                 <div className="border-t-2 border-button_black w-10 opacity-20"></div>
                 <span>kéknyelű</span>
@@ -24,9 +24,9 @@ export default function HomePage({ data }) {
               </div>
             </div>
             <div className="flex flex-col items-center max-w-full">
-              <StaticImage className="h-auto -mb-16 md:-mb-36 z-10" src='../images/bor1.png' alt="olaszrizling 2022" />
+              <StaticImage className="h-auto -mb-16 md:-mb-36 z-10" src='../images/bor1.png' alt="olaszrizling 2022" placeholder='blurred' />
               <div
-                className="flex flex-col justify-end items-center gap-1 w-[90%] md:size-[12.5rem] bg-brown rounded-full opacity-90 text-xxs md:text-xs z-5 p-2 md:p-6 aspect-square circle">
+                className="flex flex-col justify-end items-center gap-1 w-11/12 md:size-circle bg-brown rounded-full opacity-90 text-xxs md:text-xs z-5 p-2 md:p-6 aspect-square circle">
                 <span>Wine&Sofi</span>
                 <div className="border-t-2 border-button_black w-10 opacity-20"></div>
                 <span>olaszrizling</span>
@@ -34,9 +34,9 @@ export default function HomePage({ data }) {
               </div>
             </div>
             <div className="flex flex-col items-center max-w-full">
-              <StaticImage className="h-auto -mb-16 md:-mb-36 z-10" src='../images/bor2.png' alt="olaszrizling 2022" />
+              <StaticImage className="h-auto -mb-16 md:-mb-36 z-10" src='../images/bor2.png' alt="olaszrizling 2022" placeholder='blurred' />
               <div
-                className="flex flex-col justify-end items-center gap-1 w-[90%] md:size-[12.5rem] bg-green rounded-full opacity-90 text-xxs md:text-xs z-5 p-2 md:p-6 aspect-square circle">
+                className="flex flex-col justify-end items-center gap-1 w-11/12 md:size-circle bg-green rounded-full opacity-90 text-xxs md:text-xs z-5 p-2 md:p-6 aspect-square circle">
                 <span>Wine&Sofi</span>
                 <div className="border-t-2 border-button_black w-10 opacity-20"></div>
                 <span>olaszrizling</span>
@@ -45,102 +45,73 @@ export default function HomePage({ data }) {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-2 items-center px-8 md:px-60 mt-28 md:mt-48 w-full">
-          <h1 className="text-3xl md:text-4xl title">Vine&Sofi</h1>
+        <div className="flex flex-col gap-2 items-center px-4 md:px-60 mt-28 md:mt-48 container mx-auto">
+          <h1 className="text-3xl md:text-4xl title">Wine&Sofi</h1>
           <div className="border-t-2 border-gray w-10"></div>
           <p className="basic-text text-center">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus  mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
           </p>
           <div className="flex gap-3 justify-center pt-7">
             <button
-              className="px-5 py-2 bg-button_black rounded-[20px] text-white uppercase text-xs tracking-[2px] font-semibold">
+              className="button h-9">
               a pincészet borai
             </button>
           </div>
         </div>
       </section>
 
-      <section className='w-full mt-20 bg-gradient-to-r from-orange to-[#D07C1F]'>
-        <div className="container mx-auto bg-[url('../images/index-bg-object.png')] bg-no-repeat bg-teaser">
+      <section className='my-16 bg-gradient-to-r from-orange to-orange_strong'>
+        <div className="container mx-auto bg-[url('../images/index-bg-object.png')] bg-no-repeat bg-teaser px-4">
           <div className='flex flex-wrap justify-center xl:gap-8 flex-col sm:flex-row'>
             <div className='flex items-center sm:gap-8 flex-col-reverse sm:flex-row sm:py-16'>
               <div className='relative left-6 bottom-10 sm:left-0 sm:bottom-0 z-20 text-right w-64'>
                 <h2 className='font-cormorant_sc text-3xl font-bold leading-7 tracking-normal text-button_black'>Borászati</h2>
-                <h3 className='font-kaushan text-4xl leading-[52px] tracking-normal text-white'>Képzések</h3>
-                <div className='h-[1px] w-10 opacity-20 bg-button_black ml-auto'></div>
+                <h3 className='font-kaushan text-4xl leading-11 tracking-normal text-white'>Képzések</h3>
+                <div className='h-px w-10 opacity-20 bg-button_black ml-auto'></div>
                 <p className='font-sans text-sm leading-7 text-wrap text-button_black opacity-60 pb-4'>Egyedi borászati kurzusok 4-8 fős csoportok részére.</p>
-                <button className='bg-button_black text-white text-sm font-sans font-[600] tracking-[2px] uppercase gap-3 px-5 py-3 rounded-3xl cursor-pointer mr-0 sm:-mr-24 mt-0 sm:mt-4'>részletek</button>
+                <div className='relative mr-0 sm:-mr-24 mt-0 sm:mt-4'>
+                  <Link className='button' to="/boraszat-kepzesek">részletek</Link>
+                </div>
               </div>
-              <StaticImage class='teaser-img relative sm:right-0 z-10 mt-8 sm:mt-0 mb-0' src="../images/index-post-left.jpg" alt="index-post-left" placeholder="blurred" />
+              <StaticImage className='teaser-img relative sm:right-0 z-10 mt-8 sm:mt-0 mb-0' src="../images/index-post-left.jpg" alt="Borászati képzések" placeholder="blurred" />
             </div>
             <div className='flex items-center sm:gap-8 flex-col sm:flex-row sm:py-16'>
-              <StaticImage class='teaser-img sm:left-0 my-0' src="../images/index-post-right.jpg" alt="index-post-right" placeholder="blurred" />
+              <StaticImage className='teaser-img sm:left-0 my-0' src="../images/index-post-right.jpg" alt="Szőlészeti tanácsadás" placeholder="blurred" />
               <div className='relative z-20 w-64 text-right sm:text-left left-6 bottom-10 sm:left-0 sm:bottom-0'>
                 <h2 className='font-cormorant_sc text-3xl font-bold leading-7 tracking-normal text-button_black'>Szőlészeti</h2>
-                <h3 className='font-kaushan text-4xl leading-[52px] tracking-normal text-white'>Szaktanácsadás</h3>
-                <div className='h-[1px] w-10 opacity-20 bg-button_black ml-auto sm:mr-auto sm:ml-0'></div>
+                <h3 className='font-kaushan text-4xl leading-11 tracking-normal text-white'>Szaktanácsadás</h3>
+                <div className='h-px w-10 opacity-20 bg-button_black ml-auto sm:mr-auto sm:ml-0'></div>
                 <p className='font-sans text-sm leading-7 text-wrap text-button_black opacity-60 pb-4'>Lorem ipsum  amet, consectetuer adipiscing elit.</p>
-                <button className='bg-button_black text-white text-sm font-sans font-[600] tracking-[2px] uppercase gap-3 px-5 py-3 rounded-3xl cursor-pointer -ml-24 mt-4'>részletek</button>
+                <div className='relative -ml-24 mt-4'>
+                  <Link className='button' to="/boraszat-tanacsadas">részletek</Link>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className='w-full'>
-        <div className="flex flex-wrap items-center justify-evenly bg-[url('../images/index-bio-bg.png')] bg-contain bg-no-repeat bg-right-bottom">
-          <div className='max-w-[50%]'>
-            <h1 className='font-kaushan text-4xl leading-[52px] tracking-normal text-orange'>Laposa Zsófia</h1>
-            <h3 className='font-cormorant_sc text-3xl font-bold leading-7 tracking-normal uppercase text-button_black'>borász</h3>
-            <div className='h-[1px] w-[40px] opacity-20 bg-button_black mr-auto my-4'></div>
-            <p className='font-sans text-sm leading-7 text-wrap text-button_black opacity-60 pb-4'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus  mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus  mus.</p>
-            <button className='bg-button_black text-white text-sm font-sans font-[600] tracking-[2px] uppercase gap-3 px-5 py-3 rounded-3xl cursor-pointer -mr-24 mt-4'>kapcsolat</button>
-          </div>
+      <section className='py-16 bg-no-repeat bg-contain bg-[url(../images/index-bio-bg.png)] bg-right'>
+        <div className="container mx-auto flex flex-wrap items-center justify-evenly bg-contain px-4 max-w-7xl gap-8 md:gap-12 sm:flex-row-reverse">
           <div className=''>
-            <StaticImage class='rounded-full h-[19rem] w-[19rem] my-20' src="../images/index-bio-photo.jpg" alt="index-post-right" placeholder="blurred" />
+            <StaticImage className='rounded-full h-76 w-76' src="../images/index-bio-photo.jpg" alt="Laposa Zsófia" placeholder="blurred" />
+          </div>
+          <div className='sm:flex-1 w-full'>
+            <h1 className='font-kaushan text-4xl leading-11 tracking-normal text-orange'>Laposa Zsófia</h1>
+            <h3 className='font-cormorant_sc text-3xl font-bold leading-7 tracking-normal uppercase text-button_black'>borász</h3>
+            <div className='h-px w-10 opacity-20 bg-button_black mr-auto my-4'></div>
+            <p className='font-sans text-sm leading-7 text-wrap text-button_black opacity-60 pb-4'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus  mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus  mus.</p>
+            <div className='relative -mr-24 mt-4'>
+              <Link className='button' to="/kapcsolat">kapcsolat</Link>
+            </div>
           </div>
         </div>
       </section>
 
       <section>
-        <div className="md:mx-12 mt-8">
+        <div className="container mx-auto px-4 mt-8">
           <h2 className="uppercase text-center text-2xl sm:text-3xl md:text-4xl pb-3 mb-auto font-cormorant_sc">Kiemelt posztok</h2>
-          <div className="flex flex-col items-center">
-            {nodes.map((node, index) => (
-              <article
-                className={`blog_post_card flex-col-reverse w-[80%] sm:w-[90%] lg:w-full ${
-                  index % 2 ? 'blog-second' : 'blog-first lg:flex-row-reverse'
-                }`}
-                key={node.id}
-              >
-                <div className="blog-article-child flex flex-1 items-center self-stretch py-4 lg:py-0 lg:pl-32 lg:-ml-28 mt-4 lg:mt-0 rounded-2xl lg:rounded-none">
-                  <div className="px-8">
-                  <span className="brand">BRAND</span>
-                  <span className="text-gray-500">{node._createdAt}</span>
-                  <h2 className="mt-2 text-2xl font-bold font-cormorant_sc">{node.title}</h2>
-                  <hr className="w-8 mt-3 h-1 opacity-25"></hr>
-                  <div className="prose py-6 font-sans">
-                    <PortableText
-                      value={node._rawSummary}
-                      // components={/* optional object of custom components to use */}
-                    />
-                  </div>
-                  <Link className="black_button" to={`/post/${node.slug.current}`}>
-                    Tovább
-                  </Link>
-                  </div>
-               </div>
-
-                <div className="flex items-center lg:container h-auto w-full lg:max-w-[26rem] lg:max-h-[26rem]">
-                <GatsbyImage
-                  image={node.mainImage.asset.gatsbyImageData}
-                  alt={node.title}
-                  className="rounded-2xl lg:rounded-full aspect-square md:w-full md:aspect-auto lg:aspect-square object-fill"
-                />
-                </div>
-              </article>
-            ))}
-          </div>
+          <BlogList nodes={nodes} />
         </div>
       </section>
     </Layout>
