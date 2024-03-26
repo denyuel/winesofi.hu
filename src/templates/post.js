@@ -10,7 +10,7 @@ export default function BlogPost({ data }) {
   return (
     <Layout>
       <div className='narrow-hero w-full'></div>
-      <div className='flex justify-around container mx-auto py-10'>
+      <div className='flex justify-around container mx-auto md:py-10 flex-col-reverse md:flex-row'>
         <div className=''>
           <div className='flex items-center gap-3 mb-3'>
             <button className='bg-brown py-1 px-[10px] text-white rounded font-open font-semibold text-xs uppercase'>szőlészet</button>
@@ -25,7 +25,7 @@ export default function BlogPost({ data }) {
             />
           </div>
         </div>
-        <GatsbyImage className='rounded-full w-96 h-96 -mb-24' image={post.mainImage.asset.gatsbyImageData} alt={post.title} />
+        <GatsbyImage className='md:rounded-full w-full my-1 md:w-96 h-96 md:-mb-24' image={post.mainImage.asset.gatsbyImageData} alt={post.title} />
       </div>
       <div className='w-full h-0 border-b-[1px] border-button_black border-opacity-20'></div>
       <div className='container mx-auto py-10'>
