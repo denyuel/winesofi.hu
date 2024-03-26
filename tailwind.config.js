@@ -5,6 +5,7 @@ module.exports = {
   ],
   theme: {
     backgroundPosition: {
+      'bio': 'right',
       'teaser': 'center bottom -7.5rem'
     },
     extend: {
