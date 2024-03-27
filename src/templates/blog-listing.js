@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
-import { PortableText } from '@portabletext/react';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { graphql } from 'gatsby';
 import Layout from '../components/layout';
+import BlogList from '../components/blog-list';
 
 export default function Blog({ data }) {
   const nodes = data.allSanityPost.nodes;
