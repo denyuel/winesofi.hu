@@ -4,10 +4,6 @@ module.exports = {
     "./src/**/*.{html,js,ts,jsx,tsx}",
   ],
   theme: {
-    backgroundPosition: {
-      'bio': 'right',
-      'teaser': 'center bottom -7.5rem'
-    },
     extend: {
       colors: {
         transparent: 'transparent',
@@ -73,6 +69,9 @@ module.exports = {
       },
       gap: {
         form: '0.4rem',
+      },
+      backgroundPosition: {
+        'teaser': 'center bottom -7.5rem'
       }
     },
   },

@@ -38,8 +38,8 @@ textarea:focus-visible {
 }
 
 .hero {
-    background-image: url('../images/hero-bg.png');
-    background-size: cover;
+  background-image: url('../images/hero-bg.png');
+  background-size: cover;
 }
 
 .narrow-hero {
@@ -47,23 +47,27 @@ textarea:focus-visible {
   @apply w-full min-h-28 bg-cover;
 }
 
-.brand{
+.bio-bg {
+  background-image: url("../images/index-bio-bg.png");
+  @apply bg-contain bg-right bg-no-repeat;
+}
+
+.brand {
   @apply p-1 mr-4 rounded text-white uppercase font-sans font-light bg-orange;
 }
 
-.black_button{
+.black_button {
   @apply text-white uppercase gap-3 px-5 py-3 rounded-2xl bg-button_black cursor-pointer;
 }
 
-.blog_post_card{
+.blog_post_card {
   @apply flex lg:flex-row flex-1 items-center lg:container lg:mx-auto overflow-x-hidden mb-16;
-
 }
 
-article.blog-first > div.blog-article-child{
+article.blog-first>div.blog-article-child {
   @apply lg:-ml-[200px] lg:pl-[200px] bg-gray_light;
 }
 
-article.blog-second > div.blog-article-child{
-  @apply  lg:-mr-[200px] lg:pl-[200px] bg-gray_light;
+article.blog-second>div.blog-article-child {
+  @apply lg:-mr-[200px] lg:pl-[200px] bg-gray_light;
 }

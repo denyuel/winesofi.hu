@@ -91,7 +91,7 @@ export default function HomePage({ data }) {
         </div>
       </section>
 
-      <section className='pb-16 pt-4 sm:py-16 bg-no-repeat bg-contain bg-[url(../images/index-bio-bg.png)] bg-bio'>
+      <section className='pb-16 pt-4 sm:py-16 bio-bg'>
         <div className="container mx-auto flex flex-wrap items-center justify-evenly bg-contain px-4 max-w-7xl gap-8 md:gap-12 sm:flex-row-reverse">
           <div className=''>
             <StaticImage className='rounded-full h-76 w-76' src="../images/index-bio-photo.jpg" alt="Laposa Zsófia" placeholder="blurred" />
