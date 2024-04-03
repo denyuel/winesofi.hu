@@ -8,7 +8,7 @@ export default function Contact() {
       <div>
         <div className='narrow-hero'></div>
         <div className='flex flex-col'>
-          <div className='flex flex-col md:flex-row justify-center items-center gap-2 px-4 md:px-20 xl:px-72 py-12'>
+          <div className='mx-auto flex flex-col md:flex-row justify-center items-center gap-2 px-4 md:px-20 xl:px-0 xl:max-w-5xl py-12'>
             <div className='flex flex-col items-center md:items-start gap-8 w-11/12 md:w-8/12'>
               <h1 className='text-3xl md:text-4xl title'>kapcsolat</h1>
               <div class="border-t-2 border-gray w-10"></div>
