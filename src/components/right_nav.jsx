@@ -18,9 +18,9 @@ const RightNav = () => {
           <Link to="/blog" className="hover:text-gray-300">
             Blog
           </Link>
-          <div className="hidden md:flex items-center justify-center">
+          <span className="hidden md:flex items-center">
             <StaticImage src="../images/ellipse.svg" role="presentation" alt="" />
-          </div>
+          </span>
           <Link to="/kapcsolat" className="hover:text-gray-300">
             Kapcsolat
           </Link>

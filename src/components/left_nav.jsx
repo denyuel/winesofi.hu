@@ -24,7 +24,9 @@ const LeftNav = () => {
         {pages.nodes.map((page) => (
           <Link to={`/${page.slug.current}`} key={page.id} className="hover:text-gray-300">
             <div className="flex items-center justify-center gap-3 xl:gap-7">
-              <StaticImage className="hidden md:block" src="../images/ellipse.svg" role="presentation" alt="" />
+              <span className="hidden md:flex items-center">
+                <StaticImage src="../images/ellipse.svg" role="presentation" alt="" />
+              </span>
               {page.title}
             </div>
           </Link>
