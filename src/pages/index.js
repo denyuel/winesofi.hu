@@ -11,7 +11,7 @@ export default function HomePage({ data }) {
   return (
     <Layout>
       <section>
-        <div className="flex flex-col justify-center w-full h-auto hero">
+        <div className="flex flex-col justify-center w-full h-auto bg-hero bg-cover">
           <div className="flex justify-center gap-2 mt-12 md:gap-8 -mb-16 md:-mb-32 md:mt-16 w-full wine-container">
             <div className="flex flex-col items-center max-w-full">
               <StaticImage className="h-auto -mb-16 md:-mb-36 z-10" src='../images/bor3.png' alt="kéknyelű 2021" placeholder='blurred' />
@@ -91,7 +91,7 @@ export default function HomePage({ data }) {
         </div>
       </section>
 
-      <section className='pb-16 pt-4 sm:py-16 bio-bg'>
+      <section className='pb-16 pt-4 sm:py-16 bg-bio bg-contain bg-right bg-no-repeat'>
         <div className="container mx-auto flex flex-wrap items-center justify-evenly bg-contain px-4 max-w-7xl gap-8 md:gap-12 sm:flex-row-reverse">
           <div className=''>
             <StaticImage className='rounded-full h-76 w-76' src="../images/index-bio-photo.jpg" alt="Laposa Zsófia" placeholder="blurred" />

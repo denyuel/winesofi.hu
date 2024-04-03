@@ -37,21 +37,6 @@ textarea:focus-visible {
   outline: none;
 }
 
-.hero {
-  background-image: url('../images/hero-bg.png');
-  background-size: cover;
-}
-
-.narrow-hero {
-  background-image: url("../images/narrow-hero-bg.png");
-  @apply w-full min-h-28 bg-cover;
-}
-
-.bio-bg {
-  background-image: url("../images/index-bio-bg.png");
-  @apply bg-contain bg-right bg-no-repeat;
-}
-
 .brand {
   @apply p-1 mr-4 rounded text-white uppercase font-sans font-light bg-orange;
 }

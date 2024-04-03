@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <Layout>
       <div>
-        <div className='narrow-hero'></div>
+        <div className='bg-narrow-hero w-full min-h-28 bg-cover'></div>
         <div className='flex flex-col'>
           <div className='flex flex-col md:flex-row justify-center items-center gap-2 px-4 md:px-20 xl:px-72 py-12'>
             <div className='flex flex-col items-center md:items-start gap-8 w-11/12 md:w-8/12'>

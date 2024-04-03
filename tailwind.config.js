@@ -26,6 +26,11 @@ module.exports = {
         brown_strong: '#C1672D',
         button_black: '#1D1D1B',
       },
+      backgroundImage: {
+        'hero': "url('../images/hero-bg.png')",
+        'narrow-hero': "url('../images/narrow-hero-bg.png')",
+        'bio': "url('../images/index-bio-bg.png')"
+      },
       fontFamily: {
         'sans': ['Montserrat', 'sans-serif'],
         'serif': ['Montserrat', 'serif'],
