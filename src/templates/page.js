@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { PortableText } from '@portabletext/react';
 import Layout from '../components/layout';
+import { SEO } from '../components/seo';
 
 export default function Page({ data }) {
   const post = data.sanityPage;
@@ -45,3 +46,10 @@ export const query = graphql`
     }
   }
 `;
+
+export function Head({ data }) {
+  const page = data.sanityPage;
+  return (
+    <SEO title={page.title} />
+  )
+}

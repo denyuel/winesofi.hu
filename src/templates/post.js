@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import { PortableText } from '@portabletext/react';
 import Layout from '../components/layout';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import { StaticImage } from 'gatsby-plugin-image';
+import { SEO } from '../components/seo';
 
 export default function BlogPost({ data }) {
   const post = data.sanityPost;
@@ -60,3 +60,10 @@ export const query = graphql`
     }
   }
 `;
+
+export function Head({ data }) {
+  const post = data.sanityPost;
+  return (
+    <SEO title={post.title} />
+  )
+}

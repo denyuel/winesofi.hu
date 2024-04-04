@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout';
 import { StaticImage } from 'gatsby-plugin-image';
+import { SEO } from '../components/seo';
 
 export default function Contact() {
   return (
@@ -18,7 +19,7 @@ export default function Contact() {
             </div>
             <div className='flex justify-center md:justify-end w-11/12 md:w-4/12 -mb-20'>
               <div className='w-64 h-64 overflow-hidden z-10 rounded-full aspect-square'>
-                <StaticImage className='rounded-full' src='../images/contact.jpg' alt=''/>
+                <StaticImage className='rounded-full' src='../images/contact.jpg' alt='' />
               </div>
             </div>
           </div>
@@ -34,7 +35,7 @@ export default function Contact() {
                     type="email" id="email" name="email" required />
                   <label className="pl-4 text-gray_strong text-xs font-light tracking-extra uppercase" for="tel">telefon</label>
                   <input className="w-full md:w-input h-input basic-text border-solid border-gray border rounded-3xl p-4"
-                    type="tel" id="tel" name="tel" required placeholder='+36'/>
+                    type="tel" id="tel" name="tel" required placeholder='+36' />
                 </div>
                 <div className="flex flex-col gap-form">
                   <label className="pl-4 text-gray_strong text-xs font-light tracking-extra uppercase" for="message">üzenet</label>
@@ -51,9 +52,11 @@ export default function Contact() {
             </form>
           </div>
         </div>
-    </div>
-  </Layout>
+      </div>
+    </Layout>
   )
 };
 
-export const Head = () => <title>Wine&Sofi &mdash; terroir by Laposa Zsófia</title>
+export const Head = () => (
+  <SEO title="Kapcsolat" pathname="/kapcsolat" />
+)

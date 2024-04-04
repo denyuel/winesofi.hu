@@ -4,6 +4,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 import Layout from '../components/layout';
 import BlogList from '../components/blog-list';
+import { SEO } from '../components/seo';
 
 export default function HomePage({ data }) {
   const { nodes } = data.allSanityPost;
@@ -139,4 +140,6 @@ export const query = graphql`
   }
 `;
 
-export const Head = () => <title>Wine&Sofi &mdash; terroir by Laposa Zsófia</title>;
+export const Head = () => (
+  <SEO />
+)
