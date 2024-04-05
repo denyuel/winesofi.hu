@@ -8,8 +8,8 @@ module.exports = {
   siteMetadata: {
     title: `Wine&Sofi &mdash; terroir by Laposa Zsófia`,
     description: `Lorem ipsum...`,
-    image: `/logo.svg`,
-    siteUrl: `https://winesofi.hu`
+    image: `/logo.png`,
+    siteUrl: 'https://winesofi.hu'
   },
   plugins: [{
     resolve: 'gatsby-source-sanity',
