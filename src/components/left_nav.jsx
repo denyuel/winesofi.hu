@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useStaticQuery, graphql } from 'gatsby';
-import { StaticImage } from "gatsby-plugin-image";
 
 const LeftNav = () => {
   const { pages } = useStaticQuery(graphql`
@@ -24,9 +23,7 @@ const LeftNav = () => {
         {pages.nodes.map((page) => (
           <Link to={`/${page.slug.current}`} key={page.id} className="hover:text-gray-300">
             <div className="flex items-center justify-center gap-3 xl:gap-7">
-              <span className="hidden md:flex items-center">
-                <StaticImage src="../images/ellipse.svg" role="presentation" alt="" />
-              </span>
+              <span className="hidden md:flex items-center text-lg leading-none text-slate-200">&bull;</span>
               {page.title}
             </div>
           </Link>
