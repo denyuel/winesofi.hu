@@ -8,7 +8,7 @@ export default function Page({ data }) {
   return (
     <Layout>
       <div>
-        <div className='narrow-hero w-full'></div>
+        <div className='bg-narrow-hero w-full min-h-28 bg-cover'></div>
         <div className='container mx-auto px-4'>
           <h1 className='title text-4xl my-8'>{post.title}</h1>
           <div className='h-px w-10 opacity-20 bg-button_black mr-auto my-4'></div>
