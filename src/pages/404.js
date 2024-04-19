@@ -19,4 +19,4 @@ export default function NotFoundPage() {
   )
 }
 
-export const Head = () => <title>Not found</title>
+export const Head = () => <title>Nem található</title>
