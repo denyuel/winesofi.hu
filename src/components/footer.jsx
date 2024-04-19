@@ -29,10 +29,10 @@ const Footer = () => {
             </div>
         </div>
         <div className="flex items-center justify-end gap-2 md:hidden w-1/3">
-          <a href="https://www.facebook.com/" className="hover:text-gray-300">
+          <a href="https://www.facebook.com/people/WineSofi/100063848108657/" className="hover:text-gray-300">
             <img src={fb} alt="facebook" className="w-6 h-6 mx-2" />
           </a>
-          <a href="https://www.instagram.com/" className="hover:text-gray-300">
+          <a href="https://www.instagram.com/winesofi/" className="hover:text-gray-300">
             <img src={insta} alt="instagram" className="w-7 h-7 mx-2" />
           </a>
       </div>
