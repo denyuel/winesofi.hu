@@ -7,7 +7,9 @@ require('dotenv').config({ path: './sanity_studio/.env' });
 module.exports = {
   siteMetadata: {
     title: `Wine&Sofi &mdash; terroir by Laposa Zsófia`,
-    siteUrl: `https://winesofi.hu`
+    description: `Lorem ipsum...`,
+    image: `/logo.png`,
+    siteUrl: 'https://winesofi.hu'
   },
   plugins: [{
     resolve: 'gatsby-source-sanity',

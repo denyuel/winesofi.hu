@@ -1,15 +1,17 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { PortableText } from '@portabletext/react';
+import { PortableText, toPlainText } from '@portabletext/react';
 import Layout from '../components/layout';
+import { SEO } from '../components/seo';
+import ContactForm from '../components/contact-form';
 
 export default function Page({ data }) {
   const post = data.sanityPage;
   return (
     <Layout>
       <div>
-        <div className='narrow-hero w-full'></div>
-        <div className='container mx-auto px-4'>
+        <div className='bg-narrow-hero w-full min-h-28 bg-cover'></div>
+        <div className='container mx-auto px-4 pb-8'>
           <h1 className='title text-4xl my-8'>{post.title}</h1>
           <div className='h-px w-10 opacity-20 bg-button_black mr-auto my-4'></div>
           <div className="prose max-w-none bold-text my-8">
@@ -25,6 +27,7 @@ export default function Page({ data }) {
             />
           </div>
         </div>
+        <ContactForm />
       </div>
     </Layout>
   )
@@ -45,3 +48,10 @@ export const query = graphql`
     }
   }
 `;
+
+export function Head({ data }) {
+  const page = data.sanityPage;
+  return (
+    <SEO title={page.title} description={toPlainText(page._rawSummary)} />
+  )
+};
