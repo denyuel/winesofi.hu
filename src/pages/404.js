@@ -1,52 +1,27 @@
-import * as React from "react"
+import React from "react"
 import { Link } from "gatsby"
-import { SEO } from "../components/seo"
+import { SEO } from "../components/seo";
+import Layout from '../components/layout';
 
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-
-const NotFoundPage = () => {
+export default function NotFoundPage() {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
+    <Layout>
+      <div>
+        <div className='bg-narrow-hero w-full min-h-28 bg-cover'></div>
+        <div className='container mx-auto px-4'>
+          <h1 className='title text-4xl my-8'>Nem található az oldal, amit keresel.</h1>
+          <div className='h-px w-10 opacity-20 bg-button_black mr-auto my-4'></div>
+          <div className="prose max-w-none bold-text my-8">
+            Kérlek, ellenőrizd a beírt URL-t, vagy térj vissza a <Link to="/">főoldalra</Link>.
+          </div>
+        </div>
+      </div>
+    </Layout>
   )
 }
 
-export default NotFoundPage
+export default NotFoundPage;
 
 export const Head = () => (
-  <SEO title="404: Not found" pathname="/404" />
-)
+  <SEO title="Az oldal nem található" pathname="/404" />
+);

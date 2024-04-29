@@ -9,9 +9,10 @@ export default function BlogPost({ data }) {
   const post = data.sanityPost;
   return (
     <Layout>
-      <div className='narrow-hero w-full'></div>
-      <div className='flex justify-around container mx-auto md:py-10 flex-col-reverse md:flex-row'>
-        <div className=''>
+      <div className='bg-narrow-hero w-full min-h-28 bg-cover'></div>
+      <div className='container mx-auto md:px-4'>
+      <div className='flex justify-around container mx-auto md:py-10 flex-col-reverse md:flex-row gap-12'>
+        <div className='md:flex-1 px-4 md:px-0'>
           <div className='flex items-center gap-3 mb-3'>
             <button className='bg-brown py-1 px-[10px] text-white rounded font-open font-semibold text-xs uppercase'>szőlészet</button>
             <p className='font-light font-open text-xs'>{post._createdAt}</p>
@@ -25,20 +26,21 @@ export default function BlogPost({ data }) {
             />
           </div>
         </div>
-        <GatsbyImage className='md:rounded-full w-full my-1 md:w-96 h-96 md:-mb-24' image={post.mainImage.asset.gatsbyImageData} alt={post.title} />
+        <GatsbyImage className='md:flex-1 md:rounded-full w-full my-1 md:max-w-80 md:max-h-80 aspect-square md:-mb-24' image={post.mainImage.asset.gatsbyImageData} alt={post.title} />
       </div>
       <div className='w-full h-0 border-b-[1px] border-button_black border-opacity-20'></div>
-      <div className='container mx-auto py-10'>
+        <div className='container mx-auto py-10 md:pt-24 px-4 md:px-0'>
         <div className="prose prose-h2:font-cormorant prose-h2:text-[28px] prose-h2:leading-7 prose-h2:font-bold text-sm leading-6 font-normal font-open max-w-none">
           <PortableText
             value={post._rawBody}
           // components={/* optional object of custom components to use */}
           />
         </div>
+        </div>
       </div>
     </Layout>
   )
-}
+};
 
 export const query = graphql`
   query MyQuery($id: String) {
@@ -66,4 +68,4 @@ export function Head({ data }) {
   return (
     <SEO title={post.title} image={post.mainImage.asset.gatsbyImageData.images.fallback.src} description={toPlainText(post._rawSummary)} />
   )
-}
+};

@@ -26,10 +26,10 @@ const RightNav = () => {
           </Link>
         </div>
         <div className="hidden md:flex justify-between items-center gap-2">
-          <a href="https://www.facebook.com/" className="hover:text-gray-300">
+          <a href="https://www.facebook.com/people/WineSofi/100063848108657/" className="hover:text-gray-300">
             <img src={fb} alt="facebook" className="w-6 h-6 lg:mx-2" />
           </a>
-          <a href="https://www.instagram.com/" className="hover:text-gray-300">
+          <a href="https://www.instagram.com/winesofi/" className="hover:text-gray-300">
             <img src={insta} alt="instagram" className="w-7 h-7 lg:mx-2" />
           </a>
         </div>

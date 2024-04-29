@@ -4,9 +4,6 @@ module.exports = {
     "./src/**/*.{html,js,ts,jsx,tsx}",
   ],
   theme: {
-    backgroundPosition: {
-      'teaser': 'center bottom -7.5rem'
-    },
     extend: {
       colors: {
         transparent: 'transparent',
@@ -28,6 +25,11 @@ module.exports = {
         red: '#C76D5C',
         brown_strong: '#C1672D',
         button_black: '#1D1D1B',
+      },
+      backgroundImage: {
+        'hero': "url('../images/hero-bg.png')",
+        'narrow-hero': "url('../images/narrow-hero-bg.png')",
+        'bio': "url('../images/index-bio-bg.png')"
       },
       fontFamily: {
         'sans': ['Montserrat', 'sans-serif'],
@@ -72,6 +74,9 @@ module.exports = {
       },
       gap: {
         form: '0.4rem',
+      },
+      backgroundPosition: {
+        'teaser': 'center bottom -7.5rem'
       }
     },
   },

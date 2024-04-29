@@ -20,6 +20,12 @@ const page = {
       validation: Rule => Rule.required()
     },
     {
+      name: 'include_in_navigation',
+      title: 'Include in main navigation?',
+      type: 'boolean',
+      initialValue: false
+    },
+    {
       name: 'summary',
       title: 'Summary',
       type: 'array',
