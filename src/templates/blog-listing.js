@@ -2,14 +2,18 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import BlogList from '../components/blog-list';
-import { SEO } from '../components/seo';
+import { Seo } from '../components/seo';
 
 export default function Blog({ data }) {
   const nodes = data.allSanityPost.nodes;
   return (
     <Layout>
-      <div className='narrow-hero mb-16'></div>
-      <BlogList nodes={nodes} />
+      <div className='bg-narrow-hero w-full min-h-28 bg-cover'></div>
+
+      <div className='container mx-auto px-4 pb-8'>
+        <h1 className='title text-4xl my-8 text-center'>Blog</h1>
+        <BlogList nodes={nodes} />
+      </div>
     </Layout>
   )
 }
@@ -42,5 +46,5 @@ export const query = graphql`
 `;
 
 export const Head = () => (
-  <SEO title="Blog" pathname="/blog" />
+  <Seo title="Blog — Wine&Sofi borászat Badacsony`}" pathname="/blog" />
 )

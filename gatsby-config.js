@@ -6,8 +6,8 @@ require('dotenv').config({ path: './sanity_studio/.env' });
 
 module.exports = {
   siteMetadata: {
-    title: `Wine&Sofi &mdash; terroir by Laposa Zsófia`,
-    description: `Lorem ipsum...`,
+    title: `Wine&Sofi — terroir by Laposa Zsófia`,
+    description: `A WineSofi nem csak egy borászat: a természetről és Badacsonyról szól. Bemutat egy egyedi helyet, ahol a vulkáni talaj adta megismételhetetlen borok születnek. Kis mennyiségben készítek számozott tételeket és arra törekszem, hogy minden palackban a terroir varázsa érezhető legyen.`,
     image: `/logo.png`,
     siteUrl: 'https://winesofi.hu'
   },
@@ -22,12 +22,6 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-postcss",
-    // {
-    //   resolve: 'gatsby-plugin-google-analytics',
-    //   options: {
-    //     "trackingId": ""
-    //   }
-    // },
     "gatsby-plugin-sitemap",
     "gatsby-transformer-remark",
   {

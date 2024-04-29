@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { SEO } from "../components/seo";
+import { Seo } from "../components/seo";
 import Layout from '../components/layout';
 
 export default function NotFoundPage() {
@@ -20,8 +20,6 @@ export default function NotFoundPage() {
   )
 }
 
-export default NotFoundPage;
-
 export const Head = () => (
-  <SEO title="Az oldal nem található" pathname="/404" />
+  <Seo title="Az oldal nem található" pathname="/404" />
 );

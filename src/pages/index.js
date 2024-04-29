@@ -4,7 +4,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 import Layout from '../components/layout';
 import BlogList from '../components/blog-list';
-import { SEO } from '../components/seo';
+import { Seo } from '../components/seo';
 
 export default function HomePage({ data }) {
   const { nodes } = data.allSanityPost;
@@ -50,13 +50,13 @@ export default function HomePage({ data }) {
           <h1 className="text-3xl md:text-4xl title">Wine&Sofi</h1>
           <div className="border-t-2 border-gray w-10"></div>
           <p className="basic-text text-center">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus  mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-          </p>
+          A WineSofi nem csak egy borászat: a természetről és Badacsonyról szól. Bemutat egy egyedi helyet, ahol a vulkáni talaj adta megismételhetetlen borok születnek. Kis mennyiségben készítek számozott tételeket és arra törekszem, hogy minden palackban a terroir varázsa érezhető legyen.          </p>
           <div className="flex gap-3 justify-center pt-7">
-            <button
+            <Link
+              to='/boraink'
               className="button h-9">
               a pincészet borai
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -82,7 +82,7 @@ export default function HomePage({ data }) {
                 <h2 className='font-cormorant_sc text-3xl font-bold leading-7 tracking-normal text-button_black'>Szőlészeti</h2>
                 <h3 className='font-kaushan text-4xl leading-11 tracking-normal text-white'>Szaktanácsadás</h3>
                 <div className='h-px w-10 opacity-20 bg-button_black ml-auto sm:mr-auto sm:ml-0'></div>
-                <p className='font-sans text-sm leading-7 text-wrap text-button_black opacity-60 pb-4'>Lorem ipsum  amet, consectetuer adipiscing elit.</p>
+                <p className='font-sans text-sm leading-7 text-wrap text-button_black opacity-60 pb-4'>Személyre szabott borászati szaktanácsadás.</p>
                 <div className='relative -ml-24 mt-4'>
                   <Link className='button' to="/boraszat-tanacsadas">részletek</Link>
                 </div>
@@ -101,7 +101,11 @@ export default function HomePage({ data }) {
             <h1 className='font-kaushan text-4xl leading-11 tracking-normal text-orange'>Laposa Zsófia</h1>
             <h3 className='font-cormorant_sc text-3xl font-bold leading-7 tracking-normal uppercase text-button_black'>borász</h3>
             <div className='h-px w-10 opacity-20 bg-button_black mr-auto my-4'></div>
-            <p className='font-sans text-sm leading-7 text-wrap text-button_black opacity-60 pb-4'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus  mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus  mus.</p>
+            <p className='font-sans text-sm leading-7 text-wrap text-button_black opacity-60 pb-4'>
+Üdvözöllek! Zsófi vagyok, a WineSofi alapítója. A világ számos pontján szereztem tapasztalatot a borászat világából. Szakmai tanulmányaimat a Kertészeti Egyetemen, Valenciában és Bordeaux-ban végeztem. Emellett dolgoztam Kaliforniában, Burgundiában, Elzászban, Bordeaux-ban, Észak-Olaszországban és az akkor még családi vállalkozásként működő Laposa Birtoknál. 2021-ben pedig úgy döntöttem, saját utat választok, így született meg a WineSofi butikborászat.<br />
+„Az ember része a természetnek és az élet körforgásának, melyben teremt és alkot. Ezt a lüktető ciklikusságot tapasztalhatjuk testünkön, az időjárás változásain, sőt, még a születés és az elmúlás pillanataiban is. Egy pohár borban érezhető az éghajlat, a talaj, a napsütötte órák száma, az évjárat sajátosságai, a borász munkája és a természet maga. Mivel minden évjárat egyedi, minden bor más. Az ember akkor kerül összhangba önmagával, amikor összhangba kerül a természettel.”
+Bízom benne, hogy a boraimmal sikerül átadnom neked a természet iránti szenvedélyt és tiszteletet.
+              </p>
             <div className='flex flex-row justify-center sm:justify-normal mt-2'>
               <Link className='button' to="/kapcsolat">kapcsolat</Link>
             </div>
@@ -141,5 +145,5 @@ export const query = graphql`
 `;
 
 export const Head = () => (
-  <SEO />
+  <Seo />
 )
