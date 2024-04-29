@@ -1,5 +1,6 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
+import { SEO } from '../components/seo';
 import Layout from '../components/layout';
 import ContactForm from '../components/contact-form';
 
@@ -30,4 +31,6 @@ export default function Contact() {
   )
 };
 
-export const Head = () => <title>Wine&Sofi &mdash; terroir by Laposa Zsófia</title>
+export const Head = () => (
+  <SEO title="Kapcsolat" pathname="/kapcsolat" />
+);
