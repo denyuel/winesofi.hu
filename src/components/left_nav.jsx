@@ -4,7 +4,7 @@ import { Link, useStaticQuery, graphql } from 'gatsby';
 const LeftNav = () => {
   const { pages } = useStaticQuery(graphql`
     query {
-      pages: allSanityPage {
+      pages: allSanityPage(filter: {include_in_navigation: {eq: true}}) {
         nodes {
           id
           slug {

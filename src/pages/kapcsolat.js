@@ -1,6 +1,6 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-import { SEO } from '../components/seo';
+import { Seo } from '../components/seo';
 import Layout from '../components/layout';
 import ContactForm from '../components/contact-form';
 
@@ -32,5 +32,5 @@ export default function Contact() {
 };
 
 export const Head = () => (
-  <SEO title="Kapcsolat" pathname="/kapcsolat" />
+  <Seo title="Kapcsolat" pathname="/kapcsolat" />
 );

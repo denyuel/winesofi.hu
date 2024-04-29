@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { PortableText, toPlainText } from '@portabletext/react';
 import Layout from '../components/layout';
-import { SEO } from '../components/seo';
+import { Seo } from '../components/seo';
 import ContactForm from '../components/contact-form';
 
 export default function Page({ data }) {
@@ -52,6 +52,6 @@ export const query = graphql`
 export function Head({ data }) {
   const page = data.sanityPage;
   return (
-    <SEO title={page.title} description={toPlainText(page._rawSummary)} />
+    <Seo title={page.title} description={toPlainText(page._rawSummary)} />
   )
 };

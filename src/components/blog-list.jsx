@@ -14,7 +14,7 @@ const BlogList = ({ nodes = []}) => (
       >
         <div className="blog-article-child flex flex-1 items-center self-stretch py-4 lg:py-0 lg:pl-32 lg:-ml-28 rounded-b-2xl lg:rounded-none">
           <div className="px-8">
-            <span className="brand">BRAND</span>
+            <span className='bg-brown py-1 px-[10px] text-white rounded font-open font-semibold text-xs uppercase mr-2'>szőlészet blog</span>
             <span className="text-gray-500">{node._createdAt}</span>
             <h2 className="mt-2 text-2xl font-bold font-cormorant_sc">
               {node.title}
