@@ -81,6 +81,6 @@ export const query = graphql`
 export function Head({ data }) {
   const post = data.sanityPost;
   return (
-    <Seo title={post.title} image={post.mainImage.asset.gatsbyImageData.images.fallback.src} description={toPlainText(post._rawSummary)} />
+    <Seo title={`${post.title} — Wine&Sofi blog`} image={post.mainImage.asset.gatsbyImageData.images.fallback.src} description={toPlainText(post._rawSummary)} />
   )
 };

@@ -52,6 +52,6 @@ export const query = graphql`
 export function Head({ data }) {
   const page = data.sanityPage;
   return (
-    <Seo title={page.title} description={toPlainText(page._rawSummary)} />
+    <Seo title={`${page.title} — Wine&Sofi borászat Badacsony`} description={toPlainText(page._rawSummary)} />
   )
 };

@@ -1,7 +1,6 @@
 import React from 'react';
 import LeftNav from './left_nav';
 import RightNav from './right_nav';
-import { StaticImage } from "gatsby-plugin-image";
 import logoSvg from '../images/logo.svg';
 import fb from "../images/facebook.svg";
 import insta from "../images/instagram.svg";

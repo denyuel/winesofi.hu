@@ -46,5 +46,5 @@ export const query = graphql`
 `;
 
 export const Head = () => (
-  <Seo title="Blog" pathname="/blog" />
+  <Seo title="Blog — Wine&Sofi borászat Badacsony`}" pathname="/blog" />
 )
