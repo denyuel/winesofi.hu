@@ -1,7 +1,4 @@
 import React from 'react';
-import './src/styles/global.css'
-import '@fontsource/cormorant-sc/700.css';
-import '@fontsource/kaushan-script';
 import AgeVerificationModal from './src/components/ageVerificationModal';
 
 const PageWrapper = ({ children }) => {
