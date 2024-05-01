@@ -9,16 +9,21 @@ module.exports = {
     title: `Wine&Sofi — terroir by Laposa Zsófia`,
     description: `A WineSofi nem csak egy borászat: a természetről és Badacsonyról szól. Bemutat egy egyedi helyet, ahol a vulkáni talaj adta megismételhetetlen borok születnek. Kis mennyiségben készítek számozott tételeket és arra törekszem, hogy minden palackban a terroir varázsa érezhető legyen.`,
     image: `/logo.png`,
-    siteUrl: 'https://winesofi.hu',
-    sanityProjectId: process.env.SANITY_STUDIO_PROJECT_ID,
-    sanityDataset: process.env.SANITY_STUDIO_DATASET
+    siteUrl: 'https://winesofi.hu'
   },
   plugins: [{
     resolve: 'gatsby-source-sanity',
     options: {
       projectId: process.env.SANITY_STUDIO_PROJECT_ID,
-      dataset: process.env.SANITY_STUDIO_DATASET,
+      dataset: process.env.SANITY_STUDIO_DATASET
     }
+  },
+  {
+    resolve: "gatsby-plugin-sanity-image",
+    options: {
+      projectId: process.env.SANITY_STUDIO_PROJECT_ID,
+      dataset: process.env.SANITY_STUDIO_DATASET
+    },
   },
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",

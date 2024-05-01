@@ -26,8 +26,9 @@
   }
 
   .button {
-    @apply px-5 py-2.75 bg-button_black rounded-[20px] text-white uppercase text-xs tracking-[2px] font-semibold font-open;
+    @apply px-5 py-2.75 bg-button_black rounded-[20px] text-white uppercase text-xs tracking-[2px] font-semibold font-open hover:bg-blue transition-all duration-150 hover:shadow-sm;
   }
+
   .button--secondary {
     @apply text-button_black bg-white border-2 border-button_black;
   }
