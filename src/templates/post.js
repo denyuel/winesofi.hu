@@ -1,12 +1,59 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { PortableText, toPlainText } from '@portabletext/react';
-import Layout from '../components/layout';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import { getGatsbyImageData } from 'gatsby-source-sanity';
+import Layout from '../components/layout';
 import { Seo } from '../components/seo';
 
 export default function BlogPost({ data }) {
   const post = data.sanityPost;
+  const { sanityDataset: dataset, sanityProjectId: projectId } = data.site.siteMetadata;
+  const portableTextComponents = {
+    types: {
+      image: ({ value }) => {
+        const imageData = getGatsbyImageData(
+          value?.asset?._id,
+          {
+            layout: 'constrained',
+            placeholder: 'blurred'
+          },
+          {
+            dataset,
+            projectId
+          }
+        );
+        return <GatsbyImage className="block mx-auto max-w-4xl" image={imageData} alt={post.title} />;
+      },
+      imageGallery: ({ value }) => (
+        <div className="flex flex-wrap gap-4 justify-center">
+          {value.images.map((image) => {
+            const imageData = getGatsbyImageData(
+              image?.asset?._id,
+              {
+                layout: 'constrained',
+                placeholder: 'blurred'
+              },
+              {
+                dataset,
+                projectId
+              }
+            );
+            return (
+              <React.Fragment key={image?.asset?._id}>
+                <GatsbyImage className="" image={imageData} alt={post.title} />
+              </React.Fragment>);
+          })}
+        </div>)
+    },
+    marks: {
+      link: ({ children, value }) => (
+        <a href={value.href} className="underline text-orange">
+          {children}
+        </a>)
+    }
+  };
+
   return (
     <Layout>
       <div className='bg-narrow-hero w-full min-h-28 bg-cover'></div>
@@ -37,7 +84,6 @@ export default function BlogPost({ data }) {
             <div className="prose max-w-none bold-text py-6">
               <PortableText
                 value={post._rawSummary}
-              // components={/* optional object of custom components to use */}
               />
             </div>
           </div>
@@ -48,7 +94,7 @@ export default function BlogPost({ data }) {
           <div className="prose prose-h2:font-cormorant prose-h2:text-[28px] prose-h2:leading-7 prose-h2:font-bold text-sm leading-6 font-normal font-open max-w-none">
             <PortableText
               value={post._rawBody}
-            // components={/* optional object of custom components to use */}
+              components={ portableTextComponents }
             />
           </div>
         </div>
@@ -59,6 +105,12 @@ export default function BlogPost({ data }) {
 
 export const query = graphql`
   query MyQuery($id: String) {
+    site {
+      siteMetadata {
+        sanityDataset
+        sanityProjectId
+      }
+    }
     sanityPost(id: {eq: $id}) {
       id
       title

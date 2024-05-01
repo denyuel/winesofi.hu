@@ -50,6 +50,9 @@ const post = {
           options: {
             hotspot: true
           },
+        },
+        {
+          type: 'imageGallery'
         }
       ],
       validation: Rule => Rule.required()
