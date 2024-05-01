@@ -12,10 +12,46 @@ export default function BlogPost({ data }) {
   const portableTextComponents = {
     types: {
       image: ({ value }) => {
-        const imageData = getGatsbyImageData(value?.asset?._id, { width: 1024 }, { dataset, projectId });
-        return <GatsbyImage layout="constrained" className="block mx-auto max-w-5xl" image={imageData} alt={post.title} />;
+        const imageData = getGatsbyImageData(
+          value?.asset?._id,
+          {
+            layout: 'constrained',
+            placeholder: 'blurred'
+          },
+          {
+            dataset,
+            projectId
+          }
+        );
+        return <GatsbyImage className="block mx-auto max-w-4xl" image={imageData} alt={post.title} />;
       },
+      imageGallery: ({ value }) => (
+        <div className="flex flex-wrap gap-4 justify-center">
+          {value.images.map((image) => {
+            const imageData = getGatsbyImageData(
+              image?.asset?._id,
+              {
+                layout: 'constrained',
+                placeholder: 'blurred'
+              },
+              {
+                dataset,
+                projectId
+              }
+            );
+            return (
+              <React.Fragment key={image?.asset?._id}>
+                <GatsbyImage className="" image={imageData} alt={post.title} />
+              </React.Fragment>);
+          })}
+        </div>)
     },
+    marks: {
+      link: ({ children, value }) => (
+        <a href={value.href} className="underline text-orange">
+          {children}
+        </a>)
+    }
   };
 
   return (
