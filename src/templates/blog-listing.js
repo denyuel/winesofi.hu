@@ -33,7 +33,7 @@ export const query = graphql`
             gatsbyImageData
           }
         }
-        _createdAt
+        _createdAt(formatString: "YYYY.MM.DD")
         _updatedAt
         _rawBody(resolveReferences: {maxDepth: 5})
         slug {
