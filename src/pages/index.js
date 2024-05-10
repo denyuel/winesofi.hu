@@ -52,12 +52,12 @@ export default function HomePage({ data }) {
           <h1 className="text-3xl md:text-4xl title">Wine&Sofi</h1>
           <div className="border-t-2 border-gray w-10"></div>
           <p className="basic-text text-center">
-            A WineSofi nem csak egy borászat: a természetről és Badacsonyról szól. Bemutat egy egyedi helyet, ahol a vulkáni talaj adta megismételhetetlen borok születnek. Kis mennyiségben készítek számozott tételeket és arra törekszem, hogy minden palackban a terroir varázsa érezhető legyen.          </p>
+            A WineSofi nem csak egy borászat: a természetről és Badacsonyról szól. Bemutat egy egyedi helyet, ahol a vulkáni talaj adta megismételhetetlen borok születnek. Kis mennyiségekben készülnek egyedi számozott palackok, melyek mindegyikében érezhető a terroir varázsa.</p>
           <div className="flex gap-3 justify-center pt-7">
             <Link
               to='/boraink'
               className="button h-9">
-              a pincészet borai
+              Borbutik
             </Link>
           </div>
         </div>
