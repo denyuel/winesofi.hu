@@ -55,7 +55,7 @@ export default function HomePage({ data }) {
             A WineSofi nem csak egy borászat: a természetről és Badacsonyról szól. Bemutat egy egyedi helyet, ahol a vulkáni talaj adta megismételhetetlen borok születnek. Kis mennyiségekben készülnek egyedi számozott palackok, melyek mindegyikében érezhető a terroir varázsa.</p>
           <div className="flex gap-3 justify-center pt-7">
             <Link
-              to='/boraink'
+              to='/borok'
               className="button h-9">
               Borbutik
             </Link>
