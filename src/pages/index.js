@@ -12,7 +12,7 @@ export default function HomePage({ data }) {
   return (
     <Layout>
       <section>
-        <Link to='/boraink'>
+        <Link to='/borok'>
           <div className="flex flex-col justify-center w-full h-auto bg-hero bg-cover">
             <div className="flex justify-center gap-2 mt-12 md:gap-8 -mb-16 md:-mb-32 md:mt-16 w-full wine-container">
               <div className="flex flex-col items-center max-w-full">
