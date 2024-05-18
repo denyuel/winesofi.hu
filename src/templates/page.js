@@ -5,20 +5,14 @@ import SanityImage from 'gatsby-plugin-sanity-image';
 import Layout from '../components/layout';
 import { Seo } from '../components/seo';
 import ContactForm from '../components/contact-form';
+import imageGallery from '../components/imageGallery';
 
 export default function Page({ data }) {
   const post = data.sanityPage;
   const portableTextComponents = {
     types: {
       image: ({ value }) => (<SanityImage {...value} width={1200} className='max-w-5xl max-h-104 w-auto h-auto mx-auto' alt={post.title} />),
-      imageGallery: ({ value }) => (
-        <div className="flex flex-wrap gap-4 justify-center max-w-4xl mx-auto">
-          {value.images.map((image) => (
-            <div key={image?.asset?._id} className='flex-1'>
-              <SanityImage {...image} width={600} className='max-w-xl max-h-[36rem] w-auto h-auto mx-auto' alt={post.title} />
-            </div>))
-          }
-        </div>)
+      imageGallery: imageGallery
     },
     marks: {
       link: ({ children, value }) => (
