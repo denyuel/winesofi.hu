@@ -26,6 +26,9 @@ const ContactForm = () => {
     });
     setSubmitted(true);
     e.target.reset();
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'form_submission' });
   };
 
   return (

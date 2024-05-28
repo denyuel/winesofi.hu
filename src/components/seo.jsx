@@ -16,6 +16,13 @@ export const Seo = ({ title, description, pathname, image, children }) => {
     url: `${siteUrl}${pathname || ""}`,
   };
 
+  const gaScript = `
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)}
+    gtag('js', new Date());
+    gtag('config', 'G-SN67F4C0BN');
+  `;
+
   return (
     <>
       <title>{seo.title}</title>
@@ -31,17 +38,22 @@ export const Seo = ({ title, description, pathname, image, children }) => {
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
       <link rel="icon" href="/logo.png" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SN67F4C0BN"></script>
       <script
         type="text/plain"
         data-category="analytics"
         data-service="Google Analytics"
       >
         {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-T94S4WTZ');`}
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-T94S4WTZ');`}
+
+        {gaScript}
       </script>
+
       {children}
     </>
   );
