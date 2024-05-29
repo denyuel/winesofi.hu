@@ -41,6 +41,7 @@ module.exports = {
       },
       fontSize: {
         xxs: '10px',
+        'post_title': '28px'
       },
       width: {
         '17': '4.25rem',

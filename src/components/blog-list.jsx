@@ -16,7 +16,7 @@ const BlogList = ({ nodes = []}) => (
           <div className="px-8">
             <span className='bg-brown py-1 px-[10px] text-white rounded font-open font-semibold text-xs uppercase mr-2'>borászat blog</span>
             <span className="text-gray-500">{node._createdAt}</span>
-            <h2 className="mt-2 text-2xl font-bold font-cormorant_sc">
+            <h2 className="mt-2 text-post_title font-bold font-cormorant_sc">
               {node.title}
             </h2>
             <hr className="w-8 mt-3 h-1 opacity-25"></hr>
