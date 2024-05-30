@@ -31,6 +31,11 @@ export default function BlogPost({ data }) {
           {children}
         </h3>
       ),
+      h4: ({ children }) => (
+        <h4 className="title text-2xl leading-7">
+          {children}
+        </h4>
+      ),
     }
   };
 
