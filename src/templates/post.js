@@ -27,12 +27,12 @@ export default function BlogPost({ data }) {
         </h2>
       ),
       h3: ({ children }) => (
-        <h3 className="title text-post_title leading-7">
+        <h3 className="title text-2xl leading-7">
           {children}
         </h3>
       ),
       h4: ({ children }) => (
-        <h4 className="title text-2xl leading-7">
+        <h4 className="title text-xl leading-7">
           {children}
         </h4>
       ),
