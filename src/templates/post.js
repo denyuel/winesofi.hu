@@ -19,6 +19,23 @@ export default function BlogPost({ data }) {
         <a href={value.href} className="underline text-orange">
           {children}
         </a>)
+    },
+    block: {
+      h2: ({ children }) => (
+        <h2 className="title text-post_title leading-7">
+          {children}
+        </h2>
+      ),
+      h3: ({ children }) => (
+        <h3 className="title text-2xl leading-7">
+          {children}
+        </h3>
+      ),
+      h4: ({ children }) => (
+        <h4 className="title text-xl leading-7">
+          {children}
+        </h4>
+      ),
     }
   };
 
@@ -42,14 +59,13 @@ export default function BlogPost({ data }) {
               </ul>
             </nav>
 
-
             <div className='flex justify-around container mx-auto md:py-10 flex-col-reverse md:flex-row gap-12'>
               <div className='md:flex-1 px-4 md:px-0'>
                 <div className='flex items-center gap-3 mb-3'>
                   <span className='bg-brown py-1 px-[10px] text-white rounded font-open font-semibold text-xs uppercase'>borászat blog</span>
                   <p className='font-light font-open text-xs'>{post._createdAt}</p>
                 </div>
-                <h1 className="text-4xl font-bold font-cormorant leading-9 pb-6">{post.title}</h1>
+                <h1 className="text-4xl title pb-6">{post.title}</h1>
                 <div className='h-0 border-b border-button_black border-opacity-20 w-10'></div>
                 <div className="prose max-w-none bold-text py-6">
                   <PortableText
@@ -61,7 +77,7 @@ export default function BlogPost({ data }) {
             </div>
             <div className='w-full h-0 border-b-[1px] border-button_black border-opacity-20'></div>
             <div className='container mx-auto py-10 md:pt-24 px-4 md:px-0'>
-              <div className="prose prose-h2:font-cormorant prose-h2:text-[28px] prose-h2:leading-7 prose-h2:font-bold text-sm leading-6 font-normal font-open max-w-none">
+              <div className="prose text-sm leading-6 font-normal font-open max-w-none">
                 <PortableText
                   value={post._rawBody}
                   components={portableTextComponents}

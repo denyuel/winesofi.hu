@@ -19,6 +19,23 @@ export default function Page({ data }) {
         <a href={value.href} className="underline text-orange">
           {children}
         </a>)
+    },
+    block: {
+      h2: ({ children }) => (
+        <h2 className="title text-post_title leading-7">
+          {children}
+        </h2>
+      ),
+      h3: ({ children }) => (
+        <h3 className="title text-2xl leading-7">
+          {children}
+        </h3>
+      ),
+      h4: ({ children }) => (
+        <h4 className="title text-xl leading-7">
+          {children}
+        </h4>
+      ),
     }
   };
 

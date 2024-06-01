@@ -6,13 +6,18 @@ const imageGallery = ({ value }) => {
   if (!value.images[0].asset) return null;
 
   return (
-  <div className="not-prose columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4 p-8">
-    {value.images.map((image) => (
-      <div key={image?.asset?._id} className='h-min w-full'>
-        <SanityImage {...image} width={600} className='w-auto h-auto mx-auto object-cover' alt='' />
-      </div>))
-    }
-  </div>);
+    <div className="flex overflow-x-auto overflow-y-hidden gap-2 h-full">
+      {value.images.map((image) => (
+        <div key={image?.asset?._id} className="flex-shrink-0 h-full w-full sm:w-1/2 lg:w-1/3">
+          <SanityImage
+            {...image}
+            className="w-full h-full object-cover aspect-square m-0"
+            alt=""
+          />
+        </div>
+      ))}
+    </div>
+  );
 };
 
 export default imageGallery;
