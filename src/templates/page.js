@@ -84,7 +84,33 @@ export const query = graphql`
 
 export function Head({ data }) {
   const page = data.sanityPage;
+
+  let title = page.title;
+  let description = toPlainText(page._rawSummary);
+  let winesofi = 'Wine&Sofi |';
+
+  switch (page.slug.current) {
+    case 'boraszat-kepzesek': {
+      title = `${winesofi} Borászati képzések, kurzusok`;
+      description = `Tanuld meg a borászat mesterségét egy természetközeli butikborászat megálmodójától, a Badacsony szívében, a Balaton mellett.`;
+      break;
+    }
+    case 'boraszat-tanacsadas': {
+      title = `${winesofi} Borászati Szaktanácsadás`;
+      description = `Szaktanácsadás a Wine&Sofi természetközeli butikborászat megálmodójától, a Badacsony szívében, a Balaton mellett.`;
+      break;
+    }
+    case 'borok': {
+      title = `${winesofi} Egyedi borok a borbutikból`;
+      description = `Egyedi borok, sorszámozott palackok a természetközeli butikborászatomból, a Badacsony szívében, a Balaton mellől.`;
+      break;
+    }
+    default: {
+      title = `${winesofi} ${page.title}`;
+      break;
+    }
+  }
   return (
-    <Seo title={`${page.title} — Wine&Sofi borászat Badacsony`} description={toPlainText(page._rawSummary)} />
+    <Seo title={title} description={description} />
   )
 };

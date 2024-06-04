@@ -49,10 +49,14 @@ export default function HomePage({ data }) {
           </div>
         </Link>
         <div className="flex flex-col gap-2 items-center px-4 md:px-60 mt-28 md:mt-48 container mx-auto">
-          <h1 className="text-3xl md:text-4xl title">Wine&Sofi</h1>
+          <h1 className="text-3xl md:text-4xl text-center title">Wine&Sofi butikborászat</h1>
           <div className="border-t-2 border-gray w-10"></div>
           <p className="basic-text text-center">
-            A WineSofi nem csak egy borászat: a természetről és Badacsonyról szól. Bemutat egy egyedi helyet, ahol a vulkáni talaj adta megismételhetetlen borok születnek. Kis mennyiségekben készülnek egyedi számozott palackok, melyek mindegyikében érezhető a terroir varázsa.</p>
+            A WineSofi nem csak egy borászat: a természetről, a Badacsonyról és a Balatonról szól. Bemutat
+            egy különleges helyet, ahol a vulkáni talaj adta megismételhetetlen egyedi borok születnek. A kis
+            mennyiségben készült, számozott palackokba töltött egyedi borok mindegyikében érezhető a
+            butikborászat szakértelme és a terroir varázsa.
+          </p>
           <div className="flex gap-3 justify-center pt-7">
             <Link
               to='/borok'
@@ -76,10 +80,10 @@ export default function HomePage({ data }) {
                   <Link className='button' to="/boraszat-kepzesek">részletek</Link>
                 </div>
               </div>
-              <StaticImage className='teaser-img relative sm:right-0 z-10 mt-8 sm:mt-0 mb-0' src="../images/index-post-left.jpg" alt="Borászati képzések" placeholder="blurred" />
+              <StaticImage className='teaser-img relative sm:right-0 z-10 mt-8 sm:mt-0 mb-0' src="../images/index-post-left.jpg" alt="Wine&Sofi egyedi borkülönlegesség" placeholder="blurred" />
             </div>
             <div className='flex items-center sm:gap-8 flex-col sm:flex-row sm:py-16'>
-              <StaticImage className='teaser-img sm:left-0 my-0' src="../images/index-post-right.jpg" alt="Szőlészeti tanácsadás" placeholder="blurred" />
+              <StaticImage className='teaser-img sm:left-0 my-0' src="../images/index-post-right.jpg" alt="Szőlő a Badacsonyból" placeholder="blurred" />
               <div className='relative z-20 w-64 text-right sm:text-left left-6 bottom-10 sm:left-0 sm:bottom-0'>
                 <h2 className='font-cormorant_sc text-3xl font-bold leading-7 tracking-normal text-button_black'>Borászati</h2>
                 <h3 className='font-kaushan text-4xl leading-11 tracking-normal text-white'>Szaktanácsadás</h3>
@@ -97,16 +101,26 @@ export default function HomePage({ data }) {
       <section className='pb-16 pt-4 sm:py-16 bg-bio bg-contain bg-right bg-no-repeat'>
         <div className="container mx-auto flex flex-wrap items-center justify-evenly bg-contain px-4 max-w-7xl gap-8 md:gap-12 sm:flex-row-reverse">
           <div className=''>
-            <StaticImage className='rounded-full h-76 w-76' src="../images/index-bio-photo.jpg" alt="Laposa Zsófia" placeholder="blurred" />
+            <StaticImage className='rounded-full h-76 w-76' src="../images/index-bio-photo.jpg" alt="Laposa Zsófia borász" placeholder="blurred" />
           </div>
           <div className='w-full sm:flex-1'>
             <h1 className='font-kaushan text-4xl leading-11 tracking-normal text-orange'>Laposa Zsófia</h1>
             <h3 className='font-cormorant_sc text-3xl font-bold leading-7 tracking-normal uppercase text-button_black'>borász</h3>
             <div className='h-px w-10 opacity-20 bg-button_black mr-auto my-4'></div>
             <p className='font-sans text-sm leading-7 text-wrap text-button_black opacity-60 pb-4'>
-              Üdvözöllek! Zsófi vagyok, a WineSofi alapítója. A világ számos pontján szereztem tapasztalatot a borászat világából. Szakmai tanulmányaimat a Kertészeti Egyetemen, Valenciában és Bordeaux-ban végeztem. Emellett dolgoztam Kaliforniában, Burgundiában, Elzászban, Bordeaux-ban, Észak-Olaszországban és az akkor még családi vállalkozásként működő Laposa Birtoknál. 2021-ben pedig úgy döntöttem, saját utat választok, így született meg a WineSofi butikborászat.<br />
-              „Az ember része a természetnek és az élet körforgásának, melyben teremt és alkot. Ezt a lüktető ciklikusságot tapasztalhatjuk testünkön, az időjárás változásain, sőt, még a születés és az elmúlás pillanataiban is. Egy pohár borban érezhető az éghajlat, a talaj, a napsütötte órák száma, az évjárat sajátosságai, a borász munkája és a természet maga. Mivel minden évjárat egyedi, minden bor más. Az ember akkor kerül összhangba önmagával, amikor összhangba kerül a természettel.”
-              Bízom benne, hogy a boraimmal sikerül átadnom neked a természet iránti szenvedélyt és tiszteletet.
+              Üdvözöllek! Zsófi vagyok, a WineSofi butikborászat alapítója. A világ számos pontján szereztem
+              tapasztalatot a borászat világából. Szakmai tanulmányaimat a Kertészeti Egyetemen, Valenciában
+              és Bordeaux-ban végeztem. Emellett dolgoztam Kaliforniában, Burgundiában, Elzászban,
+              Bordeaux-ban, Észak-Olaszországban és az akkor még családi vállalkozásként működő Laposa
+              Birtoknál. 2021-ben pedig úgy döntöttem, saját utat választok, így született meg az egyedi
+              borokat készítő badacsonyi WineSofi butikborászat.
+              „Az ember része a természetnek és az élet körforgásának, melyben teremt és alkot. Ezt a lüktető
+              ciklikusságot tapasztalhatjuk testünkön, az időjárás változásain, sőt, még a születés és az elmúlás
+              pillanataiban is. Egy pohár borban érezhető az éghajlat, a talaj, a napsütötte órák száma, az
+              évjárat sajátosságai, a borász munkája és a természet maga. Mivel minden évjárat egyedi, minden
+              bor más. Az ember akkor kerül összhangba önmagával, amikor összhangba kerül a természettel.”
+              Bízom benne, hogy egyedi boraimmal sikerül átadnom neked a természet iránti szenvedélyt és
+              tiszteletet.
             </p>
             <div className='flex flex-row justify-center sm:justify-normal mt-2'>
               <Link className='button' to="/kapcsolat">kapcsolat</Link>

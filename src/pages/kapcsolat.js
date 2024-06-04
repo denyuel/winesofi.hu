@@ -38,5 +38,5 @@ export default function Contact() {
 };
 
 export const Head = () => (
-  <Seo title="Kapcsolat — Wine&Sofi borászat Badacsony`}" pathname="/kapcsolat" />
+  <Seo title="Wine&Sofi | Elérhetőségek, kapcsolat" description="A Wine&Sofi Butikborászat elérhetőségei, lépj velünk kapcsolatba és ismerd meg a badacsonyi különleges borainkat." pathname="/kapcsolat" />
 );
