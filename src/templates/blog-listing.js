@@ -46,5 +46,5 @@ export const query = graphql`
 `;
 
 export const Head = () => (
-  <Seo title="Blog — Wine&Sofi borászat Badacsony`}" pathname="/blog" />
+  <Seo title="Wine&Sofi | Hírek, borblog, aktualitások" description="Hírek, borászati tartalmak a Badacsonyból, a Balaton mellől, egy különleges butikborászatból." pathname="/blog" />
 )

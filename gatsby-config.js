@@ -6,8 +6,10 @@ require('dotenv').config({ path: './sanity_studio/.env' });
 
 module.exports = {
   siteMetadata: {
-    title: `Wine&Sofi — terroir by Laposa Zsófia`,
-    description: `A WineSofi nem csak egy borászat: a természetről és Badacsonyról szól. Bemutat egy egyedi helyet, ahol a vulkáni talaj adta megismételhetetlen borok születnek. Kis mennyiségben készítek számozott tételeket és arra törekszem, hogy minden palackban a terroir varázsa érezhető legyen.`,
+    title: `Wine&Sofi | Egyedi borok egy badacsonyi butikborászatból`,
+    description: `Természetközeli butikborászat Badacsony szívében, a Balaton mellett. Egyedi
+    borok, számozott tételek, Kéknyelű különlegességek, borkóstolók, borászati kurzusok, és
+    szaktanácsadás.`,
     image: `/logo.png`,
     siteUrl: 'https://winesofi.hu'
   },
