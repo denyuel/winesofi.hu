@@ -18,7 +18,7 @@ export default function HomePage({ data }) {
               <div className="flex flex-col items-center max-w-full">
                 <StaticImage
                   className="h-auto w-28 md:w-72 -mb-16 md:-mb-36 z-10"
-                  src="../images/bor3.png"
+                  src="../../images/bor3.png"
                   alt="kéknyelű 2021"
                   placeholder="blurred"
                 />
@@ -34,7 +34,7 @@ export default function HomePage({ data }) {
               <div className="flex flex-col items-center max-w-full">
                 <StaticImage
                   className="h-auto w-28 md:w-72 -mb-16 md:-mb-36 z-10"
-                  src="../images/bor1.png"
+                  src="../../images/bor1.png"
                   alt="olaszrizling 2022"
                   placeholder="blurred"
                 />
@@ -50,7 +50,7 @@ export default function HomePage({ data }) {
               <div className="flex flex-col items-center max-w-full">
                 <StaticImage
                   className="h-auto w-28 md:w-72 -mb-16 md:-mb-36 z-10"
-                  src="../images/bor2.png"
+                  src="../../images/bor2.png"
                   alt="olaszrizling 2022"
                   placeholder="blurred"
                 />
@@ -103,7 +103,7 @@ export default function HomePage({ data }) {
               </div>
               <StaticImage
                 className="teaser-img relative sm:right-0 z-10 mt-8 sm:mt-0 mb-0"
-                src="../images/index-post-left.jpg"
+                src="../../images/index-post-left.jpg"
                 alt="Wine&Sofi egyedi borkülönlegesség"
                 placeholder="blurred"
               />
@@ -111,7 +111,7 @@ export default function HomePage({ data }) {
             <div className="flex items-center sm:gap-8 flex-col sm:flex-row sm:py-16">
               <StaticImage
                 className="teaser-img sm:left-0 my-0"
-                src="../images/index-post-right.jpg"
+                src="../../images/index-post-right.jpg"
                 alt="Szőlő a Badacsonyból"
                 placeholder="blurred"
               />
@@ -140,7 +140,7 @@ export default function HomePage({ data }) {
           <div className="">
             <StaticImage
               className="rounded-full h-76 w-76"
-              src="../images/index-bio-photo.jpg"
+              src="../../images/index-bio-photo.jpg"
               alt="Laposa Zsófia borász"
               placeholder="blurred"
             />
