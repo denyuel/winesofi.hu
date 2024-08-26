@@ -27,7 +27,7 @@ const BlogList = ({ nodes = []}) => (
               />
             </div>
             <Link className="button" to={`/post/${node.slug.current}`}>
-              Continue
+              Read more
             </Link>
           </div>
         </div>
