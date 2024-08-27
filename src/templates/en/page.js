@@ -100,7 +100,7 @@ export function Head({ data }) {
       description = `Consultation services by the creator of a nature-centric boutique winery, located in the heart of Badacsony, near Lake Balaton.`;
       break;
     }
-    case 'borok': {
+    /*case 'borok': {
       title = `${winesofi} Unique Wines from the Wine Boutique`;
       description = `Unique wines, numbered bottles from my nature-centric boutique winery, located in the heart of Badacsony, near Lake Balaton.`;
       break;
@@ -108,7 +108,7 @@ export function Head({ data }) {
     default: {
       title = `${winesofi} ${page.title}`;
       break;
-    }
+    }*/
   }
   return (
     <Seo title={title} description={description} />
