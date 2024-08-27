@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-const ShopifyBuyButton = () => {
+const ShopifyBuyButton = ({ productId, componentId }) => {
   useEffect(() => {
     const scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
 
@@ -31,8 +31,8 @@ const ShopifyBuyButton = () => {
 
       window.ShopifyBuy.UI.onReady(client).then(function (ui) {
         ui.createComponent('product', {
-          id: '9365696282971',
-          node: document.getElementById('product-component-1724660548441'),
+          id: productId,
+          node: document.getElementById(componentId),
           moneyFormat: '%7B%7Bamount_no_decimals_with_comma_separator%7D%7D%20Ft',
           options: {
             "product": {
@@ -114,9 +114,9 @@ const ShopifyBuyButton = () => {
     } else {
       loadScript();
     }
-  }, []);
+  }, [productId, componentId]);
 
-  return <div id="product-component-1724660548441"></div>;
+  return <div id={componentId}></div>;
 };
 
 export default ShopifyBuyButton;
