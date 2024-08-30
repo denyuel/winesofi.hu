@@ -13,17 +13,17 @@ export default defineConfig({
     languageFilter({
       supportedLanguages: [
         { id: 'en', title: 'English' },
-        { id: 'hu', title: 'Hungarian' },
+        { id: 'hu', title: 'Magyar' },
       ],
       defaultLanguages: ['hu'],
-      documentTypes: ['page', 'blogpost'],
+      documentTypes: ['page', 'post'],
       filterField: (enclosingType, member, selectedLanguageIds) =>
         !enclosingType.name.startsWith('locale') || selectedLanguageIds.includes(member.name),
     }),
     documentInternationalization({
       supportedLanguages: [
         { id: 'en', title: 'English' },
-        { id: 'hu', title: 'Hungarian' },
+        { id: 'hu', title: 'Magyar' },
       ],
       schemaTypes: ['page', 'post'],
     }),

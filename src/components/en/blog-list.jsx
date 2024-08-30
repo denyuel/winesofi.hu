@@ -34,7 +34,7 @@ const BlogList = ({ nodes = []}) => (
 
         <div className="flex items-center lg:container h-auto w-full lg:max-w-104 lg:max-h-104">
           <GatsbyImage
-            image={node.mainImage.asset.gatsbyImageData}
+            image={node.mainImage?.asset?.gatsbyImageData}
             alt={node.title}
             className="rounded-t-2xl lg:rounded-full aspect-video w-full h-auto md:aspect-auto lg:aspect-square object-cover"
           />

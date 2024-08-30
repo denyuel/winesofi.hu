@@ -55,6 +55,13 @@ const page = {
       ],
       validation: Rule => Rule.required()
     },
+    {
+      name: 'language',
+      title: 'Language',
+      type: 'string',
+      readOnly: true,
+      hidden: true,
+    }
   ],
   preview: {
     select: {

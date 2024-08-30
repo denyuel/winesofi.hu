@@ -1,6 +1,6 @@
 import React from 'react';
 import LeftNav from './left_nav';
-import RightNav from '../../components/right_nav';
+import RightNav from './right_nav.jsx';
 import logoSvg from '../../images/logo.svg';
 import fb from "../../images/facebook.svg";
 import insta from "../../images/instagram.svg";

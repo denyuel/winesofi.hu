@@ -24,6 +24,7 @@ export const query = graphql`
       sort: { _createdAt: DESC }
       limit: $limit
       skip: $skip
+      filter: {language: {eq: "hu"}}
     ) {
       nodes {
         id

@@ -13,7 +13,7 @@ export default function Borok() {
         <div className="bg-bio bg-contain bg-right-bottom bg-no-repeat">
           <div class="bg-white bg-opacity-80">
             <div className="container mx-auto px-4 pb-8">
-              <h1 className="title text-4xl my-8">Borok</h1>
+              <h1 className="title text-4xl my-8">Wines</h1>
               <div className="prose max-w-none bold-text my-8">
                 <div className="h-px w-10 opacity-20 bg-button_black mr-auto my-4"></div>
                 <div className="prose max-w-none bold-text my-8">
