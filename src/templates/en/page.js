@@ -4,9 +4,11 @@ import { graphql, Link } from 'gatsby';
 import { PortableText, toPlainText } from '@portabletext/react';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import SanityImage from 'gatsby-plugin-sanity-image';
-import Layout from '../components/layout';
-import { Seo } from '../components/seo';
-import imageGallery from '../components/imageGallery';
+import Layout from '../../components/en/layout';
+import { Seo } from '../../components/seo';
+import imageGallery from '../../components/imageGallery';
+import ContactForm from '../../components/en/contact-form';
+
 
 export default function BlogPost({ data }) {
   const post = data.sanityPost;
@@ -88,6 +90,7 @@ export default function BlogPost({ data }) {
           </div>
         </div>
       </div>
+      <ContactForm />
     </Layout>
   )
 };
