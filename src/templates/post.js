@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { PortableText, toPlainText } from '@portabletext/react';
@@ -92,28 +93,24 @@ export default function BlogPost({ data }) {
 };
 
 export const query = graphql`
-query Blogposts {
-  allSanityPost(
-    sort: { _createdAt: DESC }
-    limit: 2
-    filter: { language: { eq: "hu" } }
-  ) {
-    nodes {
+  query MyQuery($id: String) {
+    sanityPost(id: {eq: $id}) {
       id
       title
-      _createdAt(formatString: "YYYY.MM.DD")
       mainImage {
         asset {
           gatsbyImageData
         }
       }
+      _createdAt(formatString: "YYYY.MM.DD")
+      _updatedAt
+      _rawBody(resolveReferences: {maxDepth: 5})
       slug {
         current
       }
-      _rawSummary(resolveReferences: { maxDepth: 2 })
+      _rawSummary(resolveReferences: {maxDepth: 2})
     }
   }
-}
 `;
 
 export function Head({ data }) {

@@ -95,7 +95,7 @@ export default function HomePage({ data }) {
                   Unique winemaking courses for groups of 4-8 people.
                 </p>
                 <div className="relative mr-0 sm:-mr-24 mt-0 sm:mt-4">
-                  <Link className="button" to="/boraszat-kepzesek">
+                  <Link className="button" to="/en/education/">
                     DETAILS
                   </Link>
                 </div>
@@ -124,7 +124,7 @@ export default function HomePage({ data }) {
                   Personalised winemaking consultancy.
                 </p>
                 <div className="relative -ml-24 mt-4">
-                  <Link className="button" to="/boraszat-tanacsadas">
+                  <Link className="button" to="/en/consultancy">
                     Details
                   </Link>
                 </div>

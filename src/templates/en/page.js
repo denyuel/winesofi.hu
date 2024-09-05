@@ -1,14 +1,15 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import { PortableText, toPlainText } from '@portabletext/react';
-import SanityImage from 'gatsby-plugin-sanity-image';
-import Layout from '../../components/en/layout';
-import { Seo } from '../../components/seo';
-import ContactForm from '../../components/en/contact-form';
-import imageGallery from '../../components/imageGallery';
 
-export default function Page({ data }) {
-  const post = data.sanityPage;
+import React from 'react';
+import { graphql, Link } from 'gatsby';
+import { PortableText, toPlainText } from '@portabletext/react';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import SanityImage from 'gatsby-plugin-sanity-image';
+import Layout from '../components/layout';
+import { Seo } from '../components/seo';
+import imageGallery from '../components/imageGallery';
+
+export default function BlogPost({ data }) {
+  const post = data.sanityPost;
   const portableTextComponents = {
     types: {
       image: ({ value }) => (<SanityImage {...value} width={1200} className='max-w-5xl max-h-104 w-auto h-auto mx-auto' alt={post.title} />),
@@ -44,34 +45,64 @@ export default function Page({ data }) {
       <div className='bg-narrow-hero w-full min-h-28 bg-cover'></div>
       <div className='bg-bio bg-contain bg-right-bottom bg-no-repeat'>
         <div className='bg-white bg-opacity-80'>
-          <div className='container mx-auto px-4 pb-8'>
-            <h1 className='title text-4xl my-8'>{post.title}</h1>
-            <div className='h-px w-10 opacity-20 bg-button_black mr-auto my-4'></div>
-            <div className="prose max-w-none bold-text my-8">
-              <PortableText
-                value={post._rawSummary}
-              />
+          <div className='container mx-auto md:px-4'>
+            <nav className='py-6 text-sm'>
+              <ul>
+                <li className='inline-block pr-2'>
+                  <Link to="/" className='text-orange hover:underline'>Kezdőlap</Link>
+                </li>
+                <li className='inline-block pr-2'>›</li>
+                <li className='inline-block pr-2'>
+                  <Link to="/blog" className='text-orange hover:underline'>Blog</Link>
+                </li>
+                <li className='inline-block pr-2'>›</li>
+                <span>{post.title}</span>
+              </ul>
+            </nav>
+
+            <div className='flex justify-around container mx-auto md:py-10 flex-col-reverse md:flex-row gap-12'>
+              <div className='md:flex-1 px-4 md:px-0'>
+                <div className='flex items-center gap-3 mb-3'>
+                  <span className='bg-brown py-1 px-[10px] text-white rounded font-open font-semibold text-xs uppercase'>borászat blog</span>
+                  <p className='font-light font-open text-xs'>{post._createdAt}</p>
+                </div>
+                <h1 className="text-4xl title pb-6">{post.title}</h1>
+                <div className='h-0 border-b border-button_black border-opacity-20 w-10'></div>
+                <div className="prose max-w-none bold-text py-6">
+                  <PortableText
+                    value={post._rawSummary}
+                  />
+                </div>
+              </div>
+              <GatsbyImage className='md:flex-1 md:rounded-full w-full my-1 md:max-w-80 md:max-h-80 aspect-square md:-mb-24' image={post.mainImage.asset.gatsbyImageData} alt={post.title} />
             </div>
-            <div className="prose max-w-none basic-text mt-14">
-              <PortableText
-                value={post._rawBody}
-                components={portableTextComponents}
-              />
+            <div className='w-full h-0 border-b-[1px] border-button_black border-opacity-20'></div>
+            <div className='container mx-auto py-10 md:pt-24 px-4 md:px-0'>
+              <div className="prose text-sm leading-6 font-normal font-open max-w-none">
+                <PortableText
+                  value={post._rawBody}
+                  components={portableTextComponents}
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <ContactForm />
     </Layout>
   )
 };
 
 export const query = graphql`
   query MyQuery($id: String) {
-    sanityPage(id: {eq: $id}) {
+    sanityPost(id: {eq: $id}) {
       id
       title
-      _createdAt
+      mainImage {
+        asset {
+          gatsbyImageData
+        }
+      }
+      _createdAt(formatString: "YYYY.MM.DD")
       _updatedAt
       _rawBody(resolveReferences: {maxDepth: 5})
       slug {
@@ -83,28 +114,8 @@ export const query = graphql`
 `;
 
 export function Head({ data }) {
-  const page = data.sanityPage;
-
-  let title = page.title;
-  let description = toPlainText(page._rawSummary);
-  let winesofi = 'Wine&Sofi |';
-
-  switch (page.slug.current) {
-    case 'boraszat-kepzesek': {
-      title = `${winesofi} Winemaking Courses and Workshops`;
-      description = `Learn the art of winemaking from the creator of a nature-centric boutique winery, located in the heart of Badacsony, near Lake Balaton.`;
-      break;
-    }
-    case 'boraszat-tanacsadas': {
-      title = `${winesofi} Winemaking Consultation Services`;
-      description = `Consultation services by the creator of a nature-centric boutique winery, located in the heart of Badacsony, near Lake Balaton.`;
-      break;
-    }
-    default: {
-      title = `${winesofi} ${page.title}`;
-      break;
-  }
+  const post = data.sanityPost;
   return (
-    <Seo title={title} description={description} />
+    <Seo title={`${post.title} — Wine&Sofi blog`} image={post.mainImage.asset.gatsbyImageData.images.fallback.src} description={toPlainText(post._rawSummary)} />
   )
 };
