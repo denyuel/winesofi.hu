@@ -92,24 +92,28 @@ export default function BlogPost({ data }) {
 };
 
 export const query = graphql`
-  query MyQuery($id: String) {
-    sanityPost(id: {eq: $id}) {
+query Blogposts {
+  allSanityPost(
+    sort: { _createdAt: DESC }
+    limit: 2
+    filter: { language: { eq: "en" } }
+  ) {
+    nodes {
       id
       title
+      _createdAt(formatString: "YYYY.MM.DD")
       mainImage {
         asset {
           gatsbyImageData
         }
       }
-      _createdAt(formatString: "YYYY.MM.DD")
-      _updatedAt
-      _rawBody(resolveReferences: {maxDepth: 5})
       slug {
         current
       }
-      _rawSummary(resolveReferences: {maxDepth: 2})
+      _rawSummary(resolveReferences: { maxDepth: 2 })
     }
   }
+}
 `;
 
 export function Head({ data }) {

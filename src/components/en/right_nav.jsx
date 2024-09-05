@@ -23,12 +23,12 @@ const RightNav = () => {
           </Link>
           <span className="hidden md:flex items-center text-lg leading-none text-slate-200">
           </span>
-          <Link to="/blog" className="hover:text-gray-300">
+          <Link to="/en/blog" className="hover:text-gray-300">
             Blog
           </Link>
           <span className="hidden md:flex items-center text-lg leading-none text-slate-200">
           </span>
-          <Link to="/kapcsolat" className="hover:text-gray-300">
+          <Link to="/en/contact" className="hover:text-gray-300">
             Contact
           </Link>
         </div>

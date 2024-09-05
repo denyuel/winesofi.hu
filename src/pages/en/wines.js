@@ -151,6 +151,6 @@ export const Head = () => (
   <Seo
     title="Wine&Sofi | Elérhetőségek, kapcsolat"
     description="A Wine&Sofi Butikborászat elérhetőségei, lépj velünk kapcsolatba és ismerd meg a badacsonyi különleges borainkat."
-    pathname="/kapcsolat"
+    pathname="/en/contact/"
   />
 );

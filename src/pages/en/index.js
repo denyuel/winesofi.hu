@@ -175,24 +175,29 @@ export default function HomePage({ data }) {
 }
 
 export const query = graphql`
-  query Blogposts {
-    allSanityPost(sort: { _createdAt: DESC }, limit: 2) {
-      nodes {
-        id
-        title
-        _createdAt(formatString: "YYYY.MM.DD")
-        mainImage {
-          asset {
-            gatsbyImageData
-          }
+query Blogposts {
+  allSanityPost(
+    sort: { _createdAt: DESC }
+    limit: 2
+    filter: { language: { eq: "en" } }
+  ) {
+    nodes {
+      id
+      title
+      _createdAt(formatString: "YYYY.MM.DD")
+      mainImage {
+        asset {
+          gatsbyImageData
         }
-        slug {
-          current
-        }
-        _rawSummary(resolveReferences: { maxDepth: 2 })
       }
+      slug {
+        current
+      }
+      _rawSummary(resolveReferences: { maxDepth: 2 })
     }
   }
+}
 `;
+
 
 export const Head = () => <Seo />;
