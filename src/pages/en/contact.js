@@ -26,7 +26,7 @@ export default function Contact() {
             </div>
             <div className='flex justify-center md:justify-end w-11/12 md:w-4/12'>
               <div className='w-64 h-64 overflow-hidden z-10 rounded-full aspect-square'>
-                <StaticImage className='rounded-full' src='../images/contact.jpg' alt='' />
+                <StaticImage className='rounded-full' src='../../images/contact.jpg' alt='' />
               </div>
             </div>
           </div>
