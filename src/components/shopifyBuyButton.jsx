@@ -76,7 +76,7 @@ const ShopifyBuyButton = ({ productId, componentId }) => {
               contents: {
                 img: true,
                 imgWithCarousel: false,
-                description: false,
+                description: true,
               },
               width: "100%",
               text: {
