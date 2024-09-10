@@ -10,19 +10,23 @@
 const path = require('path');
 
 exports.createPages = async ({ actions, graphql, reporter, cache }) => {
-
   const templates = {
     page: path.join(__dirname, 'src/templates/page.js'),
     blog: path.join(__dirname, 'src/templates/blog-listing.js'),
-    post: path.join(__dirname, 'src/templates/post.js')
+    post: path.join(__dirname, 'src/templates/post.js'),
   };
 
-  const result = await graphql(
-    `{
-      allSanityPost(sort: {_createdAt: DESC}, limit: 100) {
+  const result = await graphql(`
+    {
+      allSanityPost(
+        sort: {_createdAt: DESC}
+        limit: 100
+        filter: {language: {eq: "hu"}}
+      ) {
         nodes {
           id
           title
+          language
           mainImage {
             asset {
               gatsbyImageData
@@ -37,10 +41,11 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
           _rawSummary(resolveReferences: {maxDepth: 2})
         }
       }
-      allSanityPage {
+      allSanityPage(filter: {language: {eq: "hu"}}) {
         totalCount
         nodes {
           id
+          language
           slug {
             current
           }
@@ -50,8 +55,7 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
         }
       }
     }
-    `
-  );
+  `);
 
   if (result.errors) {
     reporter.panic('error loading content', result.errors);
@@ -67,8 +71,8 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
       component: require.resolve(templates.page),
       context: {
         id: node.id,
-        title: node.title
-      }
+        title: node.title,
+      },
     });
   });
 
@@ -80,8 +84,8 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
       component: require.resolve(templates.post),
       context: {
         id: node.id,
-        title: node.title
-      }
+        title: node.title,
+      },
     });
   });
 
@@ -99,6 +103,6 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
         numPages,
         currentPage: i + 1,
       },
-    })
-  })
+    });
+  });
 };

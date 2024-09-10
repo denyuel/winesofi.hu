@@ -21,27 +21,28 @@ export default function Blog({ data }) {
 export const query = graphql`
   query MyQuery($skip: Int!, $limit: Int!) {
     allSanityPost(
-      sort: { _createdAt: DESC }
-      limit: $limit
-      skip: $skip
-    ) {
-      nodes {
-        id
-        title
-        mainImage {
-          asset {
-            gatsbyImageData
-          }
+    sort: {_createdAt: DESC}
+    limit: $limit
+    skip: $skip
+    filter: {language: {eq: "hu"}}
+  ) {
+    nodes {
+      id
+      title
+      mainImage {
+        asset {
+          gatsbyImageData
         }
-        _createdAt(formatString: "YYYY.MM.DD")
-        _updatedAt
-        _rawBody(resolveReferences: {maxDepth: 5})
-        slug {
-          current
-        }
-        _rawSummary(resolveReferences: {maxDepth: 2})
       }
+      _createdAt(formatString: "YYYY.MM.DD")
+      _updatedAt
+      _rawBody(resolveReferences: {maxDepth: 5})
+      slug {
+        current
+      }
+      _rawSummary(resolveReferences: {maxDepth: 2})
     }
+  }
   }
 `;
 
