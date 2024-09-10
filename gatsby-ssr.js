@@ -1,5 +1,6 @@
 import React from 'react';
 import AgeVerificationModal from './src/components/ageVerificationModal';
+import { LanguageProvider } from './src/context/LanguageContext';
 
 const PageWrapper = ({ children }) => {
   return (
@@ -7,12 +8,14 @@ const PageWrapper = ({ children }) => {
       {children}
       <AgeVerificationModal />
     </div>
-  )
+  );
 };
 
 export const wrapPageElement = ({ element }) => {
-  return (<PageWrapper>
-    {element}
-  </PageWrapper>
+  return (
+    <LanguageProvider>
+      <PageWrapper>{element}</PageWrapper>
+    </LanguageProvider>
   );
 };
+

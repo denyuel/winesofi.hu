@@ -1,17 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, navigate } from "gatsby";
 import fb from "../images/facebook.svg";
 import insta from "../images/instagram.svg";
+import { useLanguage } from "../context/LanguageContext"; // Import the language context
 
 const RightNav = () => {
-  const [language, setLanguage] = useState("hu");
+  const { language, toggleLanguage } = useLanguage(); // Use the global language context
 
-  const toggleLanguage = () => {
+  // Function to handle language change and navigation
+  const handleLanguageToggle = () => {
     if (language === "hu") {
-      navigate("/en/") && setLanguage("en");
+      navigate("/en/"); // Redirect to the English version
     } else {
-      navigate("/") && setLanguage("hu");
+      navigate("/"); // Redirect to the Hungarian version
     }
+    toggleLanguage(); // Toggle the language globally
   };
 
   return (
@@ -34,11 +37,12 @@ const RightNav = () => {
             {language === "hu" ? "Kapcsolat" : "Contact"}
           </Link>
         </div>{" "}
+        {/* Button to toggle language */}
         <button
-          onClick={toggleLanguage}
+          onClick={handleLanguageToggle}
           className="mx-4 px-3 py-1 border border-gray-300 rounded hover:bg-gray-300 hover:text-black"
         >
-          {language === "hu" ? "EN" : "HU"}
+          {language === "hu" ? "EN" : "HU"} {/* Toggle button label */}
         </button>
       </div>
       <div className="hidden md:flex justify-between items-center gap-2">
