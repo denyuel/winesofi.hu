@@ -19,12 +19,12 @@ export default function Blog({ data }) {
 }
 
 export const query = graphql`
-  query MyQuery($skip: Int!, $limit: Int!) {
+  query MyQuery($skip: Int!, $limit: Int!, $language: String = "en") {
     allSanityPost(
       sort: { _createdAt: DESC }
       limit: $limit
       skip: $skip
-      filter: {language: {eq: "hu"}}
+      filter: {language: {eq: $language}}
     ) {
       nodes {
         id

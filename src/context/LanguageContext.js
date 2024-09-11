@@ -1,14 +1,25 @@
-import React, { createContext, useState, useContext } from "react";
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import { navigate } from 'gatsby';
 
 const LanguageContext = createContext();
 
-export const useLanguage = () => useContext(LanguageContext);
+export const LanguageProvider = ({ initialLanguage, children }) => {
+  const [language, setLanguage] = useState(initialLanguage || 'en');
 
-export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState("hu");
+  useEffect(() => {
+    // Only run this effect on the client side
+    if (typeof document !== 'undefined') {
+      const htmlTag = document.querySelector('html');
+      htmlTag?.setAttribute('lang', language);
+    }
+  }, [language]);
 
   const toggleLanguage = () => {
-    setLanguage((prevLang) => (prevLang === "hu" ? "hu" : "en"));
+    const newLanguage = language === 'en' ? 'hu' : 'en';
+    setLanguage(newLanguage);
+
+    // Update the URL when language is toggled
+    navigate(`/${newLanguage === 'en' ? 'en' : ''}`);
   };
 
   return (
@@ -16,4 +27,8 @@ export const LanguageProvider = ({ children }) => {
       {children}
     </LanguageContext.Provider>
   );
+};
+
+export const useLanguage = () => {
+  return useContext(LanguageContext);
 };

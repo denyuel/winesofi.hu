@@ -102,5 +102,15 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
         currentPage: i + 1,
       },
     });
+    actions.createPage({
+      path: i === 0 ? `/en/blog` : `/en/blog/${i + 1}`,
+      component: templates.blog,
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numPages,
+        currentPage: i + 1,
+      },
+    });
   });
 };

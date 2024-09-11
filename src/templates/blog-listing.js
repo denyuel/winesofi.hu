@@ -3,8 +3,10 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import BlogList from '../components/blog-list';
 import { Seo } from '../components/seo';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Blog({ data }) {
+  const { language } = useLanguage();
   const nodes = data.allSanityPost.nodes;
   return (
     <Layout>
@@ -12,7 +14,7 @@ export default function Blog({ data }) {
 
       <div className='container mx-auto px-4 pb-8'>
         <h1 className='title text-4xl my-8 text-center'>Blog</h1>
-        <BlogList nodes={nodes} />
+        <BlogList nodes={nodes.filter(node => node.language === language)} />
       </div>
     </Layout>
   )
@@ -24,11 +26,11 @@ export const query = graphql`
       sort: { _createdAt: DESC }
       limit: $limit
       skip: $skip
-      filter: {language: {eq: "hu"}}
     ) {
       nodes {
         id
         title
+        language
         mainImage {
           asset {
             gatsbyImageData

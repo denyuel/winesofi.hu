@@ -1,7 +1,7 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import { Seo } from '../../components/seo';
-import Layout from '../../components/en/layout';
+import Layout from '../../components/layout';
 import ContactForm from '../../components/en/contact-form';
 
 export default function Contact() {

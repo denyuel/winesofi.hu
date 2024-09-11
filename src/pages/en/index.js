@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import Layout from '../../components/en/layout';
-import BlogList from '../../components/en/blog-list';
+import Layout from '../../components/layout';
+import BlogList from '../../components/blog-list';
 import { Seo } from '../../components/seo';
 
 export default function HomePage({ data }) {
@@ -147,11 +147,11 @@ export default function HomePage({ data }) {
           <div className="w-full sm:flex-1">
             <h1 className="font-kaushan text-4xl leading-11 tracking-normal text-orange">Zsófia Laposa</h1>
             <h3 className="font-cormorant_sc text-3xl font-bold leading-7 tracking-normal uppercase text-button_black">
-            WINEMAKER
+              WINEMAKER
             </h3>
             <div className="h-px w-10 opacity-20 bg-button_black mr-auto my-4"></div>
             <p className="font-sans text-sm leading-7 text-wrap text-button_black opacity-60 pb-4">
-            Welcome! I'm Zsófi, the founder of WineSofi boutique winery. I've gained experience in winemaking around the world. I completed my professional studies at the University of Valencia, and Bordeaux. Additionally, I have worked in California, Burgundy, Alsace, Bordeaux, Northern Italy, and at Laposa Estate, which was then a family business. In 2021, I decided to forge my own path, leading to the creation of WineSofi in Badacsony, a boutique winery producing unique wines. "Humans are part of nature and the cycle of life, where we create and build. This pulsating cyclicality can be experienced in our bodies, through changes in the weather, and even in moments of birth and death. A glass of wine reflects the climate, the soil, the hours of sunshine, the peculiarities of the vintage, the winemaker's labour, and nature itself. Since each vintage is unique, every wine is different. A person achieves harmony with themselves when they are in harmony with nature." I hope that my unique wines convey my passion and respect for nature.
+              Welcome! I'm Zsófi, the founder of WineSofi boutique winery. I've gained experience in winemaking around the world. I completed my professional studies at the University of Valencia, and Bordeaux. Additionally, I have worked in California, Burgundy, Alsace, Bordeaux, Northern Italy, and at Laposa Estate, which was then a family business. In 2021, I decided to forge my own path, leading to the creation of WineSofi in Badacsony, a boutique winery producing unique wines. "Humans are part of nature and the cycle of life, where we create and build. This pulsating cyclicality can be experienced in our bodies, through changes in the weather, and even in moments of birth and death. A glass of wine reflects the climate, the soil, the hours of sunshine, the peculiarities of the vintage, the winemaker's labour, and nature itself. Since each vintage is unique, every wine is different. A person achieves harmony with themselves when they are in harmony with nature." I hope that my unique wines convey my passion and respect for nature.
             </p>
             <div className="flex flex-row justify-center sm:justify-normal mt-2">
               <Link className="button" to="/en/contact">
@@ -165,7 +165,7 @@ export default function HomePage({ data }) {
       <section>
         <div className="container mx-auto px-4 mt-8">
           <h2 className="uppercase text-center text-2xl sm:text-3xl md:text-4xl pb-3 mb-auto font-cormorant_sc">
-          FEATURED POSTS
+            FEATURED POSTS
           </h2>
           <BlogList nodes={nodes} />
         </div>
@@ -199,5 +199,7 @@ query Blogposts {
 }
 `;
 
-
-export const Head = () => <Seo />;
+export const Head = () => (<Seo
+  title="WineSofi - Home"
+  description="WineSofi - Home">
+</Seo>);

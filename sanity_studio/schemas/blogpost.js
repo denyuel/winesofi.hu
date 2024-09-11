@@ -24,8 +24,9 @@ const post = {
       title: 'Main image',
       type: 'image',
       options: {
-        hotspot: true,
+        hotspot: true
       },
+      validation: Rule => Rule.required()
     },
     {
       name: 'summary',
@@ -64,6 +65,12 @@ const post = {
       readOnly: true,
       hidden: true,
     },
+    {
+      name: 'language',
+      type: 'string',
+      readOnly: true,
+      hidden: true,
+    }
   ],
   preview: {
     select: {
