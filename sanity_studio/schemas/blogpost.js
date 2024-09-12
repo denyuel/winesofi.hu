@@ -64,12 +64,6 @@ const post = {
       type: 'string',
       readOnly: true,
       hidden: true,
-    },
-    {
-      name: 'language',
-      type: 'string',
-      readOnly: true,
-      hidden: true,
     }
   ],
   preview: {

@@ -7,8 +7,10 @@ import SanityImage from 'gatsby-plugin-sanity-image';
 import Layout from '../components/layout';
 import { Seo } from '../components/seo';
 import imageGallery from '../components/imageGallery';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function BlogPost({ data }) {
+  const {language} = useLanguage();
   const post = data.sanityPost;
   const portableTextComponents = {
     types: {
@@ -49,7 +51,7 @@ export default function BlogPost({ data }) {
             <nav className='py-6 text-sm'>
               <ul>
                 <li className='inline-block pr-2'>
-                  <Link to="/" className='text-orange hover:underline'>Kezdőlap</Link>
+                  <Link to="/" className='text-orange hover:underline'>{language === 'hu' ? 'Kezdőlap' : 'Home'}</Link>
                 </li>
                 <li className='inline-block pr-2'>›</li>
                 <li className='inline-block pr-2'>
@@ -63,7 +65,7 @@ export default function BlogPost({ data }) {
             <div className='flex justify-around container mx-auto md:py-10 flex-col-reverse md:flex-row gap-12'>
               <div className='md:flex-1 px-4 md:px-0'>
                 <div className='flex items-center gap-3 mb-3'>
-                  <span className='bg-brown py-1 px-[10px] text-white rounded font-open font-semibold text-xs uppercase'>borászat blog</span>
+                  <span className='bg-brown py-1 px-[10px] text-white rounded font-open font-semibold text-xs uppercase'>{language === 'hu' ? 'borászati blog' : 'winery blog'}</span>
                   <p className='font-light font-open text-xs'>{post._createdAt}</p>
                 </div>
                 <h1 className="text-4xl title pb-6">{post.title}</h1>

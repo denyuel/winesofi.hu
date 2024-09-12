@@ -21,8 +21,6 @@ const LeftNav = () => {
     }
   `);
 
-  console.log(language);
-
   return (
     <nav className="container md:mx-auto flex justify-between items-center h-full uppercase">
       <div className="flex flex-col md:flex-row flex-1 md:justify-end items-center xl:space-x-4 gap-3 xl:gap-4 nav-text">
