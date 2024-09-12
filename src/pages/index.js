@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-
 import Layout from '../components/layout';
 import BlogList from '../components/blog-list';
 import { Seo } from '../components/seo';
@@ -77,7 +76,7 @@ export default function HomePage({ data }) {
                 <div className='h-px w-10 opacity-20 bg-button_black ml-auto'></div>
                 <p className='font-sans text-sm leading-7 text-wrap text-button_black opacity-60 pb-4'>Egyedi borászati kurzusok 4-8 fős csoportok részére.</p>
                 <div className='relative mr-0 sm:-mr-24 mt-0 sm:mt-4'>
-                  <Link className='button' to="/boraszat-kepzesek">részletek</Link>
+                  <Link className='button' to="/kepzesek">részletek</Link>
                 </div>
               </div>
               <StaticImage className='teaser-img relative sm:right-0 z-10 mt-8 sm:mt-0 mb-0' src="../images/index-post-left.jpg" alt="Wine&Sofi egyedi borkülönlegesség" placeholder="blurred" />
@@ -90,7 +89,7 @@ export default function HomePage({ data }) {
                 <div className='h-px w-10 opacity-20 bg-button_black ml-auto sm:mr-auto sm:ml-0'></div>
                 <p className='font-sans text-sm leading-7 text-wrap text-button_black opacity-60 pb-4'>Személyre szabott borászati szaktanácsadás.</p>
                 <div className='relative -ml-24 mt-4'>
-                  <Link className='button' to="/boraszat-tanacsadas">részletek</Link>
+                  <Link className='button' to="/szaktanacsadas">részletek</Link>
                 </div>
               </div>
             </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "gatsby";
 import { PortableText } from "@portabletext/react";
 import { GatsbyImage } from "gatsby-plugin-image";
