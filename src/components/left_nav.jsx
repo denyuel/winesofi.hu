@@ -6,7 +6,9 @@ const LeftNav = () => {
   const { language } = useLanguage();
   const { pages } = useStaticQuery(graphql`
     query {
-      pages: allSanityPage(filter: {
+      pages: allSanityPage(
+        sort: { _createdAt: ASC }
+        filter: {
           include_in_navigation: { eq: true },
         }) {
         nodes {
