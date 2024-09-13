@@ -2,7 +2,7 @@ import React from 'react';
 import { Seo } from '../../components/seo';
 import Layout from '../../components/layout';
 import ContactForm from '../../components/en/contact-form';
-import ShopifyBuyButton from '../../components/shopifyBuyButton';
+import ShopifyBuyButtonEng from '../../components/shopifyBuyButtonEng';
 
 export default function Borok() {
   return (
@@ -15,16 +15,16 @@ export default function Borok() {
               <h1 className="title text-4xl my-8">Wines</h1>
               <div className="prose max-w-none bold-text my-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-auto">
-                  <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                    <ShopifyBuyButton productId="9365696282971" componentId="product-component-1724660548441" />
+                  <div className="items-center max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <ShopifyBuyButtonEng productId="9457752342875" componentId="product-component-1726210304942" />
                   </div>
 
-                  <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                    <ShopifyBuyButton productId="9365699559771" componentId="product-component-1724755265832" />
+                  <div className="items-center max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <ShopifyBuyButtonEng productId="9457751228763" componentId="product-component-1726210267165" />
                   </div>
 
-                  <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                    <ShopifyBuyButton productId="9365702836571" componentId="product-component-1724661037101" />
+                  <div className="items-center max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <ShopifyBuyButtonEng productId="9454030160219" componentId="product-component-1726143603645" />
                   </div>
                 </div>
 
