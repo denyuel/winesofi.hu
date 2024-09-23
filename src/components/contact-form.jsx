@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { useFormspark } from "@formspark/use-formspark";
+import { useLanguage } from "../context/LanguageContext";
 
 const ContactForm = () => {
   const FORMSPARK_FORM_ID = "DXGfC3vR5";
+
+  const { language } = useLanguage();
 
   const [submit, submitting] = useFormspark({
     formId: FORMSPARK_FORM_ID,
@@ -40,7 +43,7 @@ const ContactForm = () => {
               className="pl-4 text-gray_strong text-xs font-light tracking-extra uppercase"
               htmlFor="name"
             >
-              név
+              {language === 'en' ? 'Name' : 'Név'}
             </label>
             <input
               className="w-full md:w-input h-input basic-text border-solid border-gray border rounded-3xl p-4"
@@ -54,7 +57,7 @@ const ContactForm = () => {
               className="pl-4 text-gray_strong text-xs font-light tracking-extra uppercase"
               htmlFor="email"
             >
-              email
+              {language === 'en' ? 'Email' : 'Email'}
             </label>
             <input
               className="w-full md:w-input h-input basic-text border-solid border-gray border rounded-3xl p-4"
@@ -68,7 +71,7 @@ const ContactForm = () => {
               className="pl-4 text-gray_strong text-xs font-light tracking-extra uppercase"
               htmlFor="tel"
             >
-              telefon
+              {language === 'en' ? 'Phone' : 'Telefon'}
             </label>
             <input
               className="w-full md:w-input h-input basic-text border-solid border-gray border rounded-3xl p-4"
@@ -86,7 +89,7 @@ const ContactForm = () => {
                 className="pl-4 text-gray_strong text-xs font-light tracking-extra uppercase"
                 htmlFor="url"
               >
-                Website url
+                {language === 'en' ? 'Website URL' : 'Website URL'}
               </label>
               <input
                 className="w-full md:w-input h-input basic-text border-solid border-gray border rounded-3xl p-4"
@@ -101,7 +104,7 @@ const ContactForm = () => {
               className="pl-4 text-gray_strong text-xs font-light tracking-extra uppercase"
               htmlFor="message"
             >
-              üzenet
+              {language === 'en' ? 'Message' : 'Üzenet'}
             </label>
             <textarea
               className="w-full md:w-textarea h-textarea basic-text border-solid border-gray border rounded-3xl resize-none p-4"
@@ -110,7 +113,7 @@ const ContactForm = () => {
               cols="30"
               rows="10"
               required
-              placeholder="üzenet"
+              placeholder={language === 'en' ? 'Message' : 'Üzenet'}
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
           </div>
@@ -122,8 +125,12 @@ const ContactForm = () => {
               className="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green_light text-center"
               role="alert"
             >
-              <span className="font-bold">Az üzenetet elküdtük!</span> Hamarosan
-              jelentkezünk a megadott elérhetőségeken!
+              <span className="font-bold">
+                {language === 'en' ? 'Your message has been sent!' : 'Az üzenetet elküdtük!'}
+              </span>{' '}
+              {language === 'en'
+                ? 'We will get back to you soon via the provided contact details.'
+                : 'Hamarosan jelentkezünk a megadott elérhetőségeken!'}
             </div>
           </div>
         )}
@@ -134,7 +141,7 @@ const ContactForm = () => {
             type="submit"
             disabled={submitting}
           >
-            üzenet küldése
+            {language === 'en' ? 'Send Message' : 'Üzenet küldése'}
           </button>
         </div>
       </form>

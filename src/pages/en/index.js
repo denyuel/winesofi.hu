@@ -16,7 +16,7 @@ export default function HomePage({ data }) {
             <div className="flex justify-center gap-2 mt-12 md:gap-8 -mb-16 md:-mb-32 md:mt-16 w-full wine-container">
               <div className="flex flex-col items-center max-w-full">
                 <StaticImage
-                  className="h-auto w-28 md:w-72 -mb-16 md:-mb-36 z-10"
+                  className="h-auto w-28 md:w-72 -mb-12 md:-mb-36 z-10"
                   src="../../images/bor3.png"
                   alt="kéknyelű 2021"
                   placeholder="blurred"
@@ -32,7 +32,7 @@ export default function HomePage({ data }) {
               </div>
               <div className="flex flex-col items-center max-w-full">
                 <StaticImage
-                  className="h-auto w-28 md:w-72 -mb-16 md:-mb-36 z-10"
+                  className="h-auto w-28 md:w-72 -mb-12 md:-mb-36 z-10"
                   src="../../images/bor1.png"
                   alt="olaszrizling 2022"
                   placeholder="blurred"
@@ -48,7 +48,7 @@ export default function HomePage({ data }) {
               </div>
               <div className="flex flex-col items-center max-w-full">
                 <StaticImage
-                  className="h-auto w-28 md:w-72 -mb-16 md:-mb-36 z-10"
+                  className="h-auto w-28 md:w-72 -mb-12 md:-mb-36 z-10"
                   src="../../images/bor2.png"
                   alt="olaszrizling 2022"
                   placeholder="blurred"
