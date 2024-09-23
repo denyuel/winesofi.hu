@@ -51,8 +51,8 @@ export default function Borok() {
 
 export const Head = () => (
   <Seo
-    title="Wine&Sofi | Elérhetőségek, kapcsolat"
-    description="A Wine&Sofi Butikborászat elérhetőségei, lépj velünk kapcsolatba és ismerd meg a badacsonyi különleges borainkat."
+    title="Wine&Sofi | Contact Information"
+    description="Get in touch with Wine&Sofi Boutique Winery. Contact us and discover our unique wines from the Badacsony region."
     pathname="/en/contact/"
   />
 );
