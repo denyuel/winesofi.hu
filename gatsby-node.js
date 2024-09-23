@@ -10,7 +10,6 @@
 const path = require('path');
 
 exports.createPages = async ({ actions, graphql, reporter, cache }) => {
-
   const templates = {
     page: path.join(__dirname, 'src/templates/page.js'),
     blog: path.join(__dirname, 'src/templates/blog-listing.js'),
@@ -18,38 +17,41 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
   };
 
   const result = await graphql(
-    `{
-      allSanityPost(sort: {_createdAt: DESC}, limit: 100) {
-        nodes {
-          id
-          title
-          mainImage {
-            asset {
-              gatsbyImageData
+    `
+      {
+        allSanityPost(sort: { _createdAt: DESC }, limit: 100) {
+          nodes {
+            id
+            title
+            language
+            mainImage {
+              asset {
+                gatsbyImageData
+              }
             }
+            _createdAt
+            _updatedAt
+            _rawBody(resolveReferences: { maxDepth: 5 })
+            slug {
+              current
+            }
+            _rawSummary(resolveReferences: { maxDepth: 2 })
           }
-          _createdAt
-          _updatedAt
-          _rawBody(resolveReferences: {maxDepth: 5})
-          slug {
-            current
+        }
+        allSanityPage {
+          totalCount
+          nodes {
+            id
+            language
+            slug {
+              current
+            }
+            _rawSummary(resolveReferences: { maxDepth: 2 })
+            _rawBody(resolveReferences: { maxDepth: 5 })
+            title
           }
-          _rawSummary(resolveReferences: {maxDepth: 2})
         }
       }
-      allSanityPage {
-        totalCount
-        nodes {
-          id
-          slug {
-            current
-          }
-          _rawSummary(resolveReferences: {maxDepth: 2})
-          _rawBody(resolveReferences: {maxDepth: 5})
-          title
-        }
-      }
-    }
     `
   );
 
@@ -67,8 +69,8 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
       component: require.resolve(templates.page),
       context: {
         id: node.id,
-        title: node.title
-      }
+        title: node.title,
+      },
     });
   });
 
@@ -80,8 +82,8 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
       component: require.resolve(templates.post),
       context: {
         id: node.id,
-        title: node.title
-      }
+        title: node.title,
+      },
     });
   });
 
@@ -99,6 +101,16 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
         numPages,
         currentPage: i + 1,
       },
-    })
-  })
+    });
+    actions.createPage({
+      path: i === 0 ? `/en/blog` : `/en/blog/${i + 1}`,
+      component: templates.blog,
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numPages,
+        currentPage: i + 1,
+      },
+    });
+  });
 };

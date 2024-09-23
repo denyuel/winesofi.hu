@@ -2,12 +2,14 @@ import React from "react";
 import { Link } from 'gatsby';
 import logoSvg from "../images/logo.svg";
 import intersect from "../images/intersect.png";
+import { useLanguage } from '../context/LanguageContext';
 
 const Logo = () => {
+  const { language } = useLanguage();
   return (
     <div className="flex flex-col items-center gap-4 relative w-32 lg:w-80 z-10">
       <div className="absolute top-0 z-10 w-20 lg:w-28">
-        <Link to="/">
+        <Link to={language === 'en' ?  '/en' : '/'}>
           <img src={logoSvg} alt="logo" className="w-full h-auto" />
         </Link>
       </div>

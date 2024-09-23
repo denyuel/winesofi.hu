@@ -7,7 +7,7 @@ const post = {
       name: 'title',
       title: 'Title',
       type: 'string',
-      validation: Rule => Rule.required()
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'slug',
@@ -15,9 +15,9 @@ const post = {
       type: 'slug',
       options: {
         source: 'title',
-        maxLength: 80
+        maxLength: 80,
       },
-      validation: Rule => Rule.required()
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'mainImage',
@@ -25,7 +25,8 @@ const post = {
       type: 'image',
       options: {
         hotspot: true
-      }
+      },
+      validation: Rule => Rule.required()
     },
     {
       name: 'summary',
@@ -48,21 +49,28 @@ const post = {
         {
           type: 'image',
           options: {
-            hotspot: true
+            hotspot: true,
           },
         },
         {
-          type: 'imageGallery'
-        }
+          type: 'imageGallery',
+        },
       ],
-      validation: Rule => Rule.required()
+      validation: (Rule) => Rule.required(),
     },
+    {
+      name: 'language',
+      title: 'Language',
+      type: 'string',
+      readOnly: true,
+      hidden: true,
+    }
   ],
   preview: {
     select: {
       title: 'title',
     },
   },
-};
+}
 
-export default post;
+export default post

@@ -100,11 +100,6 @@ export function Head({ data }) {
       description = `Szaktanácsadás a Wine&Sofi természetközeli butikborászat megálmodójától, a Badacsony szívében, a Balaton mellett.`;
       break;
     }
-    case 'borok': {
-      title = `${winesofi} Egyedi borok a borbutikból`;
-      description = `Egyedi borok, sorszámozott palackok a természetközeli butikborászatomból, a Badacsony szívében, a Balaton mellől.`;
-      break;
-    }
     default: {
       title = `${winesofi} ${page.title}`;
       break;

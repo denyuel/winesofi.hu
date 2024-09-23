@@ -6,7 +6,7 @@ const imageGallery = ({ value }) => {
   if (!value.images[0].asset) return null;
 
   return (
-    <div className="flex overflow-x-auto overflow-y-hidden gap-2 h-full">
+    <div className="flex overflow-x-auto lg:overflow-x-hidden  overflow-y-hidden gap-2 h-full">
       {value.images.map((image) => (
         <div key={image?.asset?._id} className="flex-shrink-0 h-full w-full sm:w-1/2 lg:w-1/3">
           <SanityImage

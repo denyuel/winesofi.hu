@@ -1,12 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../components/layout';
-import BlogList from '../components/blog-list';
-import { Seo } from '../components/seo';
-import { useLanguage } from '../context/LanguageContext';
+import Layout from '../../components/en/layout';
+import BlogList from '../../components/en/blog-list';
+import { Seo } from '../../components/seo';
 
 export default function Blog({ data }) {
-  const { language } = useLanguage();
   const nodes = data.allSanityPost.nodes;
   return (
     <Layout>
@@ -14,23 +12,23 @@ export default function Blog({ data }) {
 
       <div className='container mx-auto px-4 pb-8'>
         <h1 className='title text-4xl my-8 text-center'>Blog</h1>
-        <BlogList nodes={nodes.filter(node => node.language === language)} />
+        <BlogList nodes={nodes} />
       </div>
     </Layout>
   )
 }
 
 export const query = graphql`
-  query MyQuery($skip: Int!, $limit: Int!) {
+  query MyQuery($skip: Int!, $limit: Int!, $language: String = "en") {
     allSanityPost(
       sort: { _createdAt: DESC }
       limit: $limit
       skip: $skip
+      filter: {language: {eq: $language}}
     ) {
       nodes {
         id
         title
-        language
         mainImage {
           asset {
             gatsbyImageData
@@ -49,5 +47,5 @@ export const query = graphql`
 `;
 
 export const Head = () => (
-  <Seo title="Wine&Sofi | Hírek, borblog, aktualitások" description="Hírek, borászati tartalmak a Badacsonyból, a Balaton mellől, egy különleges butikborászatból." pathname="/blog" />
+<Seo title="Wine&Sofi | News, Wine Blog, Updates" description="News, winemaking content from Badacsony, near Lake Balaton, from a unique boutique winery." pathname="/en/blog" />
 )
