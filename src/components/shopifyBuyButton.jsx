@@ -34,8 +34,7 @@ const ShopifyBuyButton = ({ productId, componentId }) => {
         ui.createComponent("product", {
           id: productId,
           node: document.getElementById(componentId),
-          moneyFormat:
-            "%7B%7Bamount_no_decimals_with_comma_separator%7D%7D%20Ft",
+          moneyFormat: "%7B%7Bamount_no_decimals_with_comma_separator%7D%7D%20Ft",
           options: {
             product: {
               styles: {
@@ -55,6 +54,14 @@ const ShopifyBuyButton = ({ productId, componentId }) => {
                 title: {
                   "font-size": "26px",
                   "text-align": "center",
+                  "max-height": "4rem",
+                  "min-height": "4rem",
+                  "overflow": "hidden",
+                  "margin-bottom": "2rem",
+                  display: "-webkit-box",
+                  "-webkit-line-clamp": "2",
+                  "-webkit-box-orient": "vertical",
+                  "line-height": "2rem",
                 },
                 button: {
                   "border-radius": "12px",
@@ -87,7 +94,7 @@ const ShopifyBuyButton = ({ productId, componentId }) => {
               },
               width: "100%",
               text: {
-                button: "Kosárba rak",
+                button: "Add to cart",
               },
             },
             productSet: {
@@ -112,6 +119,8 @@ const ShopifyBuyButton = ({ productId, componentId }) => {
                     "max-width": "100%",
                     "margin-left": "0px",
                     "margin-bottom": "0px",
+                    display: "flex",
+                    "justify-content": "center"
                   },
                 },
                 button: {
@@ -122,7 +131,7 @@ const ShopifyBuyButton = ({ productId, componentId }) => {
                   "font-weight": "bold",
                   "font-size": "26px",
                   color: "#4c4c4c",
-                  "text-align": "center",
+                  "text-align": "center"
                 },
                 price: {
                   "font-family": "Helvetica Neue, sans-serif",
@@ -136,18 +145,18 @@ const ShopifyBuyButton = ({ productId, componentId }) => {
                   "font-weight": "normal",
                   "font-size": "15.3px",
                   color: "#4c4c4c",
-                  "text-align": "center",
+                  "text-align": "center"
                 },
                 unitPrice: {
                   "font-family": "Helvetica Neue, sans-serif",
                   "font-weight": "normal",
                   "font-size": "15.3px",
                   color: "#4c4c4c",
-                  "text-align": "center",
+                  "text-align": "center"
                 },
               },
               text: {
-                button: "Kosárba rak",
+                button: "Add to cart",
               },
             },
             cart: {
@@ -157,12 +166,12 @@ const ShopifyBuyButton = ({ productId, componentId }) => {
                 },
               },
               text: {
-                title: "Kosár",
-                total: "Összeg",
-                empty: "A kosara üres.",
+                title: "Cart",
+                total: "Total",
+                empty: "Your cart is empty.",
                 notice:
-                  "Szállítási djak és kedvezmények a rendelés véglegesítése során kerülnek kiszámításra.",
-                button: "Pénztárhoz",
+                  "Shipping fees and discounts will be calculated during the order finalization.",
+                button: "Proceed to checkout"
               },
             },
             toggle: {},

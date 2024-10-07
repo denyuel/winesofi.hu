@@ -54,6 +54,14 @@ const ShopifyBuyButton = ({ productId, componentId }) => {
                 title: {
                   "font-size": "26px",
                   "text-align": "center",
+                  "max-height": "6rem",
+                  "min-height": "6rem",
+                  "overflow": "hidden",
+                  "margin-bottom": "2rem",
+                  display: "-webkit-box",
+                  "-webkit-line-clamp": "6",
+                  "-webkit-box-orient": "vertical",
+                  "line-height": "2rem",
                 },
                 button: {
                   "border-radius": "12px",
