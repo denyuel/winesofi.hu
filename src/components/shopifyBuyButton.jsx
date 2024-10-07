@@ -94,7 +94,7 @@ const ShopifyBuyButton = ({ productId, componentId }) => {
               },
               width: "100%",
               text: {
-                button: "Add to cart",
+                button: "Kosárba rak",
               },
             },
             productSet: {
@@ -156,7 +156,7 @@ const ShopifyBuyButton = ({ productId, componentId }) => {
                 },
               },
               text: {
-                button: "Add to cart",
+                button: "Kosárba rak",
               },
             },
             cart: {
@@ -166,12 +166,12 @@ const ShopifyBuyButton = ({ productId, componentId }) => {
                 },
               },
               text: {
-                title: "Cart",
-                total: "Total",
-                empty: "Your cart is empty.",
+                title: "Kosár",
+                total: "Összeg",
+                empty: "A kosara üres.",
                 notice:
-                  "Shipping fees and discounts will be calculated during the order finalization.",
-                button: "Proceed to checkout"
+                  "Szállítási djak és kedvezmények a rendelés véglegesítése során kerülnek kiszámításra.",
+                button: "Pénztárhoz"
               },
             },
             toggle: {},
