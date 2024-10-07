@@ -55,6 +55,14 @@ const ShopifyBuyButton = ({ productId, componentId }) => {
                 title: {
                   "font-size": "26px",
                   "text-align": "center",
+                  "max-height": "4rem",
+                  "min-height": "4rem",
+                  overflow: "hidden",
+                  "margin-bottom": "2rem",
+                  display: "-webkit-box",
+                  "-webkit-line-clamp": "2",
+                  "-webkit-box-orient": "vertical",
+                  "line-height": "2rem",
                 },
                 button: {
                   "border-radius": "12px",
@@ -112,6 +120,8 @@ const ShopifyBuyButton = ({ productId, componentId }) => {
                     "max-width": "100%",
                     "margin-left": "0px",
                     "margin-bottom": "0px",
+                    display: "flex",
+                    "justify-content": "center",
                   },
                 },
                 button: {
