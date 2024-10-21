@@ -11,9 +11,9 @@ const RightNav = () => {
     <nav className="container md:mx-auto flex justify-between items-center h-full uppercase">
       <div className="flex flex-col md:flex-row flex-1 justify-between items-center">
         <div className="flex flex-col md:flex-row flex-1 items-center justify-start xl:space-x-4 gap-3 xl:gap-4 nav-text">
-          {language === 'hu' ? (<Link to="/borok" className="hover:text-gray-300">
+          {language === 'hu' ? (<Link to="/borok" className="hover:text-gray-300 whitespace-nowrap">
             Borbutik
-          </Link>) : (<Link to="/en/wines" className="hover:text-gray-300">
+          </Link>) : (<Link to="/en/wines" className="hover:text-gray-300 whitespace-nowrap">
             Wine Boutique
           </Link>)}
           <span className="hidden md:flex items-center text-lg leading-none text-slate-200">
