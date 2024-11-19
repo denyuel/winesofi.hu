@@ -4,69 +4,72 @@
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/
  */
 
-/**
- * @type {import('gatsby').GatsbyNode['createPages']}
- */
 const path = require('path');
 
 exports.createPages = async ({ actions, graphql, reporter, cache }) => {
   const templates = {
     page: path.join(__dirname, 'src/templates/page.js'),
     blog: path.join(__dirname, 'src/templates/blog-listing.js'),
-    post: path.join(__dirname, 'src/templates/post.js')
+    post: path.join(__dirname, 'src/templates/post.js'),
   };
 
-  const result = await graphql(
-    `
-      {
-        allSanityPost(sort: { _createdAt: DESC }, limit: 100) {
-          nodes {
-            id
-            title
-            language
-            mainImage {
-              asset {
-                gatsbyImageData
-              }
+  const result = await graphql(`
+    {
+      allSanityPost(sort: { _createdAt: DESC }, limit: 100) {
+        nodes {
+          id
+          title
+          language
+          mainImage {
+            asset {
+              gatsbyImageData
             }
-            _createdAt
-            _updatedAt
-            _rawBody(resolveReferences: { maxDepth: 5 })
-            slug {
-              current
-            }
-            _rawSummary(resolveReferences: { maxDepth: 2 })
           }
+          _createdAt
+          _updatedAt
+          _rawBody(resolveReferences: { maxDepth: 5 })
+          slug {
+            current
+          }
+          _rawSummary(resolveReferences: { maxDepth: 2 })
         }
-        allSanityPage {
-          totalCount
-          nodes {
+      }
+      allSanityPage {
+        totalCount
+        nodes {
+          id
+          language
+          slug {
+            current
+          }
+          _rawSummary(resolveReferences: { maxDepth: 2 })
+          _rawBody(resolveReferences: { maxDepth: 5 })
+          title
+        }
+      }
+      allShopifyProduct {
+        edges {
+          node {
             id
-            language
-            slug {
-              current
-            }
-            _rawSummary(resolveReferences: { maxDepth: 2 })
-            _rawBody(resolveReferences: { maxDepth: 5 })
             title
+            description
           }
         }
       }
-    `
-  );
+    }
+  `);
 
   if (result.errors) {
-    reporter.panic('error loading content', result.errors);
+    reporter.panic('Error loading content', result.errors);
     return;
   }
 
   await cache.set('docskit_site_allSanity_data', result);
 
-  // create pages
   result.data.allSanityPage.nodes.forEach((node) => {
     actions.createPage({
       path: node.slug.current,
-      component: require.resolve(templates.page),
+      component: templates.page,
       context: {
         id: node.id,
         title: node.title,
@@ -74,12 +77,11 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
     });
   });
 
-  // create blog posts
   result.data.allSanityPost.nodes.forEach((node) => {
     const slug = `/post/${node.slug.current}`;
     actions.createPage({
       path: slug,
-      component: require.resolve(templates.post),
+      component: templates.post,
       context: {
         id: node.id,
         title: node.title,
@@ -87,7 +89,6 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
     });
   });
 
-  // Create blog-list pages
   const posts = result.data.allSanityPost.nodes;
   const postsPerPage = 6;
   const numPages = Math.ceil(posts.length / postsPerPage);

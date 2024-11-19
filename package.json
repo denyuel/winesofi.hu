@@ -30,6 +30,7 @@
     "gatsby-plugin-sitemap": "^6.13.1",
     "gatsby-source-filesystem": "^5.13.1",
     "gatsby-source-sanity": "^7.9.1",
+    "gatsby-source-shopify": "^8.13.2",
     "gatsby-transformer-remark": "^6.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
     "js-cookie": "^3.0.5",

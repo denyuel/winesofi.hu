@@ -3,6 +3,7 @@
  */
 
 require('dotenv').config({ path: './sanity_studio/.env' });
+require('dotenv').config({ path: '.env' })
 
 module.exports = {
   siteMetadata: {
@@ -27,6 +28,15 @@ module.exports = {
       dataset: process.env.SANITY_STUDIO_DATASET
     },
   },
+  {
+    resolve: "gatsby-source-shopify",
+      options: {
+        storeUrl: process.env.GATSBY_SHOPIFY_STORE_URL,
+        password: process.env.SHOPIFY_ADMIN_API_ACCESS_TOKEN,
+        includeCollections: false, // Ensure collections aren’t queried
+        downloadImages: false, // Skip image downloads if unnecessary
+      },
+    },
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
