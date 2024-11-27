@@ -51,6 +51,8 @@ const ShopifyBuyButton = ({ productId, componentId }) => {
                 },
                 img: {
                   "margin-bottom": "30px",
+                  "height": "254px",
+                  "width": "auto"
                 },
                 title: {
                   "font-size": "26px",
