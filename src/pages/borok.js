@@ -15,7 +15,6 @@ export default function Borok() {
               <h1 className="title text-4xl my-8">Borok</h1>
               <div className="prose max-w-none bold-text my-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mx-auto ">
-
                   <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                     <ShopifyBuyButton productId="9596891332955" componentId="product-component-1732691795505" />
                   </div>
