@@ -16,6 +16,22 @@ export default function Borok() {
               <div className="prose max-w-none bold-text my-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mx-auto ">
                   <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <ShopifyBuyButton productId="9596921872731" componentId="product-component-1732704084212" />
+                  </div>
+
+                  <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <ShopifyBuyButton productId="9365696282971" componentId="product-component-1724660548441" />
+                  </div>
+
+                  <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <ShopifyBuyButton productId="9365699559771" componentId="product-component-1724755265832" />
+                  </div>
+
+                  <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <ShopifyBuyButton productId="9365702836571" componentId="product-component-1724661037101" />
+                  </div>
+
+                  <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                     <ShopifyBuyButton productId="9596891332955" componentId="product-component-1732691795505" />
                   </div>
 
@@ -33,22 +49,6 @@ export default function Borok() {
 
                   <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                     <ShopifyBuyButton productId="9514696540507" componentId="product-component-1732692810592" />
-                  </div>
-
-                  <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                    <ShopifyBuyButton productId="9596921872731" componentId="product-component-1732704084212" />
-                  </div>
-
-                  <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                    <ShopifyBuyButton productId="9365696282971" componentId="product-component-1724660548441" />
-                  </div>
-
-                  <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                    <ShopifyBuyButton productId="9365699559771" componentId="product-component-1724755265832" />
-                  </div>
-
-                  <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                    <ShopifyBuyButton productId="9365702836571" componentId="product-component-1724661037101" />
                   </div>
                 </div>
                 <h2 className="title text-post_title leading-7">Borrendelés</h2>
