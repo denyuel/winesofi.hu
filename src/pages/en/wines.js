@@ -50,6 +50,11 @@ export default function Borok() {
                   <div className="items-center max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                     <ShopifyBuyButtonEng productId="9596881437019" componentId="product-component-1732704355873" />
                   </div>
+    
+                 <div className="items-center max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <ShopifyBuyButtonEng productId="9596881437019" componentId="product-component-1732704355873" />
+                  </div>
+    
                 </div>
                 <div className="">
                   <h2 className="title text-post_title leading-7">WINE ORDERING</h2>
