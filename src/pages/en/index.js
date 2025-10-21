@@ -70,8 +70,7 @@ export default function HomePage({ data }) {
           <div className="border-t-2 border-gray w-10"></div>
           <p className="basic-text text-center">
             Wine&Sofi is not just a winery: it's about nature, Badacsony, and Lake Balaton. It showcases a unique place
-            where the volcanic soil creates irreplaceable, unique wines. Each bottle, produced in small quantities and
-            individually numbered, captures the expertise of the boutique winery and the magic of terroir.
+            where the volcanic soil creates irreplaceable, unique wines. Each bottle, produced in small quantities captures the expertise of the boutique winery and the magic of terroir.
           </p>
           <div className="flex gap-3 justify-center pt-7">
             <Link to="/en/wines" className="button h-9">
