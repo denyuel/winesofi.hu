@@ -51,9 +51,9 @@ export default function HomePage({ data }) {
           <h1 className="text-3xl md:text-4xl text-center title">Wine&Sofi butikborászat</h1>
           <div className="border-t-2 border-gray w-10"></div>
           <p className="basic-text text-center">
-            A WineSofi nem csak egy borászat: a természetről, a Badacsonyról és a Balatonról szól. Bemutat
+            A WineSofi nem csak egy borászat: a természetről, Badacsonyról és a Balatonról szól. Bemutat
             egy különleges helyet, ahol a vulkáni talaj adta megismételhetetlen egyedi borok születnek. A kis
-            mennyiségben készült, számozott palackokba töltött egyedi borok mindegyikében érezhető a
+            mennyiségben készült, számozott palackok mindegyikében érezhető a
             butikborászat szakértelme és a terroir varázsa.
           </p>
           <div className="flex gap-3 justify-center pt-7">
