@@ -10,7 +10,7 @@
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
-    "prebuild": "npm install --prefix sanity_studio && npm run build --prefix sanity_studio",
+    "prebuild": "npm install --legacy-peer-deps --prefix sanity_studio && npm run build --prefix sanity_studio",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
