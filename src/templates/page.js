@@ -86,7 +86,7 @@ export function Head({ data }) {
   const page = data.sanityPage;
 
   let title = page.title;
-  let description = toPlainText(page._rawSummary);
+  let description = page._rawSummary ? toPlainText(page._rawSummary) : '';
   let winesofi = 'Wine&Sofi |';
 
   switch (page.slug.current) {
