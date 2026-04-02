@@ -13,6 +13,7 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
   const templates = {
     page: path.join(__dirname, 'src/templates/page.js'),
     blog: path.join(__dirname, 'src/templates/blog-listing.js'),
+    blogEn: path.join(__dirname, 'src/templates/en/blog-listing.js'),
     post: path.join(__dirname, 'src/templates/post.js')
   };
 
@@ -88,29 +89,42 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
   });
 
   // Create blog-list pages
-  const posts = result.data.allSanityPost.nodes;
   const postsPerPage = 6;
-  const numPages = Math.ceil(posts.length / postsPerPage);
-  Array.from({ length: numPages }).forEach((_, i) => {
+  const posts = result.data.allSanityPost.nodes;
+  
+  // Create Hungarian blog-list pages
+  const huPosts = posts.filter(post => post.language === 'hu' || !post.language);
+  const huNumPages = Math.ceil(huPosts.length / postsPerPage) || 1;
+  Array.from({ length: huNumPages }).forEach((_, i) => {
     actions.createPage({
       path: i === 0 ? `/blog` : `/blog/${i + 1}`,
       component: templates.blog,
       context: {
         limit: postsPerPage,
         skip: i * postsPerPage,
-        numPages,
+        numPages: huNumPages,
         currentPage: i + 1,
-      },
-    });
-    actions.createPage({
-      path: i === 0 ? `/en/blog` : `/en/blog/${i + 1}`,
-      component: templates.blog,
-      context: {
-        limit: postsPerPage,
-        skip: i * postsPerPage,
-        numPages,
-        currentPage: i + 1,
+        language: 'hu',
       },
     });
   });
+
+  // Create English blog-list pages
+  const enPosts = posts.filter(post => post.language === 'en');
+  if (enPosts.length > 0) {
+    const enNumPages = Math.ceil(enPosts.length / postsPerPage);
+    Array.from({ length: enNumPages }).forEach((_, i) => {
+      actions.createPage({
+        path: i === 0 ? `/en/blog` : `/en/blog/${i + 1}`,
+        component: templates.blogEn,
+        context: {
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          numPages: enNumPages,
+          currentPage: i + 1,
+          language: 'en',
+        },
+      });
+    });
+  }
 };

@@ -6,7 +6,6 @@ import { Seo } from '../components/seo';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Blog({ data }) {
-  const { language } = useLanguage();
   const nodes = data.allSanityPost.nodes;
   return (
     <Layout>
@@ -14,18 +13,19 @@ export default function Blog({ data }) {
 
       <div className='container mx-auto px-4 pb-8'>
         <h1 className='title text-4xl my-8 text-center'>Blog</h1>
-        <BlogList nodes={nodes.filter(node => node.language === language)} />
+        <BlogList nodes={nodes} />
       </div>
     </Layout>
   )
 }
 
 export const query = graphql`
-  query MyQuery($skip: Int!, $limit: Int!) {
+  query MyQuery($skip: Int!, $limit: Int!, $language: String = "hu") {
     allSanityPost(
       sort: { _createdAt: DESC }
       limit: $limit
       skip: $skip
+      filter: { language: { eq: $language } }
     ) {
       nodes {
         id
