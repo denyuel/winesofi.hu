@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../../components/en/layout';
-import BlogList from '../../components/en/blog-list';
+import Layout from '../../components/layout';
+import BlogList from '../../components/blog-list';
 import { Seo } from '../../components/seo';
 
 export default function Blog({ data }) {
