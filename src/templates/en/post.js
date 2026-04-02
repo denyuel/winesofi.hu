@@ -116,9 +116,14 @@ query Blogposts {
 }
 `;
 
-export function Head({ data }) {
+export function Head({ data, location }) {
   const post = data.sanityPost;
   return (
-    <Seo title={`${post.title} — Wine&Sofi blog`} image={post.mainImage.asset.gatsbyImageData.images.fallback.src} description={post._rawSummary ? toPlainText(post._rawSummary) : ''} />
+    <Seo 
+      title={`${post.title} — Wine&Sofi blog`} 
+      image={post.mainImage?.asset?.gatsbyImageData?.images?.fallback?.src || ''} 
+      description={post._rawSummary ? toPlainText(post._rawSummary) : ''} 
+      pathname={location?.pathname || `/post/${post.slug?.current}`}
+    />
   )
 };
