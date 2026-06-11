@@ -21,7 +21,7 @@ export default function HomePage({ data }) {
                   alt="furmint 2023"
                   placeholder="blurred"
                 />
-                <div className="flex flex-col justify-end items-center gap-1 w-11/12 md:size-circle bg-orange rounded-full opacity-90 text-xxs md:text-xs z-5 p-2 md:p-6 aspect-square circle">
+                <div className="flex flex-col justify-end items-center gap-1 w-11/12 md:size-circle bg-red rounded-full opacity-90 text-xxs md:text-xs z-5 p-2 md:p-6 aspect-square circle">
                   <span>Wine&Sofi</span>
                   <div className="border-t-2 border-button_black w-10 opacity-20"></div>
                   <span>furmint</span>

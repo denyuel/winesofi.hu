@@ -1,11 +1,9 @@
 import React from 'react';
 
 const WineCard = ({ product, lang = 'hu' }) => {
-  const { title, description, price, images } = product;
+  const { title, description, price, images, outOfStock } = product;
   const imageUrl = images[0];
 
-  const emailAddress = "winesofi@gmail.com";
-  
   // Format price
   let priceText = "";
   if (price === 0) {
@@ -16,27 +14,33 @@ const WineCard = ({ product, lang = 'hu' }) => {
       : `${price.toLocaleString('hu-HU')} Ft`;
   }
 
-  // Pre-filled email details
-  const subject = encodeURIComponent(
-    lang === 'en' ? `Wine Order - ${title}` : `Borrendelés - ${title}`
-  );
-  
-  const body = encodeURIComponent(
-    lang === 'en'
-      ? `Dear Wine&Sofi!\n\nI would like to order the following product:\nProduct: ${title}\nPrice: ${priceText}\n\nPlease contact me regarding the order details.\n\nBest regards,\n[Name]\n[Phone]\n[Delivery / Pickup choice: e.g. personal / shipping]`
-      : `Kedves Wine&Sofi!\n\nSzeretném megrendelni a következő terméket:\nTermék: ${title}\nÁr: ${priceText}\n\nKérlek, vegyétek fel velem a kapcsolatot a részletekkel kapcsolatban.\n\nÜdvözlettel,\n[Név]\n[Telefon]\n[Átvétel módja: pl. személyes / szállítás]`
-  );
-
-  const mailtoLink = `mailto:${emailAddress}?subject=${subject}&body=${body}`;
+  const handleOrderClick = (e) => {
+    e.preventDefault();
+    const messageInput = document.getElementById('message');
+    if (messageInput) {
+      const text = lang === 'en'
+        ? `Dear Wine&Sofi!\n\nI would like to order the following product: ${title} (${priceText}).`
+        : `Kedves Wine&Sofi!\n\nSzeretnék rendelni a következő termékből: ${title} (${priceText}).`;
+      messageInput.value = text;
+      
+      // Trigger React's onChange state update
+      const event = new Event('input', { bubbles: true });
+      messageInput.dispatchEvent(event);
+    }
+    const form = document.getElementById('contactForm');
+    if (form) {
+      form.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
-    <div className="flex flex-col justify-between items-center h-full max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 transition-colors duration-150 text-center dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+    <div className={`flex flex-col justify-between items-center h-full max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 transition-colors duration-150 text-center dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 ${outOfStock ? 'opacity-80' : ''}`}>
       <div className="flex flex-col items-center w-full">
         {imageUrl && (
           <img
             src={imageUrl}
             alt={title}
-            className="object-contain h-64 mb-6"
+            className={`object-contain h-64 mb-6 ${outOfStock ? 'grayscale opacity-60' : ''}`}
           />
         )}
         <h3 className="font-cormorant_sc text-button_black font-bold uppercase text-xl md:text-2xl mb-4 min-h-[4.5rem] flex items-center justify-center dark:text-white">
@@ -48,11 +52,17 @@ const WineCard = ({ product, lang = 'hu' }) => {
       </div>
       <div className="w-full mt-auto flex flex-col items-center">
         <div className="font-open text-lg font-bold text-button_black mb-6 dark:text-white">
-          {priceText}
+          {outOfStock ? (lang === 'en' ? 'Sold out' : 'Elfogyott') : priceText}
         </div>
-        <a href={mailtoLink} className="button w-full text-center inline-block">
-          {lang === 'en' ? 'Order via email' : 'Rendelés e-mailben'}
-        </a>
+        {outOfStock ? (
+          <button disabled className="px-5 py-2.75 bg-gray_strong opacity-50 rounded-[20px] text-white uppercase text-xs tracking-[2px] font-semibold font-open w-full text-center inline-block cursor-not-allowed">
+            {lang === 'en' ? 'Sold out' : 'Elfogyott'}
+          </button>
+        ) : (
+          <button onClick={handleOrderClick} className="button w-full text-center inline-block">
+            {lang === 'en' ? 'Order' : 'Rendelés'}
+          </button>
+        )}
       </div>
     </div>
   );

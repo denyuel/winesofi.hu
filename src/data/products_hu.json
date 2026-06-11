@@ -39,6 +39,7 @@
     "handle": "2021-winesofi-keknyelu",
     "price": 7900,
     "currency": "HUF",
+    "outOfStock": true,
     "images": [
       "/images/products/2021-winesofi-keknyelu.png"
     ]
