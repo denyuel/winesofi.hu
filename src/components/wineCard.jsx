@@ -158,7 +158,7 @@ const WineCard = ({ product, lang = 'hu' }) => {
             src={imageUrl}
             alt={title}
             className={`object-contain h-64 mb-6 ${outOfStock ? 'grayscale opacity-60' : ''}`}
-            style={isGlass ? { filter: 'invert(1) brightness(4) invert(1)', mixBlendMode: 'multiply' } : {}}
+            style={isGlass ? { mixBlendMode: 'multiply' } : {}}
           />
         )}
         <h3 className="font-cormorant_sc text-button_black font-bold uppercase text-xl md:text-2xl mb-4 min-h-[4.5rem] flex items-center justify-center dark:text-white">
