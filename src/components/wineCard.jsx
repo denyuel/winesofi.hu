@@ -26,41 +26,76 @@ const WineCard = ({ product, lang = 'hu' }) => {
         currentVal.startsWith("Dear Wine&Sofi!\n\nI would like to order the following");
       
       if (isDefaultTemplate) {
-        if (lang === 'en') {
-          let productsList = [];
-          if (currentVal) {
-            // Extract existing items starting with "- "
-            const lines = currentVal.split('\n');
-            productsList = lines.filter(line => line.startsWith('- '));
+        const isEn = lang === 'en';
+        let items = []; // Array of { qty, title, priceText }
+        
+        if (currentVal) {
+          // Parse existing lines
+          const lines = currentVal.split('\n');
+          for (const line of lines) {
+            if (line.startsWith('- ')) {
+              const content = line.substring(2); // Remove "- "
+              
+              let match = null;
+              if (isEn) {
+                // Regex for: "2x Lunara 2022 (4 900 HUF)"
+                match = content.match(/^(\d+)x\s+(.*?)\s+\((.*?)\)$/);
+              } else {
+                // Regex for: "2 db Lunara 2022 (4 900 Ft)"
+                match = content.match(/^(\d+)\s+db\s+(.*?)\s+\((.*?)\)$/);
+              }
+              
+              if (match) {
+                items.push({
+                  qty: parseInt(match[1], 10),
+                  title: match[2],
+                  priceText: match[3]
+                });
+              } else {
+                // Try parsing without quantity prefix (e.g. "Lunara 2022 (4 900 Ft)")
+                const simpleMatch = content.match(/^(.*?)\s+\((.*?)\)$/);
+                if (simpleMatch) {
+                  items.push({
+                    qty: 1,
+                    title: simpleMatch[1],
+                    priceText: simpleMatch[2]
+                  });
+                }
+              }
+            }
           }
-          
-          const newItem = `- ${title} (${priceText})`;
-          if (!productsList.includes(newItem)) {
-            productsList.push(newItem);
-          }
-          
-          messageInput.value = `Dear Wine&Sofi!\n\nI would like to order the following products:\n${productsList.join('\n')}\n\nPlease contact me regarding the order details.\n\nBest regards,\n[Name]\n[Phone]\n[Delivery / Pickup choice: e.g. personal / shipping]`;
+        }
+        
+        // Update quantity if exists, otherwise add new
+        const existingItem = items.find(item => item.title === title);
+        if (existingItem) {
+          existingItem.qty += 1;
         } else {
-          let productsList = [];
-          if (currentVal) {
-            // Extract existing items starting with "- "
-            const lines = currentVal.split('\n');
-            productsList = lines.filter(line => line.startsWith('- '));
+          items.push({
+            qty: 1,
+            title: title,
+            priceText: priceText
+          });
+        }
+        
+        // Build lines
+        const linesText = items.map(item => {
+          if (isEn) {
+            return `- ${item.qty}x ${item.title} (${item.priceText})`;
+          } else {
+            return `- ${item.qty} db ${item.title} (${item.priceText})`;
           }
-          
-          const newItem = `- ${title} (${priceText})`;
-          if (!productsList.includes(newItem)) {
-            productsList.push(newItem);
-          }
-          
-          messageInput.value = `Kedves Wine&Sofi!\n\nSzeretnék rendelni a következő termékekből:\n${productsList.join('\n')}\n\nKérlek, vegyétek fel velem a kapcsolatot a részletekkel kapcsolatban.\n\nÜdvözlettel,\n[Név]\n[Telefon]\n[Átvétel módja: pl. személyes / szállítás]`;
+        }).join('\n');
+        
+        if (isEn) {
+          messageInput.value = `Dear Wine&Sofi!\n\nI would like to order the following products:\n${linesText}\n\nPlease contact me regarding the order details.\n\nBest regards,\n[Name]\n[Phone]\n[Delivery / Pickup choice: e.g. personal / shipping]`;
+        } else {
+          messageInput.value = `Kedves Wine&Sofi!\n\nSzeretnék rendelni a következő termékekből:\n${linesText}\n\nKérlek, vegyétek fel velem a kapcsolatot a részletekkel kapcsolatban.\n\nÜdvözlettel,\n[Név]\n[Telefon]\n[Átvétel módja: pl. személyes / szállítás]`;
         }
       } else {
         // If the user already wrote a custom message, just append the product at the end
         const newItem = `[Product: ${title} (${priceText})]`;
-        if (!currentVal.includes(title)) {
-          messageInput.value = currentVal + `\n${newItem}`;
-        }
+        messageInput.value = currentVal + `\n${newItem}`;
       }
       
       // Trigger React's onChange state update
