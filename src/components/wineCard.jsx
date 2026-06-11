@@ -18,15 +18,56 @@ const WineCard = ({ product, lang = 'hu' }) => {
     e.preventDefault();
     const messageInput = document.getElementById('message');
     if (messageInput) {
-      const text = lang === 'en'
-        ? `Dear Wine&Sofi!\n\nI would like to order the following product: ${title} (${priceText}).`
-        : `Kedves Wine&Sofi!\n\nSzeretnék rendelni a következő termékből: ${title} (${priceText}).`;
-      messageInput.value = text;
+      const currentVal = messageInput.value.trim();
+      
+      // Check if it's the default template or empty
+      const isDefaultTemplate = !currentVal || 
+        currentVal.startsWith("Kedves Wine&Sofi!\n\nSzeretnék rendelni a következő") ||
+        currentVal.startsWith("Dear Wine&Sofi!\n\nI would like to order the following");
+      
+      if (isDefaultTemplate) {
+        if (lang === 'en') {
+          let productsList = [];
+          if (currentVal) {
+            // Extract existing items starting with "- "
+            const lines = currentVal.split('\n');
+            productsList = lines.filter(line => line.startsWith('- '));
+          }
+          
+          const newItem = `- ${title} (${priceText})`;
+          if (!productsList.includes(newItem)) {
+            productsList.push(newItem);
+          }
+          
+          messageInput.value = `Dear Wine&Sofi!\n\nI would like to order the following products:\n${productsList.join('\n')}\n\nPlease contact me regarding the order details.\n\nBest regards,\n[Name]\n[Phone]\n[Delivery / Pickup choice: e.g. personal / shipping]`;
+        } else {
+          let productsList = [];
+          if (currentVal) {
+            // Extract existing items starting with "- "
+            const lines = currentVal.split('\n');
+            productsList = lines.filter(line => line.startsWith('- '));
+          }
+          
+          const newItem = `- ${title} (${priceText})`;
+          if (!productsList.includes(newItem)) {
+            productsList.push(newItem);
+          }
+          
+          messageInput.value = `Kedves Wine&Sofi!\n\nSzeretnék rendelni a következő termékekből:\n${productsList.join('\n')}\n\nKérlek, vegyétek fel velem a kapcsolatot a részletekkel kapcsolatban.\n\nÜdvözlettel,\n[Név]\n[Telefon]\n[Átvétel módja: pl. személyes / szállítás]`;
+        }
+      } else {
+        // If the user already wrote a custom message, just append the product at the end
+        const newItem = `[Product: ${title} (${priceText})]`;
+        if (!currentVal.includes(title)) {
+          messageInput.value = currentVal + `\n${newItem}`;
+        }
+      }
       
       // Trigger React's onChange state update
       const event = new Event('input', { bubbles: true });
       messageInput.dispatchEvent(event);
     }
+    
     const form = document.getElementById('contactForm');
     if (form) {
       form.scrollIntoView({ behavior: 'smooth' });

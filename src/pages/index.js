@@ -27,7 +27,7 @@ export default function HomePage({ data }) {
               <div className="flex flex-col items-center max-w-full">
                 <StaticImage className="h-auto w-28 md:w-72 -mb-12 md:-mb-36 z-10" src='../images/lunara-2022.png' alt="olaszrizling 2022" placeholder='blurred' />
                 <div
-                  className="flex flex-col justify-end items-center gap-1 w-11/12 md:size-circle bg-brown rounded-full opacity-90 text-xxs md:text-xs z-5 p-2 md:p-6 aspect-square circle">
+                  className="flex flex-col justify-end items-center gap-1 w-11/12 md:size-circle bg-green rounded-full opacity-90 text-xxs md:text-xs z-5 p-2 md:p-6 aspect-square circle">
                   <span>Wine&Sofi</span>
                   <div className="border-t-2 border-button_black w-10 opacity-20"></div>
                   <span>olaszrizling</span>
@@ -37,7 +37,7 @@ export default function HomePage({ data }) {
               <div className="flex flex-col items-center max-w-full">
                 <StaticImage className="h-auto w-28 md:w-72 -mb-12 md:-mb-36 z-10" src='../images/lunessa-2022.png' alt="olaszrizling 2022" placeholder='blurred' />
                 <div
-                  className="flex flex-col justify-end items-center gap-1 w-11/12 md:size-circle bg-green rounded-full opacity-90 text-xxs md:text-xs z-5 p-2 md:p-6 aspect-square circle">
+                  className="flex flex-col justify-end items-center gap-1 w-11/12 md:size-circle bg-brown rounded-full opacity-90 text-xxs md:text-xs z-5 p-2 md:p-6 aspect-square circle">
                   <span>Wine&Sofi</span>
                   <div className="border-t-2 border-button_black w-10 opacity-20"></div>
                   <span>olaszrizling</span>
