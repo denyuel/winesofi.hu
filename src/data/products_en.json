@@ -1,0 +1,102 @@
+[
+  {
+    "id": "9596923150683",
+    "title": "Furmint 2023",
+    "description": "Furmint adapts particularly well to the region's volcanic, basalt-rich soil and moderate, relatively humid microclimate. This Furmint batch is an excellent example of how the characteristic and full-bodied flavor profile of the white grapes from the Badacsony wine region can be combined with modern winemaking techniques. The 2023 Wine&Sofi Furmint is a fresh, youthful batch highlighted by pear and lively floral aromas, while enriched with the mineral notes typical of Badacsony. It was bottled in 1823 bottles, reflecting the unique opportunities provided by the terroir.",
+    "handle": "2023-winesofi-badacsony-furmint-copy",
+    "price": 5900,
+    "currency": "HUF",
+    "images": [
+      "/images/products/2023-winesofi-badacsony-furmint-copy.png"
+    ]
+  },
+  {
+    "id": "9457752342875",
+    "title": "Welschriesling 2022",
+    "description": "Welschriesling is one of Hungary’s most beloved grape varieties, capable of showcasing a wide range of styles from light, fruity wines to mineral-rich and complex offerings. The 2022 Italian Riesling from WineSofi represents the lighter side of this diversity, realized in 1,657 bottles. The wine's freshness and fruitiness are in perfect harmony, featuring tropical notes such as elderflower, mango, apricot, and green apple, which blend seamlessly with the distinctive flavors of Badacsony. This wine has a stable structure, making it an ideal choice for those seeking a light yet characterful Italian Riesling from Badacsony.",
+    "handle": "winesofi-2022-vintage-olaszrizling",
+    "price": 4900,
+    "currency": "HUF",
+    "images": [
+      "/images/products/winesofi-2022-vintage-olaszrizling.png"
+    ]
+  },
+  {
+    "id": "9457751228763",
+    "title": "Welschriesling barrel selection 2022",
+    "description": "Welschiesling, which is a characteristic grape variety of the Badacsony wine region, adapts excellently to the area's volcanic basalt-rich soil. This variety produces particularly rich and mineral wines in the unique microclimate here. The WineSofi 2022 barrel selection Italian Riesling highlights the versatility of the grape variety. Only 1,278 bottles were produced. The wine displays rich minerality and mature, honey-nut aromas, thanks to six months of aging in 10-hectoliter oak barrels. This Welschiesling is an ideal companion for conversations.",
+    "handle": "winesofi-2022-barrel-selection-olaszrizling",
+    "price": 6900,
+    "currency": "HUF",
+    "images": [
+      "/images/products/winesofi-2022-barrel-selection-olaszrizling.png"
+    ]
+  },
+  {
+    "id": "9454030160219",
+    "title": "Blue stem 2021",
+    "description": "The Kéknyelű (Blue stem) is a unique grape variety cultivated exclusively in Badacsony, spanning only 47 hectares. It derives its name from the bluish-reddish hue of its leaf stalks and was historically dubbed 'Gentleman's Grape' due to its production of only female flowers, requiring the presence of a pollinator variety, Rózsakő. The 2021 Kéknyelű from Wine&Sofi marks the boutique winery's first vintage, with just 483 bottles produced. Its old vines provide deep, rich layers of flavor and a floral, mineral scent enhanced by peach and a hint of citrus freshness. This wine is a true gourmet delight, offering a sip that embodies the unique characteristics of both Badacsony and the Kéknyelű grape.",
+    "handle": "2021-winesofi-keknyelu-eng",
+    "price": 7900,
+    "currency": "HUF",
+    "images": [
+      "/images/products/2021-winesofi-keknyelu-eng.png"
+    ]
+  },
+  {
+    "id": "9596896641371",
+    "title": "Dr. József Laposa - Badacsony - The Jewel of Hungarian wine regions",
+    "description": "Dr. József Laposa, my father, has written a fantastic book that tells the history of viticulture and winemaking in the Badacsony wine region—especially on Badacsony Hill—from the time of the Celts to the present day. It’s filled with interesting details, stories, and over 300 images. A true treasure for anyone who loves Badacsony. It’s the perfect gift and a wonderful read—I wholeheartedly recommend it!",
+    "handle": "dr-laposa-jozsef-badacsony-a-magyar-borvidekek-ekessege-copy",
+    "price": 8900,
+    "currency": "HUF",
+    "images": [
+      "/images/products/dr-laposa-jozsef-badacsony-a-magyar-borvidekek-ekessege-copy.jpg"
+    ]
+  },
+  {
+    "id": "9596904472923",
+    "title": "Gift wrapping",
+    "description": "Free Gift Wrapping with the Purchase of 3 Bottles of Wine When you purchase 3 bottles of wine, you can choose free gift wrapping.Please add the gift wrapping to your cart only if you have already selected 3 bottles, as the offer is valid exclusively in this case!",
+    "handle": "diszcsomagolas-copy",
+    "price": 0,
+    "currency": "HUF",
+    "images": [
+      "/images/products/diszcsomagolas-copy.jpg"
+    ]
+  },
+  {
+    "id": "9596914598235",
+    "title": "Gift package",
+    "description": "Gift Package 2 elegant wine glasses Unique decorations Gift wrapping Price without wine: 8,000 FtYou must select wine separately for the package – it cannot be sold without wine.",
+    "handle": "gift-package",
+    "price": 8000,
+    "currency": "HUF",
+    "images": [
+      "/images/products/gift-package.jpg",
+      "/images/products/gift-package_1.png"
+    ]
+  },
+  {
+    "id": "9596878389595",
+    "title": "Wine&Sofi wine glass",
+    "description": "Wine&Sofi logo-embossed wine glass 40,5 cL",
+    "handle": "wine-sofi-borospohar-copy",
+    "price": 1900,
+    "currency": "HUF",
+    "images": [
+      "/images/products/wine-sofi-borospohar-copy.jpg"
+    ]
+  },
+  {
+    "id": "9596881437019",
+    "title": "Wine&Sofi wine glass - 6 pc",
+    "description": "Set of 6 Wine&Sofi logo-embossed wine glasses40.5 cL",
+    "handle": "wine-sofi-borospohar-6-db-copy",
+    "price": 9900,
+    "currency": "HUF",
+    "images": [
+      "/images/products/wine-sofi-borospohar-6-db-copy.jpg"
+    ]
+  }
+]

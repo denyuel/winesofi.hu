@@ -1,0 +1,102 @@
+[
+  {
+    "id": "9596921872731",
+    "title": "Fiora 2023",
+    "description": "Wine&Sofi Furmint A Furmint különösen jól alkalmazkodik a régió vulkanikus, bazaltos talajához és mérsékelt, viszonylag párás mikroklímájához. Ez a Furmint tétel egy remek példa arra, hogyan lehet a Badacsonyi borvidék fehér szőlőinek karakteres és telt ízvilágát a modern borászati technikákkal ötvözni. A 2023-as évjáratú Wine&Sofi Furmint egy friss, fiatalos tétel, amelyet a körte és üde virágos aromák emelnek ki, miközben a Badacsonyra jellemző ásványos jegyek gazdagítják. 1823 palack került palackozásra, ami tükrözi az egyedi terroir adta lehetőségeket.",
+    "handle": "2023-winesofi-badacsony-furmint",
+    "price": 5900,
+    "currency": "HUF",
+    "images": [
+      "/images/products/2023-winesofi-badacsony-furmint.png"
+    ]
+  },
+  {
+    "id": "9365696282971",
+    "title": "Lunara 2022",
+    "description": "Wine&Sofi OlaszrizlingAz olaszrizling Magyarország egyik legkedveltebb szőlőfajtája, amely sokféle stílusban képes megmutatkozni, a könnyed, gyümölcsös boroktól az ásványos és komplex tételekig. A WineSofi 2022-es olaszrizlingje e sokszínűség könnyed oldalát képviseli, 1657 palackkészült belőle.A bor frissessége és gyümölcsössége tökéletes harmóniában van, trópusi jegyekkel, mint bodza, mangó, sárgabarack és zöldalma, melyek a Badacsonyra jellemző ízvilággal összhangban állnak. Ez a bor stabil szerkezettel bír, ideális választás azok számára, akik egy könnyed, mégis karakteres badacsonyi olaszrizlinget keresnek.",
+    "handle": "2022-olaszrizling",
+    "price": 4900,
+    "currency": "HUF",
+    "images": [
+      "/images/products/2022-olaszrizling.png"
+    ]
+  },
+  {
+    "id": "9365699559771",
+    "title": "Lunessa 2022",
+    "description": "Wine&Sofi Olaszrizling hordóválogatásAz olaszrizling, mely a Badacsonyi borvidék egyik jellemző szőlőfajtája, kitűnően alkalmazkodik a terület vulkanikus bazalttal teli talajához. Ez a fajta az itteni egyedülálló mikroklímában kifejezetten gazdag és ásványos borokat eredményez. A WineSofi 2022-es hordóválogatás olaszrizlingje kiemeli a szőlőfajta sokoldalúságát. Mindössze 1278 palack készült, belőle. A bor gazdag ásványosságot és érett, mézes-diós aromákat mutat, köszönhetően a 6 hónapos érlelésnek 10 hektoliteres ászok hordóban. Ez az olaszrizling ideális társ beszélgetésekhez.",
+    "handle": "2022-olaszrizling-hordovalogatas",
+    "price": 6900,
+    "currency": "HUF",
+    "images": [
+      "/images/products/2022-olaszrizling-hordovalogatas.png"
+    ]
+  },
+  {
+    "id": "9365702836571",
+    "title": "Contessa 2021",
+    "description": "Wine&Sofi KéknyelűA kéknyelű egy különleges szőlőfajta, amelyet Badacsonyban termesztenek, csak 47 hektáron. Nevét a levélnyelének kékes-vöröses árnyalatáról kapta, és régen \"Úri szőlőnek\" is nevezték, mivel női virágzatot hoz és szükség van egy porzó fajtára, a Rózsakőre. A Wine&Sofi 2021-es kéknyelűje a butikborászat első évjárat, mindössze 483 palack készült belőle. Öreg tőkéi mély, gazdag ízrétegeket és virágos, ásványos illatvilágot biztosítanak, melyet barack és citrus frissessége egészít ki. Ez a bor igazi ínyenc csemege, mely minden kortyával Badacsony és a kéknyelű egyedi jellegzetességeit tárja elénk.",
+    "handle": "2021-winesofi-keknyelu",
+    "price": 7900,
+    "currency": "HUF",
+    "images": [
+      "/images/products/2021-winesofi-keknyelu.png"
+    ]
+  },
+  {
+    "id": "9596891332955",
+    "title": "Dr. Laposa József - Badacsony - A magyar borvidékek ékessége",
+    "description": "Dr. Laposa József, édesapám, írt egy fantasztikus könyvet, ami a Badacsonyi borvidék – különösen a Badacsony-hegy – szőlő- és bortermelésének történetét meséli el, egészen a kelták korától napjainkig. Tele van érdekességekkel, történetekkel, és több mint 300 képpel. Minden Badacsonyt kedvelő számára igazi kincs. Tökéletes ajándék és olvasnivaló – szívből ajánlom!",
+    "handle": "dr-laposa-jozsef-badacsony-a-magyar-borvidekek-ekessege",
+    "price": 8900,
+    "currency": "HUF",
+    "images": [
+      "/images/products/dr-laposa-jozsef-badacsony-a-magyar-borvidekek-ekessege.jpg"
+    ]
+  },
+  {
+    "id": "9596903227739",
+    "title": "Díszcsomagolás",
+    "description": "Ajándék díszcsomagolás 3 bor vásárlása esetén 3 bor vásárlása esetén választhatsz ajándék díszcsomagolás.Akkor tedd a díszcsomagolást a kosárba, ha 3 bort már választottál, mert az ajándék kizárólag így érvényes!",
+    "handle": "diszcsomagolas",
+    "price": 0,
+    "currency": "HUF",
+    "images": [
+      "/images/products/diszcsomagolas.jpg"
+    ]
+  },
+  {
+    "id": "9596915122523",
+    "title": "Ajándékcsomag",
+    "description": "Ajándékcsomag 2 elegáns borospohár egyedi díszek díszcsomagolás Ára bor nélkül: 8 000 FtA csomaghoz bort külön kell választanod – bor nélkül nem kerül értékesítésre.",
+    "handle": "gift-package-copy",
+    "price": 8000,
+    "currency": "HUF",
+    "images": [
+      "/images/products/gift-package-copy.jpg",
+      "/images/products/gift-package-copy_1.png"
+    ]
+  },
+  {
+    "id": "9514694607195",
+    "title": "Wine&Sofi borospohár",
+    "description": "Wine&Sofi logóval elátott borospohár 40,5 cL",
+    "handle": "wine-sofi-borospohar",
+    "price": 1900,
+    "currency": "HUF",
+    "images": [
+      "/images/products/wine-sofi-borospohar.jpg"
+    ]
+  },
+  {
+    "id": "9514696540507",
+    "title": "Wine&Sofi borospohár - 6 db",
+    "description": "6 db Wine&Sofi logóval elátott borospohár 40,5 cL",
+    "handle": "wine-sofi-borospohar-6-db",
+    "price": 9900,
+    "currency": "HUF",
+    "images": [
+      "/images/products/wine-sofi-borospohar-6-db.jpg"
+    ]
+  }
+]
