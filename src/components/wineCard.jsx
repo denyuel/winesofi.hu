@@ -14,9 +14,6 @@ const WineCard = ({ product, lang = 'hu' }) => {
       : `${price.toLocaleString('hu-HU')} Ft`;
   }
 
-  // Wine titles for gift wrapping validation
-  const wineTitles = ["Fiora 2023", "Furmint 2023", "Lunara 2022", "Lunessa 2022", "Contessa 2021", "Blue stem 2021"];
-
   const handleOrderClick = (e) => {
     e.preventDefault();
     const messageInput = document.getElementById('message');
@@ -29,32 +26,34 @@ const WineCard = ({ product, lang = 'hu' }) => {
       if (isGiftWrapping) {
         let wineCount = 0;
         if (currentVal) {
-          const lines = currentVal.split('\n');
+          const winesToCheck = [
+            { search: 'fiora 2023' },
+            { search: 'furmint 2023' },
+            { search: 'lunara 2022' },
+            { search: 'welschriesling 2022' },
+            { search: 'lunessa 2022' },
+            { search: 'welschriesling barrel selection 2022' },
+            { search: 'welschriesling barrel' },
+            { search: 'contessa 2021' },
+            { search: 'blue stem 2021' }
+          ];
+
+          const lines = currentVal.replace(/\r/g, '').split('\n');
           for (const line of lines) {
-            if (line.startsWith('- ')) {
-              const content = line.substring(2);
-              let match = null;
-              if (isEn) {
-                match = content.match(/^(\d+)x\s+(.*?)\s+\((.*?)\)$/);
+            const lowerLine = line.toLowerCase().trim();
+            const matchedWine = winesToCheck.find(w => lowerLine.includes(w.search));
+            if (matchedWine) {
+              let qty = 1;
+              const qtyMatch = lowerLine.match(/(\d+)\s*(?:db|x\b)/);
+              if (qtyMatch) {
+                qty = parseInt(qtyMatch[1], 10);
               } else {
-                match = content.match(/^(\d+)\s+db\s+(.*?)\s+\((.*?)\)$/);
-              }
-              
-              if (match) {
-                const qty = parseInt(match[1], 10);
-                const itemTitle = match[2];
-                if (wineTitles.includes(itemTitle)) {
-                  wineCount += qty;
-                }
-              } else {
-                const simpleMatch = content.match(/^(.*?)\s+\((.*?)\)$/);
-                if (simpleMatch) {
-                  const itemTitle = simpleMatch[1];
-                  if (wineTitles.includes(itemTitle)) {
-                    wineCount += 1;
-                  }
+                const bulletMatch = lowerLine.match(/^-\s*(\d+)\s+/);
+                if (bulletMatch) {
+                  qty = parseInt(bulletMatch[1], 10);
                 }
               }
+              wineCount += qty;
             }
           }
         }
@@ -71,14 +70,14 @@ const WineCard = ({ product, lang = 'hu' }) => {
       
       // 2. Build template or append product
       const isDefaultTemplate = !currentVal || 
-        currentVal.startsWith("Kedves Wine&Sofi!\n\nSzeretnék rendelni a következő") ||
-        currentVal.startsWith("Dear Wine&Sofi!\n\nI would like to order the following");
+        currentVal.replace(/\r/g, '').startsWith("Kedves Wine&Sofi!\n\nSzeretnék rendelni a következő") ||
+        currentVal.replace(/\r/g, '').startsWith("Dear Wine&Sofi!\n\nI would like to order the following");
       
       if (isDefaultTemplate) {
         let items = []; // Array of { qty, title, priceText }
         
         if (currentVal) {
-          const lines = currentVal.split('\n');
+          const lines = currentVal.replace(/\r/g, '').split('\n');
           for (const line of lines) {
             if (line.startsWith('- ')) {
               const content = line.substring(2);
@@ -159,7 +158,7 @@ const WineCard = ({ product, lang = 'hu' }) => {
             src={imageUrl}
             alt={title}
             className={`object-contain h-64 mb-6 ${outOfStock ? 'grayscale opacity-60' : ''}`}
-            style={isGlass ? { filter: 'brightness(0.92) contrast(1.15) drop-shadow(0px 4px 12px rgba(0,0,0,0.15))' } : {}}
+            style={isGlass ? { filter: 'invert(1) brightness(4) invert(1)', mixBlendMode: 'multiply' } : {}}
           />
         )}
         <h3 className="font-cormorant_sc text-button_black font-bold uppercase text-xl md:text-2xl mb-4 min-h-[4.5rem] flex items-center justify-center dark:text-white">
