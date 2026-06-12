@@ -89,7 +89,7 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
   });
 
   // Create blog-list pages
-  const postsPerPage = 6;
+  const postsPerPage = 100;
   const posts = result.data.allSanityPost.nodes;
   
   // Create Hungarian blog-list pages
