@@ -26,9 +26,9 @@ export default function BlogPost({ data }) {
       ),
     },
     block: {
-      h2: ({ children }) => <h2 className="title text-post_title leading-7">{children}</h2>,
-      h3: ({ children }) => <h3 className="title text-2xl leading-7">{children}</h3>,
-      h4: ({ children }) => <h4 className="title text-xl leading-7">{children}</h4>,
+      h2: ({ children }) => <h2 className="title text-post_title leading-7 mt-10 mb-4">{children}</h2>,
+      h3: ({ children }) => <h3 className="title text-2xl leading-7 mt-8 mb-3">{children}</h3>,
+      h4: ({ children }) => <h4 className="title text-xl leading-7 mt-6 mb-3">{children}</h4>,
     },
   };
 

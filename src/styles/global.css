@@ -60,3 +60,29 @@ article.blog-first>div.blog-article-child {
 article.blog-second>div.blog-article-child {
   @apply lg:-mr-[200px] lg:pl-[200px] bg-gray_light;
 }
+
+/* Blog body typography spacing and styling */
+.prose p {
+  margin-bottom: 1.25rem;
+}
+
+.prose ul {
+  list-style-type: disc;
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.prose ol {
+  list-style-type: decimal;
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+.prose li p {
+  margin-bottom: 0px;
+}
+
