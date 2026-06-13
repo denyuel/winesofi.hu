@@ -3,7 +3,7 @@ title: "Consultancy"
 slug: "/en/consultancy"
 language: "en"
 include_in_navigation: true
-summary: "**Wine&Sofi Winemaking Consultancy**  Our consultancy takes into account market trends, sustainability principles, and regulatory requirements. We assist in product structure design, technological planning, and the creation of unique and eye-catching branding.  I provide personalised winemaking consultancy across multiple areas:"
+summary: "Wine&Sofi Winemaking Consultancy. Our consultancy takes into account market trends, sustainability principles, and regulatory requirements. We assist in product structure design, technological planning, and the creation of unique and eye-catching branding. I provide personalised winemaking consultancy across multiple areas:"
 ---
 
 - General winemaking consultancy: From basics to fine-tuning, everything you need to know about making white wine.

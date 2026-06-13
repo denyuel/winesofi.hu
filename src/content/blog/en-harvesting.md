@@ -4,7 +4,7 @@ date: "2024-09-23"
 slug: "/post/harvesting"
 language: "en"
 image: "/images/blog/75b111c3a80b9a7c40d187b7b544106ef0929377.jpg"
-summary: "**Harvesting**  The harvest season is one of the most crucial and exciting parts of viticulture. Grape harvesting is not merely about gathering the fruit but is part of a complex process aimed at achieving the highest quality grapes for winemaking. In this post, we will explore the professional aspects of harvesting and the application of modern techniques."
+summary: "Harvesting. The harvest season is one of the most crucial and exciting parts of viticulture. Grape harvesting is not merely about gathering the fruit but is part of a complex process aimed at achieving the highest quality grapes for winemaking. In this post, we will explore the professional aspects of harvesting and the application of modern techniques."
 ---
 
 **Harvesting**

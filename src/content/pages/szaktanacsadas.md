@@ -3,7 +3,7 @@ title: "Szaktanácsadás"
 slug: "/szaktanacsadas"
 language: "hu"
 include_in_navigation: true
-summary: "### **Wine&Sofi borászati szaktanácsadás **  **Figyelembe veszi a piaci trendeket, a fenntarthatósági elveket és a szabályozási követelményeket. Segít a termékstruktúra kialakításában, a technológiai tervezésben, valamint az egyedi és figyelemfelkeltő arculat megalkotásában.**"
+summary: "Wine&Sofi borászati szaktanácsadás. Figyelembe veszi a piaci trendeket, a fenntarthatósági elveket és a szabályozási követelményeket. Segít a termékstruktúra kialakításában, a technológiai tervezésben, valamint az egyedi és figyelemfelkeltő arculat megalkotásában."
 ---
 
 Személyre szabott borászati szaktanácsadást adok több területen:

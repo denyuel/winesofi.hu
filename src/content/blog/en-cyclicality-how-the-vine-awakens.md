@@ -4,7 +4,7 @@ date: "2026-04-02"
 slug: "/post/cyclicality-how-the-vine-awakens"
 language: "en"
 image: "/images/blog/178a516cd564cdf615e72094b66e6d96127bb7a3.webp"
-summary: "**Grapevines operate cyclically, awakening each spring as buds unfold into green shoots. Precise pruning helps the vine focus on buds that will produce abundant and high-quality fruit. In spring, attentive growers support the plant’s development and the start of the new cycle.**"
+summary: "Grapevines operate cyclically, awakening each spring as buds unfold into green shoots. Precise pruning helps the vine focus on buds that will produce abundant and high-quality fruit. In spring, attentive growers support the plant’s development and the start of the new cycle."
 ---
 
 The vine’s life cycle is an annual repeating process: it begins with a cold winter dormancy, followed by an active growth period and fruit production. In the literature, winter dormancy is called dormancy or bud rest. This is a physiological state in which internal growth of the buds ceases, even if external temperatures are mild. Dormancy allows the plant to delay growth

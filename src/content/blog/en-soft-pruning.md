@@ -4,7 +4,7 @@ date: "2024-04-22"
 slug: "/post/soft-pruning"
 language: "en"
 image: "/images/blog/a739897696637ccfdbde94d7ebb4903310ed6017.jpg"
-summary: "**SOFT PRUNING** Soft pruning is a careful technique that considers the physiological traits and natural form of the vine, thereby minimising stress and encouraging healthy growth."
+summary: "SOFT PRUNING. Soft pruning is a careful technique that considers the physiological traits and natural form of the vine, thereby minimising stress and encouraging healthy growth."
 ---
 
 Pruning is a fundamental practice in viticulture and winemaking that significantly influences the health, yield, and quality of grapevines. During pruning, we can gather extensive information about the vines, such as their growth strength, health, balance, and fertility. In the world of winemaking, the continuous development of viticultural and winemaking techniques is key to producing high-quality wines and maintaining the natural sustainability of the grape culture. Often, we encounter methods that are not necessarily new but are revivals of previously used, abandoned, forgotten, or altered techniques. This revival does not detract from the methods' value; instead, it may indicate that there was a time when these techniques were successfully applied.

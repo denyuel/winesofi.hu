@@ -4,7 +4,7 @@ date: "2024-08-01"
 slug: "/post/szuereti-idopont"
 language: "hu"
 image: "/images/blog/75b111c3a80b9a7c40d187b7b544106ef0929377.jpg"
-summary: "**Szüret**  A szüreti időszak a szőlőtermesztés egyik legfontosabb és legizgalmasabb része. A szüret nem csupán a termés betakarításáról szól, hanem egy komplex folyamat része, amelynek célja a legjobb minőségű szőlő elérése a bor készítéséhez. Ebben a bejegyzésben a szüret szakmai aspektusait és a modern technikák alkalmazását vizsgáljuk."
+summary: "Szüret. A szüreti időszak a szőlőtermesztés egyik legfontosabb és legizgalmasabb része. A szüret nem csupán a termés betakarításáról szól, hanem egy komplex folyamat része, amelynek célja a legjobb minőségű szőlő elérése a bor készítéséhez. Ebben a bejegyzésben a szüret szakmai aspektusait és a modern technikák alkalmazását vizsgáljuk."
 ---
 
 **Szüret**
