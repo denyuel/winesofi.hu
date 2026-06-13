@@ -151,7 +151,7 @@ const WineCard = ({ product, lang = 'hu' }) => {
   const isGlass = handle && handle.includes('borospohar');
 
   return (
-    <div className={`flex flex-col justify-between items-center h-full max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 transition-colors duration-150 text-center dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 ${outOfStock ? 'opacity-80' : ''}`}>
+    <div className={`flex flex-col justify-between items-center h-full max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 transition-colors duration-150 text-center ${outOfStock ? 'opacity-80' : ''}`}>
       <div className="flex flex-col items-center w-full">
         {imageUrl && (
           <img
@@ -161,15 +161,15 @@ const WineCard = ({ product, lang = 'hu' }) => {
             style={isGlass ? { mixBlendMode: 'multiply' } : {}}
           />
         )}
-        <h3 className="font-cormorant_sc text-button_black font-bold uppercase text-xl md:text-2xl mb-4 min-h-[4.5rem] flex items-center justify-center dark:text-white">
+        <h3 className="font-cormorant_sc text-button_black font-bold uppercase text-xl md:text-2xl mb-4 min-h-[4.5rem] flex items-center justify-center">
           {title}
         </h3>
-        <p className="basic-text mb-6 text-center text-gray_strong text-sm leading-6 font-open dark:text-gray-300">
+        <p className="basic-text mb-6 text-center text-gray_strong text-sm leading-6 font-open">
           {description}
         </p>
       </div>
       <div className="w-full mt-auto flex flex-col items-center">
-        <div className="font-open text-lg font-bold text-button_black mb-6 dark:text-white">
+        <div className="font-open text-lg font-bold text-button_black mb-6">
           {outOfStock ? (lang === 'en' ? 'Sold out' : 'Elfogyott') : priceText}
         </div>
         {outOfStock ? (
