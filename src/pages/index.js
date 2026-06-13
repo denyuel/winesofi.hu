@@ -21,7 +21,7 @@ export default function HomePage({ data }) {
                   <span>Wine&Sofi</span>
                   <div className="border-t-2 border-button_black w-10 opacity-20"></div>
                   <span>furmint</span>
-                  <span className="text-xxs md:text-sm">202<span className="text-xxxs md:text-xs">3</span></span>
+                  <span className="text-xxs md:text-sm">2023</span>
                 </div>
               </div>
               <div className="flex flex-col items-center max-w-full">
@@ -31,7 +31,7 @@ export default function HomePage({ data }) {
                   <span>Wine&Sofi</span>
                   <div className="border-t-2 border-button_black w-10 opacity-20"></div>
                   <span>olaszrizling</span>
-                  <span className="text-xxs md:text-sm">202<span className="text-xxxs md:text-xs">2</span></span>
+                  <span className="text-xxs md:text-sm">2022</span>
                 </div>
               </div>
               <div className="flex flex-col items-center max-w-full">
@@ -41,7 +41,7 @@ export default function HomePage({ data }) {
                   <span>Wine&Sofi</span>
                   <div className="border-t-2 border-button_black w-10 opacity-20"></div>
                   <span>olaszrizling</span>
-                  <span className="text-xs md:text-sm">202<span className="text-xxs md:text-xs">2</span></span>
+                  <span className="text-xs md:text-sm">2022</span>
                 </div>
               </div>
             </div>

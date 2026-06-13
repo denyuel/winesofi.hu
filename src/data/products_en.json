@@ -63,7 +63,7 @@
     "price": 0,
     "currency": "HUF",
     "images": [
-      "/images/products/diszcsomagolas-copy.jpg"
+      "/images/products/diszcsomagolas-copy.png"
     ]
   },
   {
@@ -74,7 +74,7 @@
     "price": 8000,
     "currency": "HUF",
     "images": [
-      "/images/products/gift-package.jpg",
+      "/images/products/gift-package.png",
       "/images/products/gift-package_1.png"
     ]
   },

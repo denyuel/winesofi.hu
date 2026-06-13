@@ -7,9 +7,7 @@ image: "/images/blog/96d870d387b21129fcfe72e6b2e34ebc87000b83.png"
 summary: "Summer is one of the most active physiological periods in the vineyard. Shoots are growing rapidly, leaves are photosynthesizing at full capacity, and clusters are developing after flowering and fruit set. During this stage, canopy management decisions directly influence light exposure, air circulation, and the vine’s energy balance — factors that will later shape both grape composition and wine quality."
 ---
 
-English translation with reviewed viticultural terminology
-
-Summer is the grapevine&#39;s most active growth phase. After flowering and fruit set, the shoots continue to
+Summer is the grapevine's most active growth phase. After flowering and fruit set, the shoots continue to
 grow, the leaves work at full capacity, and the young berries develop rapidly. This is when it becomes
 clear how well the vine can keep vegetative growth and crop development in balance.
 During photosynthesis, green leaves use light to produce sugars from water and carbon dioxide. This
@@ -22,7 +20,8 @@ aeration and energy distribution.
 
 
 
-The canopy: the vine&#39;s working surface
+### The canopy: the vine's working surface
+
 The canopy is the green surface of the vine row: shoots, leaves, tendrils and clusters together. The fruit
 zone is the part of the canopy where the clusters are located. A good canopy is neither too dense nor too
 bare: it carries enough leaves for photosynthesis while allowing light and air to move around the clusters.
@@ -37,7 +36,8 @@ Air movement is just as important. A closed, humid canopy dries more slowly afte
 create a more favorable environment for fungal diseases. A well-organized, open canopy dries faster,
 and plant-protection treatments can reach the clusters more evenly.
 
-Lateral shoots: not an enemy, but leaf area to be regulated
+### Lateral shoots: not an enemy, but leaf area to be regulated
+
 A lateral shoot develops from the leaf axil of the main shoot. It is not a fault, and it is not a plant part that
 should automatically be removed. When young, it uses energy; later, however, its own leaves
 photosynthesize, meaning that it can contribute to the vine&#39;s sugar production.
@@ -60,7 +60,8 @@ physiological roles, and the way they are managed can also affect berry composit
 especially sensitive to temperature, so shading the fruit zone or opening it up too much can also
 influence the perception of acidity in the later wine.
 
-Shoot topping: guiding growth rather than stopping it
+### Shoot topping: guiding growth rather than stopping it
+
 Shoot topping is the cutting back of the upper part of overgrown shoots. It becomes necessary when
 shoots outgrow the trellis, bend back, become tangled, shade the fruit zone or obstruct work between the
 rows.
@@ -87,7 +88,8 @@ long can allow shoots to bend back, the fruit zone to close up, aeration to decl
 become more difficult. Good timing always depends on the vigor of the variety, the season, vine water
 supply and the current condition of the canopy.
 
-Why does all this matter for the wine?
+### Why does all this matter for the wine?
+
 Summer canopy operations shape wine quality not directly, but through the physiological condition of the
 grapevine. They affect light exposure, fruit-zone temperature, air movement, disease risk and must
 composition.
@@ -98,14 +100,8 @@ Good canopy work is therefore not a single movement, but a continuous series of 
 grapevine reacts quickly, and the winegrower&#39;s task is not to stop this growth, but to guide it in the right
 direction.
 
-References
-Davis, A., Reeve, A. L., &amp; Skinkis, P. A. (2013; reviewed 2026). The role of canopy management in vine
-balance. Oregon State University Extension Service, EM 9071.
-https://extension.oregonstate.edu/catalog/em-9071-role-canopy-management-vine-balance
-Verdenal, T., Zufferey, V., Dienes-Nagy, A., Bieri, S., Bourdin, G., Reynard, J.-S., &amp; Spring, J.-L. (2024).
-Exploring grapevine canopy management: Effects of removing main leaves or lateral shoots before
-flowering. OENO One, 58(4), Article 8175. https://doi.org/10.20870/oeno-one.2024.58.4.8175
-Molitor, D., Baron, N., Sauerwein, T., Andre, C. M., Kicherer, A., Doring, J., Stoll, M., Beyer, M.,
-Hoffmann, L., &amp; Evers, D. (2015). Postponing first shoot topping reduces grape cluster compactness
-and delays bunch rot epidemic. American Journal of Enology and Viticulture, 66(2), 164-176.
-https://doi.org/10.5344/ajev.2014.14052
+### References
+
+- Davis, A., Reeve, A. L., & Skinkis, P. A. (2013; reviewed 2026). *The role of canopy management in vine balance.* Oregon State University Extension Service, EM 9071. [https://extension.oregonstate.edu/...](https://extension.oregonstate.edu/catalog/em-9071-role-canopy-management-vine-balance)
+- Verdenal, T., Zufferey, V., Dienes-Nagy, A., Bieri, S., Bourdin, G., Reynard, J.-S., & Spring, J.-L. (2024). *Exploring grapevine canopy management: Effects of removing main leaves or lateral shoots before flowering.* OENO One, 58(4), Article 8175. [https://doi.org/10.20870/...](https://doi.org/10.20870/oeno-one.2024.58.4.8175)
+- Molitor, D., Baron, N., Sauerwein, T., Andre, C. M., Doring, J., Stoll, M., Beyer, M., Hoffmann, L., & Evers, D. (2015). *Postponing first shoot topping reduces grape cluster compactness and delays bunch rot epidemic.* American Journal of Enology and Viticulture, 66(2), 164-176. [https://doi.org/10.5344/...](https://doi.org/10.5344/ajev.2014.14052)

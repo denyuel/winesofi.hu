@@ -33,7 +33,7 @@ const BlogList = ({ nodes = [] }) => {
             </div>
           </div>
 
-          <div className="flex items-center lg:container h-auto w-full lg:max-w-104 lg:max-h-104">
+          <div className="relative z-10 flex items-center lg:container h-auto w-full lg:max-w-104 lg:max-h-104">
             {node.frontmatter.image ? (
               <img
                 src={node.frontmatter.image}
