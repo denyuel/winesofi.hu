@@ -4,3 +4,9 @@ public
 static/admin
 .env
 .vscode
+*.json
+!package.json
+!package-lock.json
+build_log.txt
+tags*.txt
+

@@ -2,8 +2,6 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 
-require('dotenv').config({ path: './sanity_studio/.env' });
-
 module.exports = {
   siteMetadata: {
     title: `Wine&Sofi | Egyedi borok egy badacsonyi butikborászatból`,
@@ -13,40 +11,42 @@ module.exports = {
     image: `/logo.png`,
     siteUrl: 'https://winesofi.hu'
   },
-  plugins: [{
-    resolve: 'gatsby-source-sanity',
-    options: {
-      projectId: process.env.SANITY_STUDIO_PROJECT_ID,
-      dataset: process.env.SANITY_STUDIO_DATASET
-    }
-  },
-  {
-    resolve: "gatsby-plugin-sanity-image",
-    options: {
-      projectId: process.env.SANITY_STUDIO_PROJECT_ID,
-      dataset: process.env.SANITY_STUDIO_DATASET
-    },
-  },
+  plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-postcss",
     "gatsby-plugin-sitemap",
     "gatsby-transformer-remark",
-  {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "images",
-      "path": "./src/images/"
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "blog",
+        "path": "./src/content/blog/"
+      }
     },
-    __key: "images"
-  },
-  {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/pages/"
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "contentPages",
+        "path": "./src/content/pages/"
+      }
     },
-    __key: "pages"
-  }]
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "images",
+        "path": "./src/images/"
+      },
+      __key: "images"
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "pages",
+        "path": "./src/pages/"
+      },
+      __key: "pages"
+    }
+  ]
 };

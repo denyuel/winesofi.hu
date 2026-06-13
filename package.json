@@ -10,7 +10,6 @@
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
-    "prebuild": "npm install --legacy-peer-deps --prefix sanity_studio && npm run build --prefix sanity_studio",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
@@ -19,17 +18,14 @@
     "@fontsource/cormorant-sc": "^5.0.19",
     "@fontsource/kaushan-script": "^5.0.19",
     "@formspark/use-formspark": "^0.1.39",
-    "@portabletext/react": "^3.0.11",
     "@tailwindcss/typography": "^0.5.10",
     "gatsby": "^5.13.2",
     "gatsby-plugin-google-analytics": "^5.13.1",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-postcss": "^6.13.1",
-    "gatsby-plugin-sanity-image": "^0.13.4",
     "gatsby-plugin-sharp": "^5.13.1",
     "gatsby-plugin-sitemap": "^6.13.1",
     "gatsby-source-filesystem": "^5.13.1",
-    "gatsby-source-sanity": "^7.9.1",
     "gatsby-transformer-remark": "^6.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
     "js-cookie": "^3.0.5",
@@ -41,6 +37,7 @@
   },
   "overrides": {
     "camelcase": "5.3.1",
-    "msgpackr": "^1.11.0"
+    "lmdb": "^3.2.2",
+    "msgpackr": "^1.11.2"
   }
 }

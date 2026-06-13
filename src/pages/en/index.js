@@ -6,7 +6,7 @@ import BlogList from '../../components/blog-list';
 import { Seo } from '../../components/seo';
 
 export default function HomePage({ data }) {
-  const { nodes } = data.allSanityPost;
+  const { nodes } = data.allMarkdownRemark;
 
   return (
     <Layout>
@@ -175,24 +175,23 @@ export default function HomePage({ data }) {
 
 export const query = graphql`
 query Blogposts {
-  allSanityPost(
-    sort: { _createdAt: DESC }
+  allMarkdownRemark(
+    sort: { frontmatter: { date: DESC } }
     limit: 2
-    filter: { language: { eq: "en" } }
+    filter: {
+      fileAbsolutePath: { regex: "/src/content/blog/" }
+      frontmatter: { language: { eq: "en" } }
+    }
   ) {
     nodes {
       id
-      title
-      _createdAt(formatString: "YYYY.MM.DD")
-      mainImage {
-        asset {
-          gatsbyImageData
-        }
+      frontmatter {
+        title
+        date(formatString: "YYYY.MM.DD")
+        slug
+        summary
+        image
       }
-      slug {
-        current
-      }
-      _rawSummary(resolveReferences: { maxDepth: 2 })
     }
   }
 }

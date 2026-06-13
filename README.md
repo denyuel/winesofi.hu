@@ -1,27 +1,38 @@
 # Wine&Sofi
 
-## Resources
-
+## Figma Design
 Figma: https://www.figma.com/file/LE2wLWska9Go06pDvnGP4y/Wine%26Sofi 
 
-## Architecture
+## Architektúra
 
-The site is built with Gatsby and uses Sanity.io as a data store and Sanity Studio for content editing.  
-Hosting and deployment is in AWS Amplify.
+A weboldal **Gatsby** (v5) keretrendszerrel készült, és statikusan generált (Static Site Generation - SSG).
+A tartalom (blogcikkek és egyedi aloldalak) helyi **Markdown (`.md`)** fájlokban található, így nincs szükség külső adatbázisra vagy headless CMS-re (korábban Sanity.io-t használt a projekt, de az teljesen el lett távolítva).
 
-### Workflow
+A tárhely és a folyamatos üzemeltetés (CI/CD) a **Cloudflare Pages** rendszerén fut. Minden GitHub-ra pusholt változtatás automatikusan buildelődik és élesedik.
 
-Users must be created in Sanity.io  
-Content schema is defined in `./sanity_studio/schemas` and the graphql API can be deployed with `npm run deploy-graphql` in `./sanity_studio` (see `./sanity_studio/package.json`).  
-A new graphql API deployment is needed after every content schema change.
+## Projekt Felépítés
 
-The Sanity Studio CMS can be started in dev mode (`npm run dev` in `./sanity_studio`, see `./sanity_studio/package.json`).
-The production CMS build is triggered by the Gatsby build process (see the `prebuild` step in `./package.json`). During the production build the Sanity Studio frontend becomes part of the Gatsby site by building the CMS files to the `./static/admin` folder.
+- `src/content/blog/`: Itt találhatóak a blogbejegyzések Markdown fájljai (magyar és angol nyelven külön, pl. `hu-*.md` és `en-*.md`).
+- `src/content/pages/`: Itt találhatóak a statikus aloldalak Markdown fájljai (pl. Képzések, Szaktanácsadás).
+- `static/images/blog/`: A blogbejegyzésekben és aloldalakon használt képek.
+- `src/pages/`: A főoldalak és a termékeket bemutató oldalak.
+- `src/templates/`: A Gatsby által dinamikusan generált oldalak sablonjai (`post.js`, `page.js`, `blog-listing.js`).
 
-Gatsby uses the `gatsby-source-sanity` plugin to source data from Sanity.io  
+## Fejlesztés Helyben
 
-Content changes in the CMS can trigger a webhook in Sanity.io that triggers a rebuild and deployment in AWS.
+1. Függőségek telepítése:
+   ```bash
+   npm install
+   ```
 
-# Installation
+2. Fejlesztői szerver indítása:
+   ```bash
+   npm run develop
+   ```
 
-Create a `.env` file in the `sanity_studio` folder with the right Sanity.io instance keys. An example is provided for the staging instance as `.env.staging`. You can copy the file as `.env`.  
+3. Statikus build generálása és helyi tesztelése:
+   ```bash
+   npm run clean
+   npm run build
+   npm run serve
+   ```

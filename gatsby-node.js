@@ -9,7 +9,7 @@
  */
 const path = require('path');
 
-exports.createPages = async ({ actions, graphql, reporter, cache }) => {
+exports.createPages = async ({ actions, graphql, reporter }) => {
   const templates = {
     page: path.join(__dirname, 'src/templates/page.js'),
     blog: path.join(__dirname, 'src/templates/blog-listing.js'),
@@ -20,36 +20,18 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
   const result = await graphql(
     `
       {
-        allSanityPost(sort: { _createdAt: DESC }, limit: 100) {
+        allMarkdownRemark(limit: 1000) {
           nodes {
             id
-            title
-            language
-            mainImage {
-              asset {
-                gatsbyImageData
-              }
+            frontmatter {
+              title
+              date
+              slug
+              language
+              image
+              summary
             }
-            _createdAt
-            _updatedAt
-            _rawBody(resolveReferences: { maxDepth: 5 })
-            slug {
-              current
-            }
-            _rawSummary(resolveReferences: { maxDepth: 2 })
-          }
-        }
-        allSanityPage {
-          totalCount
-          nodes {
-            id
-            language
-            slug {
-              current
-            }
-            _rawSummary(resolveReferences: { maxDepth: 2 })
-            _rawBody(resolveReferences: { maxDepth: 5 })
-            title
+            fileAbsolutePath
           }
         }
       }
@@ -61,39 +43,41 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
     return;
   }
 
-  await cache.set('docskit_site_allSanity_data', result);
+  const allNodes = result.data.allMarkdownRemark.nodes;
+  const posts = allNodes.filter(node => node.fileAbsolutePath.includes('/src/content/blog/'));
+  const pages = allNodes.filter(node => node.fileAbsolutePath.includes('/src/content/pages/'));
 
   // create pages
-  result.data.allSanityPage.nodes.forEach((node) => {
+  pages.forEach((node) => {
+    if (!node.frontmatter.slug) return;
     actions.createPage({
-      path: node.slug.current,
+      path: node.frontmatter.slug,
       component: require.resolve(templates.page),
       context: {
         id: node.id,
-        title: node.title,
+        title: node.frontmatter.title,
       },
     });
   });
 
   // create blog posts
-  result.data.allSanityPost.nodes.forEach((node) => {
-    const slug = `/post/${node.slug.current}`;
+  posts.forEach((node) => {
+    if (!node.frontmatter.slug) return;
     actions.createPage({
-      path: slug,
+      path: node.frontmatter.slug,
       component: require.resolve(templates.post),
       context: {
         id: node.id,
-        title: node.title,
+        title: node.frontmatter.title,
       },
     });
   });
 
   // Create blog-list pages
   const postsPerPage = 100;
-  const posts = result.data.allSanityPost.nodes;
   
   // Create Hungarian blog-list pages
-  const huPosts = posts.filter(post => post.language === 'hu' || !post.language);
+  const huPosts = posts.filter(post => post.frontmatter.language === 'hu' || !post.frontmatter.language);
   const huNumPages = Math.ceil(huPosts.length / postsPerPage) || 1;
   Array.from({ length: huNumPages }).forEach((_, i) => {
     actions.createPage({
@@ -110,7 +94,7 @@ exports.createPages = async ({ actions, graphql, reporter, cache }) => {
   });
 
   // Create English blog-list pages
-  const enPosts = posts.filter(post => post.language === 'en');
+  const enPosts = posts.filter(post => post.frontmatter.language === 'en');
   if (enPosts.length > 0) {
     const enNumPages = Math.ceil(enPosts.length / postsPerPage);
     Array.from({ length: enNumPages }).forEach((_, i) => {

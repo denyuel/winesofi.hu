@@ -6,18 +6,19 @@ const LeftNav = () => {
   const { language } = useLanguage();
   const { pages } = useStaticQuery(graphql`
     query {
-      pages: allSanityPage(
-        sort: { _createdAt: ASC }
-        filter: { include_in_navigation: { eq: true } }
+      pages: allMarkdownRemark(
+        filter: {
+          fileAbsolutePath: { regex: "/src/content/pages/" }
+          frontmatter: { include_in_navigation: { eq: true } }
+        }
       ) {
         nodes {
           id
-          language
-          slug {
-            current
+          frontmatter {
+            title
+            slug
+            language
           }
-          title
-          language
         }
       }
     }
@@ -36,10 +37,10 @@ const LeftNav = () => {
           </Link>
         )}
         {pages.nodes
-          .filter((page) => page.language === language)
+          .filter((page) => page.frontmatter.language === language)
           .map((page) => (
             <Link
-              to={`/${page.slug.current}`}
+              to={page.frontmatter.slug}
               key={page.id}
               className="hover:text-gray-300"
             >
@@ -47,7 +48,7 @@ const LeftNav = () => {
                 <span className="hidden md:flex items-center text-lg leading-none text-slate-200">
                   &bull;
                 </span>
-                {page.title}
+                {page.frontmatter.title}
               </div>
             </Link>
           ))}

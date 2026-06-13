@@ -1,12 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
-import { PortableText } from "@portabletext/react";
-import { GatsbyImage } from "gatsby-plugin-image";
 import { useLanguage } from "../context/LanguageContext";
 
 const BlogList = ({ nodes = [] }) => {
   const { language } = useLanguage();
-
 
   return (
     <div className="flex flex-col items-center">
@@ -22,25 +19,25 @@ const BlogList = ({ nodes = [] }) => {
               <span className="bg-brown py-1 px-[10px] text-white rounded font-open font-semibold text-xs uppercase mr-2">
                 {language === 'hu' ? "borászati blog" : "winery blog"}
               </span>
-              <span className="text-gray-500">{node._createdAt}</span>
+              <span className="text-gray-500">{node.frontmatter.date}</span>
               <h2 className="mt-2 text-post_title font-bold font-cormorant_sc">
-                {node.title}
+                {node.frontmatter.title}
               </h2>
               <hr className="w-8 mt-3 h-1 opacity-25"></hr>
               <div className="prose py-6 font-sans">
-                <PortableText value={node._rawSummary} />
+                {node.frontmatter.summary}
               </div>
-              <Link className="button" to={`/post/${node.slug.current}`}>
+              <Link className="button" to={node.frontmatter.slug}>
                 {language === 'hu' ? "Tovább" : "Read more"}
               </Link>
             </div>
           </div>
 
           <div className="flex items-center lg:container h-auto w-full lg:max-w-104 lg:max-h-104">
-            {node.mainImage?.asset?.gatsbyImageData ? (
-              <GatsbyImage
-                image={node.mainImage?.asset?.gatsbyImageData}
-                alt={node.title}
+            {node.frontmatter.image ? (
+              <img
+                src={node.frontmatter.image}
+                alt={node.frontmatter.title}
                 className="rounded-t-2xl lg:rounded-full aspect-video w-full h-auto md:aspect-auto lg:aspect-square object-cover"
               />
             ) : null}
